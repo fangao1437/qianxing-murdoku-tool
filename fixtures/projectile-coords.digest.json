@@ -1,0 +1,289 @@
+{
+ "_kind": "qx.graphcode.gia-digest",
+ "sample": {
+  "slug": "projectile-coords",
+  "file": "实时获取投射物坐标（最快每0.06s获取一次）.gia",
+  "bytes": 10407,
+  "sha256": "59379ecf32ada082b08a91ea2a2357d5d3ce80ffcb21d5fd9dc5769f784ce3ec"
+ },
+ "note": "定时器 + 拼装列表 + 3 个复合节点",
+ "envelope": {
+  "headerU32": [
+   10403,
+   1,
+   806,
+   3,
+   10383
+  ],
+  "bodyLen": 10383,
+  "trailerLen": 4
+ },
+ "rootFields": {
+  "1": 4,
+  "2": 3,
+  "3": 1,
+  "5": 1
+ },
+ "units": {
+  "total": 7,
+  "whichCounts": {
+   "9": 4,
+   "12": 3
+  },
+  "list": [
+   {
+    "bucket": "graph",
+    "index": 0,
+    "guid": 1073741826,
+    "which": 12,
+    "kind": "节点单元定义",
+    "name": "空节点-浮点数",
+    "relatedIds": [
+     1073741864
+    ]
+   },
+   {
+    "bucket": "graph",
+    "index": 1,
+    "guid": 1073741825,
+    "which": 12,
+    "kind": "节点单元定义",
+    "name": "运算-投射物位置函数",
+    "relatedIds": [
+     1073741863
+    ]
+   },
+   {
+    "bucket": "graph",
+    "index": 2,
+    "guid": 1073741827,
+    "which": 12,
+    "kind": "节点单元定义",
+    "name": "速度矢量转化",
+    "relatedIds": [
+     1073741865
+    ]
+   },
+   {
+    "bucket": "graph",
+    "index": 3,
+    "guid": 1073741862,
+    "which": 9,
+    "kind": "节点图",
+    "name": "示例-每0.1秒获取一次投射物坐标",
+    "relatedIds": [
+     1073741826,
+     1073741825
+    ]
+   },
+   {
+    "bucket": "acc",
+    "index": 0,
+    "guid": 1073741864,
+    "which": 9,
+    "kind": "节点图",
+    "name": null,
+    "relatedIds": []
+   },
+   {
+    "bucket": "acc",
+    "index": 1,
+    "guid": 1073741863,
+    "which": 9,
+    "kind": "节点图",
+    "name": null,
+    "relatedIds": [
+     1073741826
+    ]
+   },
+   {
+    "bucket": "acc",
+    "index": 2,
+    "guid": 1073741865,
+    "which": 9,
+    "kind": "节点图",
+    "name": null,
+    "relatedIds": [
+     1073741826
+    ]
+   }
+  ]
+ },
+ "nodeDefs": [
+  {
+   "guid": 1073741826,
+   "name": "空节点-浮点数",
+   "which": 12,
+   "pinCount": {
+    "exec_in": 0,
+    "exec_out": 0,
+    "data_in": 1,
+    "data_out": 1
+   },
+   "implGraph": null
+  },
+  {
+   "guid": 1073741825,
+   "name": "运算-投射物位置函数",
+   "which": 12,
+   "pinCount": {
+    "exec_in": 0,
+    "exec_out": 0,
+    "data_in": 4,
+    "data_out": 1
+   },
+   "implGraph": null
+  },
+  {
+   "guid": 1073741827,
+   "name": "速度矢量转化",
+   "which": 12,
+   "pinCount": {
+    "exec_in": 0,
+    "exec_out": 0,
+    "data_in": 2,
+    "data_out": 1
+   },
+   "implGraph": null
+  }
+ ],
+ "graphs": [
+  {
+   "bucket": "graph",
+   "unitIndex": 3,
+   "name": "示例-每0.1秒获取一次投射物坐标",
+   "graphId": 1073741862,
+   "header": {
+    "tag1": 10000,
+    "tag2": 20000,
+    "tag3": 21001,
+    "graphId": 1073741862
+   },
+   "nodes": 12,
+   "edges": 14,
+   "flowEdges": 2,
+   "dataEdges": 12,
+   "comments": 0,
+   "typeHistogram": {
+    "1": 1,
+    "71": 1,
+    "73": 1,
+    "79": 1,
+    "83": 1,
+    "169": 1,
+    "180": 2,
+    "200": 1,
+    "204": 1,
+    "1073741825": 1,
+    "1073741826": 1
+   },
+   "compositeRefs": 2,
+   "unknownRefs": 0
+  },
+  {
+   "bucket": "acc",
+   "unitIndex": 0,
+   "name": null,
+   "graphId": 1073741864,
+   "header": {
+    "tag1": 10000,
+    "tag2": 20000,
+    "tag3": 21002,
+    "graphId": 1073741864
+   },
+   "nodes": 1,
+   "edges": 0,
+   "flowEdges": 0,
+   "dataEdges": 0,
+   "comments": 0,
+   "typeHistogram": {
+    "200": 1
+   },
+   "compositeRefs": 0,
+   "unknownRefs": 0
+  },
+  {
+   "bucket": "acc",
+   "unitIndex": 1,
+   "name": null,
+   "graphId": 1073741863,
+   "header": {
+    "tag1": 10000,
+    "tag2": 20000,
+    "tag3": 21002,
+    "graphId": 1073741863
+   },
+   "nodes": 14,
+   "edges": 20,
+   "flowEdges": 0,
+   "dataEdges": 20,
+   "comments": 0,
+   "typeHistogram": {
+    "9": 1,
+    "10": 1,
+    "99": 1,
+    "200": 1,
+    "204": 6,
+    "225": 1,
+    "474": 1,
+    "1073741826": 2
+   },
+   "compositeRefs": 2,
+   "unknownRefs": 0
+  },
+  {
+   "bucket": "acc",
+   "unitIndex": 2,
+   "name": null,
+   "graphId": 1073741865,
+   "header": {
+    "tag1": 10000,
+    "tag2": 20000,
+    "tag3": 21002,
+    "graphId": 1073741865
+   },
+   "nodes": 7,
+   "edges": 8,
+   "flowEdges": 0,
+   "dataEdges": 8,
+   "comments": 0,
+   "typeHistogram": {
+    "204": 2,
+    "225": 1,
+    "291": 1,
+    "292": 1,
+    "1073741826": 2
+   },
+   "compositeRefs": 2,
+   "unknownRefs": 0
+  }
+ ],
+ "resources": {
+  "variables": [],
+  "signals": [],
+  "composites": [
+   {
+    "name": "空节点-浮点数",
+    "uses": [
+     "示例-每0.1秒获取一次投射物坐标",
+     "acc:1",
+     "acc:1",
+     "acc:2",
+     "acc:2"
+    ]
+   },
+   {
+    "name": "运算-投射物位置函数",
+    "uses": [
+     "示例-每0.1秒获取一次投射物坐标"
+    ]
+   }
+  ]
+ },
+ "totals": {
+  "nodes": 34,
+  "edges": 42,
+  "compositeRefs": 6,
+  "unknownNodes": 0
+ }
+}

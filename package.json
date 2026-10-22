@@ -1,0 +1,38 @@
+{
+  "name": "qianxing-murdoku-tool",
+  "version": "0.1.0",
+  "description": "千星奇域（原神 UGC）节点图双向工具链：.gil/.gia → 结构证据 + 行为规格；行为规格 → genshin-ts TypeScript → compile → inject。永不自己写 protobuf 节点图。",
+  "type": "module",
+  "license": "MIT",
+  "author": "fangao1437 <18182991366@163.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fangao1437/qianxing-murdoku-tool.git"
+  },
+  "keywords": [
+    "miHoYo",
+    "genshin",
+    "miliastra",
+    "千星奇域",
+    "node-graph",
+    "genshin-ts",
+    "reverse-engineering"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node test/run-tests.mjs",
+    "read": "node src/read.mjs",
+    "read2spec": "node src/read2spec.mjs",
+    "emit": "node src/emit.mjs",
+    "gen-nodes": "node src/gen-nodes.mjs",
+    "gen-ports": "node src/gen-ports.mjs",
+    "gts-build": "node src/gts-build.mjs",
+    "coverage": "node src/coverage.mjs",
+    "roundtrip": "node src/roundtrip.mjs",
+    "sync-from-master": "node tools/sync-from-master.mjs"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

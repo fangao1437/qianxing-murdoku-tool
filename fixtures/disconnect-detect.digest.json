@@ -1,0 +1,430 @@
+{
+ "_kind": "qx.graphcode.gia-digest",
+ "sample": {
+  "slug": "disconnect-detect",
+  "file": "玩家掉线检测、重连检测、断网检测.gia",
+  "bytes": 19777,
+  "sha256": "46c6e39190d1da13e645870df7393bec98705eb69df6a8df23292e5954571b91"
+ },
+ "note": "信号（监听/发送）+ 界面控件组 + 客户端脚本",
+ "envelope": {
+  "headerU32": [
+   19773,
+   1,
+   806,
+   3,
+   19753
+  ],
+  "bodyLen": 19753,
+  "trailerLen": 4
+ },
+ "rootFields": {
+  "1": 6,
+  "2": 8,
+  "3": 1,
+  "5": 1
+ },
+ "units": {
+  "total": 14,
+  "whichCounts": {
+   "9": 2,
+   "12": 5,
+   "14": 4,
+   "15": 1,
+   "21": 1,
+   "69": 1
+  },
+  "list": [
+   {
+    "bucket": "graph",
+    "index": 0,
+    "guid": 1073741924,
+    "which": 9,
+    "kind": "节点图",
+    "name": "[玩家]掉线检测",
+    "relatedIds": [
+     1610613065,
+     1610613068
+    ]
+   },
+   {
+    "bucket": "graph",
+    "index": 1,
+    "guid": 1610613059,
+    "which": 14,
+    "kind": "节点单元定义",
+    "name": "发送信号",
+    "relatedIds": [
+     1610613065,
+     1610613066,
+     1610613067
+    ]
+   },
+   {
+    "bucket": "graph",
+    "index": 2,
+    "guid": 1610613068,
+    "which": 14,
+    "kind": "节点单元定义",
+    "name": "发送信号",
+    "relatedIds": [
+     1610613069,
+     1610613070,
+     1610613071
+    ]
+   },
+   {
+    "bucket": "graph",
+    "index": 3,
+    "guid": 1610613073,
+    "which": 12,
+    "kind": "节点单元定义",
+    "name": "[玩家]掉线检测-信号事件",
+    "relatedIds": [
+     1610612807
+    ]
+   },
+   {
+    "bucket": "graph",
+    "index": 4,
+    "guid": 1073765245,
+    "which": 21,
+    "kind": "界面控件组",
+    "name": "[玩家]掉线检测",
+    "relatedIds": [
+     1073765248
+    ]
+   },
+   {
+    "bucket": "graph",
+    "index": 5,
+    "guid": 1073741884,
+    "which": 69,
+    "kind": "客户端脚本",
+    "name": "PlayerDisconnectDetector",
+    "relatedIds": []
+   },
+   {
+    "bucket": "acc",
+    "index": 0,
+    "guid": 1610613065,
+    "which": 12,
+    "kind": "节点单元定义",
+    "name": "监听信号",
+    "relatedIds": [
+     1610613059,
+     1610613066,
+     1610613067
+    ]
+   },
+   {
+    "bucket": "acc",
+    "index": 1,
+    "guid": 1610613066,
+    "which": 14,
+    "kind": "节点单元定义",
+    "name": "向服务器节点图发送信号",
+    "relatedIds": [
+     1610613065,
+     1610613059,
+     1610613067
+    ]
+   },
+   {
+    "bucket": "acc",
+    "index": 2,
+    "guid": 1610613067,
+    "which": 12,
+    "kind": "节点单元定义",
+    "name": "发送客户端脚本信号",
+    "relatedIds": [
+     1610613059,
+     1610613066,
+     1610613065
+    ]
+   },
+   {
+    "bucket": "acc",
+    "index": 3,
+    "guid": 1610613069,
+    "which": 12,
+    "kind": "节点单元定义",
+    "name": "监听信号",
+    "relatedIds": [
+     1610613068,
+     1610613070,
+     1610613071
+    ]
+   },
+   {
+    "bucket": "acc",
+    "index": 4,
+    "guid": 1610613070,
+    "which": 14,
+    "kind": "节点单元定义",
+    "name": "向服务器节点图发送信号",
+    "relatedIds": [
+     1610613069,
+     1610613068,
+     1610613071
+    ]
+   },
+   {
+    "bucket": "acc",
+    "index": 5,
+    "guid": 1610613071,
+    "which": 12,
+    "kind": "节点单元定义",
+    "name": "发送客户端脚本信号",
+    "relatedIds": [
+     1610613068,
+     1610613070,
+     1610613069
+    ]
+   },
+   {
+    "bucket": "acc",
+    "index": 6,
+    "guid": 1610612807,
+    "which": 9,
+    "kind": "节点图",
+    "name": null,
+    "relatedIds": [
+     1610613069
+    ]
+   },
+   {
+    "bucket": "acc",
+    "index": 7,
+    "guid": 1073765248,
+    "which": 15,
+    "kind": "容器节点",
+    "name": "容器节点",
+    "relatedIds": []
+   }
+  ]
+ },
+ "nodeDefs": [
+  {
+   "guid": 1610613059,
+   "name": "发送信号",
+   "which": 14,
+   "pinCount": {
+    "exec_in": 1,
+    "exec_out": 1,
+    "data_in": 2,
+    "data_out": 0
+   },
+   "implGraph": null
+  },
+  {
+   "guid": 1610613068,
+   "name": "发送信号",
+   "which": 14,
+   "pinCount": {
+    "exec_in": 1,
+    "exec_out": 1,
+    "data_in": 3,
+    "data_out": 0
+   },
+   "implGraph": null
+  },
+  {
+   "guid": 1610613073,
+   "name": "[玩家]掉线检测-信号事件",
+   "which": 12,
+   "pinCount": {
+    "exec_in": 0,
+    "exec_out": 2,
+    "data_in": 0,
+    "data_out": 2
+   },
+   "implGraph": null
+  },
+  {
+   "guid": 1610613065,
+   "name": "监听信号",
+   "which": 12,
+   "pinCount": {
+    "exec_in": 0,
+    "exec_out": 1,
+    "data_in": 0,
+    "data_out": 5
+   },
+   "implGraph": null
+  },
+  {
+   "guid": 1610613066,
+   "name": "向服务器节点图发送信号",
+   "which": 14,
+   "pinCount": {
+    "exec_in": 1,
+    "exec_out": 1,
+    "data_in": 2,
+    "data_out": 0
+   },
+   "implGraph": null
+  },
+  {
+   "guid": 1610613067,
+   "name": "发送客户端脚本信号",
+   "which": 12,
+   "pinCount": {
+    "exec_in": 1,
+    "exec_out": 1,
+    "data_in": 3,
+    "data_out": 0
+   },
+   "implGraph": null
+  },
+  {
+   "guid": 1610613069,
+   "name": "监听信号",
+   "which": 12,
+   "pinCount": {
+    "exec_in": 0,
+    "exec_out": 1,
+    "data_in": 0,
+    "data_out": 6
+   },
+   "implGraph": null
+  },
+  {
+   "guid": 1610613070,
+   "name": "向服务器节点图发送信号",
+   "which": 14,
+   "pinCount": {
+    "exec_in": 1,
+    "exec_out": 1,
+    "data_in": 3,
+    "data_out": 0
+   },
+   "implGraph": null
+  },
+  {
+   "guid": 1610613071,
+   "name": "发送客户端脚本信号",
+   "which": 12,
+   "pinCount": {
+    "exec_in": 1,
+    "exec_out": 1,
+    "data_in": 4,
+    "data_out": 0
+   },
+   "implGraph": null
+  }
+ ],
+ "graphs": [
+  {
+   "bucket": "graph",
+   "unitIndex": 0,
+   "name": "[玩家]掉线检测",
+   "graphId": 1073741924,
+   "header": {
+    "tag1": 10000,
+    "tag2": 20000,
+    "tag3": 21001,
+    "graphId": 1073741924
+   },
+   "nodes": 31,
+   "edges": 35,
+   "flowEdges": 13,
+   "dataEdges": 22,
+   "comments": 1,
+   "typeHistogram": {
+    "2": 3,
+    "3": 1,
+    "14": 2,
+    "22": 1,
+    "71": 1,
+    "73": 4,
+    "76": 2,
+    "79": 2,
+    "82": 2,
+    "83": 2,
+    "169": 2,
+    "323": 2,
+    "337": 1,
+    "383": 1,
+    "755": 2,
+    "1610613065": 1,
+    "1610613068": 2
+   },
+   "compositeRefs": 3,
+   "unknownRefs": 0
+  },
+  {
+   "bucket": "acc",
+   "unitIndex": 6,
+   "name": null,
+   "graphId": 1610612807,
+   "header": {
+    "tag1": 10000,
+    "tag2": 20000,
+    "tag3": 21002,
+    "graphId": 1610612807
+   },
+   "nodes": 2,
+   "edges": 2,
+   "flowEdges": 1,
+   "dataEdges": 1,
+   "comments": 0,
+   "typeHistogram": {
+    "3": 1,
+    "1610613069": 1
+   },
+   "compositeRefs": 1,
+   "unknownRefs": 0
+  }
+ ],
+ "resources": {
+  "variables": [
+   {
+    "name": "NOLOC_isDisconnect",
+    "uses": [
+     "[玩家]掉线检测",
+     "[玩家]掉线检测",
+     "[玩家]掉线检测"
+    ]
+   }
+  ],
+  "signals": [
+   {
+    "name": "[玩家]检测掉线-心跳包",
+    "uses": [
+     "[玩家]掉线检测"
+    ]
+   },
+   {
+    "name": "[玩家]检测掉线-广播信号",
+    "uses": [
+     "[玩家]掉线检测",
+     "[玩家]掉线检测",
+     "acc:6"
+    ]
+   }
+  ],
+  "composites": [
+   {
+    "name": "监听信号",
+    "uses": [
+     "[玩家]掉线检测",
+     "acc:6"
+    ]
+   },
+   {
+    "name": "发送信号",
+    "uses": [
+     "[玩家]掉线检测",
+     "[玩家]掉线检测"
+    ]
+   }
+  ]
+ },
+ "totals": {
+  "nodes": 33,
+  "edges": 37,
+  "compositeRefs": 4,
+  "unknownNodes": 0
+ }
+}

@@ -1,0 +1,211 @@
+{
+ "_kind": "qx.graphcode.roundtrip",
+ "_note": "由 tools/qx/graphcode/roundtrip.mjs 生成；status/compile 是实测基线",
+ "cases": [
+  {
+   "slug": "fall-protect-strict",
+   "file": "保护玩家防止坠崖掉落自动传送.gia",
+   "graph": null,
+   "note": "最简单的官方图。含「双分支」⇒ strict 模式必须拒绝生成",
+   "expect": {
+    "status": "blocked",
+    "blockerCategories": [
+     "CONTROL_FLOW_NODE"
+    ]
+   },
+   "graphId": 1073741845,
+   "graphName": "坠崖保护",
+   "nodes": 7,
+   "edges": 8,
+   "blockers": [
+    "CONTROL_FLOW_NODE"
+   ],
+   "warnings": [
+    "事件 \"角色移动速度达到条件时\" 有重名出参 [条件]，只保留了第一次出现的那个；如果图里引用的正是被丢掉的那个，会报 TRIGGER_PAYLOAD"
+   ],
+   "status": "blocked",
+   "diffs": []
+  },
+  {
+   "slug": "fall-protect-linear",
+   "file": "保护玩家防止坠崖掉落自动传送.gia",
+   "graph": null,
+   "note": "同上，但把分支降级成顺序调用 —— 用来**实测** gts 那条回调式 API 的边界",
+   "expect": {
+    "status": "generated",
+    "compile": "failed",
+    "compileErrorMatch": "fn is not a function"
+   },
+   "graphId": 1073741845,
+   "graphName": "坠崖保护",
+   "nodes": 7,
+   "edges": 8,
+   "blockers": [],
+   "warnings": [
+    "事件 \"角色移动速度达到条件时\" 有重名出参 [条件]，只保留了第一次出现的那个；如果图里引用的正是被丢掉的那个，会报 TRIGGER_PAYLOAD",
+    "#3 \"双分支\" 是分支/循环节点：已按 --treat-branch-as-linear 降级为顺序调用，**语义不等价且 IR 生成可能失败**"
+   ],
+   "status": "generated",
+   "spec": "fall-protect-linear.spec.json",
+   "emit": {
+    "ts": "fall-protect-linear.emit.ts",
+    "sha256": "96744b8109cae437",
+    "bytes": 865
+   },
+   "compile": {
+    "status": "failed",
+    "exit": 1,
+    "errorLine": "TypeError: fn is not a function"
+   },
+   "diffs": []
+  },
+  {
+   "slug": "atlas-collision-death",
+   "file": "常用复合节点大全v1.7(补充包同步更新中).gia",
+   "graph": "1073741843",
+   "note": "复合节点「[执行]角色碰撞死亡」的实现图：1 触发器 + 1 执行节点，最干净的一条链",
+   "expect": {
+    "status": "generated",
+    "compile": "ok"
+   },
+   "graphId": 1073741843,
+   "graphName": "_执行_角色碰撞死亡",
+   "nodes": 2,
+   "edges": 2,
+   "blockers": [],
+   "warnings": [],
+   "status": "generated",
+   "spec": "atlas-collision-death.spec.json",
+   "emit": {
+    "ts": "atlas-collision-death.emit.ts",
+    "sha256": "d0486307246602e1",
+    "bytes": 570
+   },
+   "compile": {
+    "status": "ok",
+    "exit": 0,
+    "gia": {
+     "bytes": 486,
+     "sha256": "e07895c4e3254709"
+    }
+   },
+   "diffs": []
+  },
+  {
+   "slug": "atlas-hide-player-model",
+   "file": "常用复合节点大全v1.7(补充包同步更新中).gia",
+   "graph": "1073741827",
+   "note": "复合节点「[执行]隐藏玩家模型」的实现图：1 触发器 + 1 执行节点 + 1 个布尔常量",
+   "expect": {
+    "status": "generated",
+    "compile": "ok"
+   },
+   "graphId": 1073741827,
+   "graphName": "_执行_隐藏玩家模型",
+   "nodes": 2,
+   "edges": 2,
+   "blockers": [],
+   "warnings": [],
+   "status": "generated",
+   "spec": "atlas-hide-player-model.spec.json",
+   "emit": {
+    "ts": "atlas-hide-player-model.emit.ts",
+    "sha256": "da9695b14fae07bc",
+    "bytes": 468
+   },
+   "compile": {
+    "status": "ok",
+    "exit": 0,
+    "gia": {
+     "bytes": 437,
+     "sha256": "5a7eafa2683d8e52"
+    }
+   },
+   "diffs": []
+  },
+  {
+   "slug": "projectile-coords",
+   "file": "实时获取投射物坐标（最快每0.06s获取一次）.gia",
+   "graph": "示例",
+   "note": "含 2 个复合节点引用 ⇒ 读得出来，译不出来",
+   "expect": {
+    "status": "blocked",
+    "blockerCategories": [
+     "COMPOSITE_NODE"
+    ]
+   },
+   "graphId": 1073741862,
+   "graphName": "示例_每0_1秒获取一次投射物坐标",
+   "nodes": 12,
+   "edges": 14,
+   "blockers": [
+    "COMPOSITE_NODE",
+    "CROSS_HANDLER_REF",
+    "MISSING_ARG",
+    "UPSTREAM_FAILED"
+   ],
+   "warnings": [],
+   "status": "blocked",
+   "diffs": []
+  },
+  {
+   "slug": "disconnect-detect",
+   "file": "玩家掉线检测、重连检测、断网检测.gia",
+   "graph": "掉线检测",
+   "note": "信号 + 界面控件组 + 没中文名的节点（755 Query Timestamp）⇒ 多层缺失叠加",
+   "expect": {
+    "status": "blocked",
+    "blockerCategories": [
+     "COMPOSITE_NODE",
+     "NO_DSL_NAME",
+     "NO_METHOD"
+    ]
+   },
+   "graphId": 1073741924,
+   "graphName": "_玩家_掉线检测",
+   "nodes": 31,
+   "edges": 35,
+   "blockers": [
+    "COMPOSITE_NODE",
+    "NO_DSL_NAME",
+    "NO_METHOD",
+    "MISSING_ARG",
+    "CROSS_HANDLER_REF",
+    "CONTROL_FLOW_NODE",
+    "LIST_CONSTANT"
+   ],
+   "warnings": [],
+   "status": "blocked",
+   "diffs": []
+  },
+  {
+   "slug": "double-jump",
+   "file": "只按空格实现二段跳.gia",
+   "graph": null,
+   "note": "40 节点大图：4 个触发器、枚举常量、非空列表常量、图变量",
+   "expect": {
+    "status": "blocked",
+    "blockerCategories": [
+     "CONTROL_FLOW_NODE",
+     "ENUM_CONSTANT",
+     "LIST_CONSTANT"
+    ]
+   },
+   "graphId": 1073741825,
+   "graphName": "跟随",
+   "nodes": 40,
+   "edges": 60,
+   "blockers": [
+    "UNKNOWN_CONSTANT",
+    "CROSS_HANDLER_REF",
+    "MISSING_ARG",
+    "CONTROL_FLOW_NODE",
+    "ENUM_CONSTANT",
+    "LIST_CONSTANT"
+   ],
+   "warnings": [],
+   "status": "blocked",
+   "diffs": []
+  }
+ ]
+}

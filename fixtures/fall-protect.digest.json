@@ -1,0 +1,95 @@
+{
+ "_kind": "qx.graphcode.gia-digest",
+ "sample": {
+  "slug": "fall-protect",
+  "file": "保护玩家防止坠崖掉落自动传送.gia",
+  "bytes": 1010,
+  "sha256": "507adf2d00c3d10136e4b9065879ebba8a99f364303bcc1c62bd294ca1f2b78f"
+ },
+ "note": "最简单的官方图（7 节点）—— 反向回编译主用例",
+ "envelope": {
+  "headerU32": [
+   1006,
+   1,
+   806,
+   3,
+   986
+  ],
+  "bodyLen": 986,
+  "trailerLen": 4
+ },
+ "rootFields": {
+  "1": 2,
+  "3": 1,
+  "5": 1
+ },
+ "units": {
+  "total": 2,
+  "whichCounts": {
+   "7": 1,
+   "9": 1
+  },
+  "list": [
+   {
+    "bucket": "graph",
+    "index": 0,
+    "guid": 1073741845,
+    "which": 9,
+    "kind": "节点图",
+    "name": "坠崖保护",
+    "relatedIds": []
+   },
+   {
+    "bucket": "graph",
+    "index": 1,
+    "guid": 1077936129,
+    "which": 7,
+    "kind": "UNKNOWN（#15 载荷，语义未解）",
+    "name": "监听移动速率",
+    "relatedIds": []
+   }
+  ]
+ },
+ "nodeDefs": [],
+ "graphs": [
+  {
+   "bucket": "graph",
+   "unitIndex": 0,
+   "name": "坠崖保护",
+   "graphId": 1073741845,
+   "header": {
+    "tag1": 10000,
+    "tag2": 20000,
+    "tag3": 21001,
+    "graphId": 1073741845
+   },
+   "nodes": 7,
+   "edges": 8,
+   "flowEdges": 2,
+   "dataEdges": 6,
+   "comments": 0,
+   "typeHistogram": {
+    "2": 1,
+    "9": 1,
+    "99": 1,
+    "231": 1,
+    "259": 1,
+    "288": 1,
+    "946": 1
+   },
+   "compositeRefs": 0,
+   "unknownRefs": 0
+  }
+ ],
+ "resources": {
+  "variables": [],
+  "signals": [],
+  "composites": []
+ },
+ "totals": {
+  "nodes": 7,
+  "edges": 8,
+  "compositeRefs": 0,
+  "unknownNodes": 0
+ }
+}

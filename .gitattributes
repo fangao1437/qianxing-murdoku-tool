@@ -1,0 +1,17 @@
+# 统一用 LF。
+# 为什么必须写死：测试里有一条"fixture 的 .emit.ts 与重新 emit 出来的结果**逐字节一致**"的断言，
+# 如果 Windows 上 checkout 时被转成 CRLF，这条断言会在新克隆的机器上莫名其妙地失败。
+* text=auto eol=lf
+
+*.mjs   text eol=lf
+*.json  text eol=lf
+*.ts    text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+
+# 二进制/素材：不要做任何换行或 diff 处理
+*.png   binary
+*.jpg   binary
+*.svg   text eol=lf
+*.gia   binary
+*.gil   binary
