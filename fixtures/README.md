@@ -43,6 +43,12 @@ node src/roundtrip.mjs --in=<样本目录> --workbench=<装了 genshin-ts 的目
 `fixtures/` 里**只有** `.json` / `.ts` / `.spec.json`。同步脚本会**拒绝**任何 `.gia` / `.gil` 进来
 （`tools/sync-from-master.mjs` 里有这条硬拦截）。
 
+> ⚠️ **跑这两个命令前先看清 `--in=`**：`coverage.mjs` 会**覆盖** `fixtures/index.json`；
+> 如果 `--in` 指向一个空的/不存在的目录，它会写一份 **`samples: []` 的空索引**然后 exit 1，
+> 于是**已入库的 fixture 索引被清空**（本轮真的踩了：冒烟测试 `--in=assets`（仓库里没这目录）
+> 把 `index.json` 从 1038 B 写成 60 B，测试第 [10] 项 `样本数 = 5` 当场变红）。
+> 修法：重跑 `tools/sync-from-master.mjs`（或 `coverage.mjs --in=<真实样本目录>`）再跑测试。
+
 ## 谁在用
 
 `test/run-tests.mjs`（由上游同步）：
