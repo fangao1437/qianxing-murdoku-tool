@@ -6,17 +6,16 @@
 | --- | --- |
 | 远端 | <https://github.com/fangao1437/qianxing-murdoku-tool> |
 | 分支 | `main`（已设 upstream：`origin/main`） |
-| 远端 HEAD | `36dc601fedb18d16fa55007e331b241c789f6274` |
-| 本地 HEAD | `36dc601fedb18d16fa55007e331b241c789f6274`（**一致**） |
-| 历史 | `e2de3b4` 初版 → `36dc601` 恢复被空 `--in` 覆盖的 fixtures 索引 |
-| 推送方式 | `git push -u origin main`，**一次成功**，没有 `--force`、没有改写历史 |
+| 远端 HEAD = 本地 HEAD | **以 `git rev-parse HEAD` / `git ls-remote --heads origin` 为准**（两条必须一致；本文件不写死 sha，免得每改一次文档就"过时"一次） |
+| 提交历史 | `e2de3b4` 初版（44 文件）→ `36dc601` 恢复被空 `--in` 覆盖的 fixtures 索引 → 之后每次同步/文档更新一条 |
+| 推送方式 | `git push -u origin main`（首次，一次成功）→ 之后 `git push`；**从未** `--force`、**从未**改写历史 |
 
 复核命令（两条 sha 一致才算真的推上去了）：
 
 ```powershell
 cd "D:\新建文件夹\miHoYo Launcher\qianxing-murdoku-tool"
-git ls-remote --heads origin      # refs/heads/main → 36dc601…
-git rev-parse HEAD                # 36dc601…
+git ls-remote --heads origin      # refs/heads/main → <sha>
+git rev-parse HEAD                # <同一个 sha>
 ```
 
 ## 背景：为什么之前是"待用户建仓"
