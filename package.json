@@ -31,7 +31,11 @@
     "gts-build": "node src/gts-build.mjs",
     "coverage": "node src/coverage.mjs",
     "roundtrip": "node src/roundtrip.mjs",
-    "sync-from-master": "node tools/sync-from-master.mjs"
+    "sync-from-master": "node tools/sync-from-master.mjs",
+    "art:check": "node art/tools/check-spec.mjs",
+    "art:slice": "node art/tools/slice-layout.mjs --layout=art/examples/level-demo.json --out=out/slice.json",
+    "art:preview": "node art/tools/render-preview.mjs --layout=art/examples/level-demo.json --spec=art/specs/furniture_templates.json --out=out/art-preview.svg",
+    "art:test": "node art/test/run.mjs"
   },
   "dependencies": {},
   "devDependencies": {}

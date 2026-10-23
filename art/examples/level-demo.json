@@ -1,0 +1,28 @@
+{
+  "name": "art-demo-4x4",
+  "note": "合成示例（不是任何真实关卡）：4×4、两个房间、含横/竖/方桌、椅子、植物、书架、雕像、跨格地毯。用于 preview/slice 的自检。",
+  "canvas": [1600, 900],
+  "frame": { "x": 608, "y": 138, "size": 584, "ruler": 12, "gap": 4 },
+  "rows": 4,
+  "cols": 4,
+  "rooms": [
+    { "id": 0, "name": "大屋", "color": "#D9CDB4" },
+    { "id": 1, "name": "内室", "color": "#BFD8B8" }
+  ],
+  "cells": [
+    "0000",
+    "0000",
+    "0011",
+    "0011"
+  ],
+  "objects": [
+    { "name": "长桌", "kind": "table", "cells": [[1, 1], [1, 2]] },
+    { "name": "椅子", "kind": "chair", "cells": [[2, 1]] },
+    { "name": "植物", "kind": "plant", "cells": [[1, 4]] },
+    { "name": "竖桌", "kind": "table", "cells": [[2, 3], [3, 3]] },
+    { "name": "地毯", "kind": "carpet", "cells": [[3, 1], [4, 1]] },
+    { "name": "书架", "kind": "shelf", "cells": [[4, 2]] },
+    { "name": "雕像", "kind": "statue", "cells": [[3, 4]] },
+    { "name": "方桌", "kind": "table", "cells": [[4, 4]] }
+  ]
+}

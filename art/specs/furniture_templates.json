@@ -1,0 +1,922 @@
+{
+ "note": "家具模板逐层规格（生成物）。坐标相对模板 content 中心；dy_down 向下为正，y_up = -dy_down。模板 content 画布基准 = 1 格 = 108 画布像素；h2 216×108、v2 108×216。",
+ "cellTemplatePx": 108,
+ "imageIds": {
+  "rect": 100001,
+  "ellipse": 100002,
+  "round": 107102,
+  "shadowSoft": 106056
+ },
+ "templates": {
+  "furn.chair": {
+   "kind": "chair",
+   "variant": "1",
+   "desc": "椅子：9 层，单格",
+   "sizePx": [
+    108,
+    108
+   ],
+   "layerCount": 9,
+   "layers": [
+    {
+     "order": 1,
+     "imageId": 106056,
+     "shape": "soft",
+     "color": "0X9A000000",
+     "w": 79.92,
+     "h": 86.4,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 2,
+     "imageId": 107102,
+     "shape": "round",
+     "color": "0XFFD9C08A",
+     "w": 71.28,
+     "h": 79.92,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 3,
+     "imageId": 107102,
+     "shape": "round",
+     "color": "0XFFFEF7E4",
+     "w": 64.8,
+     "h": 73.44,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 4,
+     "imageId": 100002,
+     "shape": "circle",
+     "color": "0XFFE9D9B2",
+     "w": 45.36,
+     "h": 23.76,
+     "dx": 0.0,
+     "dy_down": -22.68,
+     "y_up": 22.68
+    },
+    {
+     "order": 5,
+     "imageId": 107102,
+     "shape": "round",
+     "color": "0XFFFBD592",
+     "w": 49.68,
+     "h": 11.88,
+     "dx": 0.0,
+     "dy_down": -31.32,
+     "y_up": 31.32
+    },
+    {
+     "order": 6,
+     "imageId": 107102,
+     "shape": "round",
+     "color": "0XFFFBF2DA",
+     "w": 41.04,
+     "h": 21.6,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 7,
+     "imageId": 107102,
+     "shape": "round",
+     "color": "0XFFE9D9B2",
+     "w": 51.84,
+     "h": 10.8,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 8,
+     "imageId": 107102,
+     "shape": "round",
+     "color": "0XFFE9D9B2",
+     "w": 10.8,
+     "h": 28.08,
+     "dx": -29.16,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 9,
+     "imageId": 107102,
+     "shape": "round",
+     "color": "0XFFE9D9B2",
+     "w": 10.8,
+     "h": 28.08,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    }
+   ]
+  },
+  "furn.plant": {
+   "kind": "plant",
+   "variant": "1",
+   "desc": "植物：10 层，单格",
+   "sizePx": [
+    108,
+    108
+   ],
+   "layerCount": 10,
+   "layers": [
+    {
+     "order": 1,
+     "imageId": 106056,
+     "shape": "soft",
+     "color": "0X9A000000",
+     "w": 60.48,
+     "h": 60.48,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 2,
+     "imageId": 100002,
+     "shape": "circle",
+     "color": "0XFF1E2A18",
+     "w": 36.72,
+     "h": 25.92,
+     "dx": 0.0,
+     "dy_down": -4.32,
+     "y_up": 4.32
+    },
+    {
+     "order": 3,
+     "imageId": 100002,
+     "shape": "circle",
+     "color": "0XFF1E2A18",
+     "w": 12.96,
+     "h": 36.72,
+     "dx": -21.6,
+     "dy_down": -10.8,
+     "y_up": 10.8
+    },
+    {
+     "order": 4,
+     "imageId": 100002,
+     "shape": "circle",
+     "color": "0XFF79CFA1",
+     "w": 8.64,
+     "h": 30.24,
+     "dx": -21.6,
+     "dy_down": -11.88,
+     "y_up": 11.88
+    },
+    {
+     "order": 5,
+     "imageId": 100002,
+     "shape": "circle",
+     "color": "0XFF1E2A18",
+     "w": 12.96,
+     "h": 36.72,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 6,
+     "imageId": 100002,
+     "shape": "circle",
+     "color": "0XFF79CFA1",
+     "w": 8.64,
+     "h": 30.24,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 7,
+     "imageId": 100002,
+     "shape": "circle",
+     "color": "0XFF1E2A18",
+     "w": 14.04,
+     "h": 43.2,
+     "dx": -4.32,
+     "dy_down": -15.12,
+     "y_up": 15.12
+    },
+    {
+     "order": 8,
+     "imageId": 100002,
+     "shape": "circle",
+     "color": "0XFFA8E6C4",
+     "w": 9.72,
+     "h": 34.56,
+     "dx": -4.32,
+     "dy_down": -16.2,
+     "y_up": 16.2
+    },
+    {
+     "order": 9,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFFFFB782",
+     "w": 43.2,
+     "h": 9.72,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 10,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFFFCA161",
+     "w": 34.56,
+     "h": 23.76,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    }
+   ]
+  },
+  "furn.statue": {
+   "kind": "statue",
+   "variant": "1",
+   "desc": "雕像：10 层，单格",
+   "sizePx": [
+    108,
+    108
+   ],
+   "layerCount": 10,
+   "layers": [
+    {
+     "order": 1,
+     "imageId": 106056,
+     "shape": "soft",
+     "color": "0X9A000000",
+     "w": 66.96,
+     "h": 66.96,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 2,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF3E3E48",
+     "w": 66.96,
+     "h": 15.12,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 3,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF8E8E9A",
+     "w": 60.48,
+     "h": 9.72,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 4,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF8E8E9A",
+     "w": 47.52,
+     "h": 9.72,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 5,
+     "imageId": 100002,
+     "shape": "circle",
+     "color": "0XFFC9C9D2",
+     "w": 34.56,
+     "h": 47.52,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 6,
+     "imageId": 100002,
+     "shape": "circle",
+     "color": "0XFF8E8E9A",
+     "w": 23.76,
+     "h": 38.88,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 7,
+     "imageId": 100002,
+     "shape": "circle",
+     "color": "0XFFC9C9D2",
+     "w": 41.04,
+     "h": 21.6,
+     "dx": 0.0,
+     "dy_down": -6.48,
+     "y_up": 6.48
+    },
+    {
+     "order": 8,
+     "imageId": 100002,
+     "shape": "circle",
+     "color": "0XFFE2E2E8",
+     "w": 19.44,
+     "h": 17.28,
+     "dx": 0.0,
+     "dy_down": -24.84,
+     "y_up": 24.84
+    },
+    {
+     "order": 9,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFFC9C9D2",
+     "w": 12.96,
+     "h": 5.4,
+     "dx": 0.0,
+     "dy_down": -33.48,
+     "y_up": 33.48
+    },
+    {
+     "order": 10,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF8E8E9A",
+     "w": 28.08,
+     "h": 10.8,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    }
+   ]
+  },
+  "furn.table.1": {
+   "kind": "table",
+   "variant": "1",
+   "desc": "方桌：10 层，单格",
+   "sizePx": [
+    108,
+    108
+   ],
+   "layerCount": 10,
+   "layers": [
+    {
+     "order": 1,
+     "imageId": 106056,
+     "shape": "soft",
+     "color": "0X9A000000",
+     "w": 78.84,
+     "h": 103.68,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 2,
+     "imageId": 107102,
+     "shape": "round",
+     "color": "0XFF1F1A14",
+     "w": 78.84,
+     "h": 75.6,
+     "dx": 0.0,
+     "dy_down": -7.34,
+     "y_up": 7.34
+    },
+    {
+     "order": 3,
+     "imageId": 107102,
+     "shape": "round",
+     "color": "0XFFAD9C67",
+     "w": 73.44,
+     "h": 70.2,
+     "dx": 0.0,
+     "dy_down": -7.34,
+     "y_up": 7.34
+    },
+    {
+     "order": 4,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF1F1A14",
+     "w": 73.44,
+     "h": 3.02,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 5,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF8C7F52",
+     "w": 73.44,
+     "h": 5.94,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 6,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF1F1A14",
+     "w": 73.44,
+     "h": 2.38,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 7,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF1F1A14",
+     "w": 7.56,
+     "h": 7.56,
+     "dx": -25.38,
+     "dy_down": 40.5,
+     "y_up": -40.5
+    },
+    {
+     "order": 8,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFFA08F5C",
+     "w": 4.97,
+     "h": 4.97,
+     "dx": -25.38,
+     "dy_down": 40.5,
+     "y_up": -40.5
+    },
+    {
+     "order": 9,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF1F1A14",
+     "w": 7.56,
+     "h": 7.56,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 10,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFFA08F5C",
+     "w": 4.97,
+     "h": 4.97,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    }
+   ]
+  },
+  "furn.table.h2": {
+   "kind": "table",
+   "variant": "h2",
+   "desc": "横长桌：10 层（按长桌比例单独一套）",
+   "sizePx": [
+    216,
+    108
+   ],
+   "layerCount": 10,
+   "layers": [
+    {
+     "order": 1,
+     "imageId": 106056,
+     "shape": "soft",
+     "color": "0X9A000000",
+     "w": 181.44,
+     "h": 118.8,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 2,
+     "imageId": 107102,
+     "shape": "round",
+     "color": "0XFF1F1A14",
+     "w": 180.58,
+     "h": 75.6,
+     "dx": 0.0,
+     "dy_down": -7.34,
+     "y_up": 7.34
+    },
+    {
+     "order": 3,
+     "imageId": 107102,
+     "shape": "round",
+     "color": "0XFFAD9C67",
+     "w": 175.18,
+     "h": 70.2,
+     "dx": 0.0,
+     "dy_down": -7.34,
+     "y_up": 7.34
+    },
+    {
+     "order": 4,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF1F1A14",
+     "w": 175.18,
+     "h": 3.02,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 5,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF8C7F52",
+     "w": 175.18,
+     "h": 5.94,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 6,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF1F1A14",
+     "w": 175.18,
+     "h": 2.38,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 7,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF1F1A14",
+     "w": 7.56,
+     "h": 7.56,
+     "dx": -64.8,
+     "dy_down": 40.5,
+     "y_up": -40.5
+    },
+    {
+     "order": 8,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFFA08F5C",
+     "w": 4.97,
+     "h": 4.97,
+     "dx": -64.8,
+     "dy_down": 40.5,
+     "y_up": -40.5
+    },
+    {
+     "order": 9,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF1F1A14",
+     "w": 7.56,
+     "h": 7.56,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 10,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFFA08F5C",
+     "w": 4.97,
+     "h": 4.97,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    }
+   ]
+  },
+  "furn.table.v2": {
+   "kind": "table",
+   "variant": "v2",
+   "desc": "竖长桌：10 层（按长桌比例单独一套）",
+   "sizePx": [
+    108,
+    216
+   ],
+   "layerCount": 10,
+   "layers": [
+    {
+     "order": 1,
+     "imageId": 106056,
+     "shape": "soft",
+     "color": "0X9A000000",
+     "w": 78.84,
+     "h": 190.08,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 2,
+     "imageId": 107102,
+     "shape": "round",
+     "color": "0XFF1F1A14",
+     "w": 78.84,
+     "h": 180.58,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 3,
+     "imageId": 107102,
+     "shape": "round",
+     "color": "0XFFAD9C67",
+     "w": 73.44,
+     "h": 175.18,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 4,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF1F1A14",
+     "w": 73.44,
+     "h": 3.02,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 5,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF8C7F52",
+     "w": 73.44,
+     "h": 5.94,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 6,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF1F1A14",
+     "w": 73.44,
+     "h": 2.38,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 7,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF1F1A14",
+     "w": 7.56,
+     "h": 7.56,
+     "dx": -25.38,
+     "dy_down": 86.4,
+     "y_up": -86.4
+    },
+    {
+     "order": 8,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFFA08F5C",
+     "w": 4.97,
+     "h": 4.97,
+     "dx": -25.38,
+     "dy_down": 86.4,
+     "y_up": -86.4
+    },
+    {
+     "order": 9,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF1F1A14",
+     "w": 7.56,
+     "h": 7.56,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 10,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFFA08F5C",
+     "w": 4.97,
+     "h": 4.97,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    }
+   ]
+  },
+  "furn.shelf": {
+   "kind": "shelf",
+   "variant": "1",
+   "desc": "书架：12 层，单格",
+   "sizePx": [
+    108,
+    108
+   ],
+   "layerCount": 12,
+   "layers": [
+    {
+     "order": 1,
+     "imageId": 106056,
+     "shape": "soft",
+     "color": "0X9A000000",
+     "w": 97.2,
+     "h": 54.0,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 2,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF1F1A14",
+     "w": 99.36,
+     "h": 92.88,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 3,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFFD0B0D9",
+     "w": 88.56,
+     "h": 82.08,
+     "dx": 0.0,
+     "dy_down": -1.08,
+     "y_up": 1.08
+    },
+    {
+     "order": 4,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFFE4CBE9",
+     "w": 86.4,
+     "h": 10.8,
+     "dx": 0.0,
+     "dy_down": -37.8,
+     "y_up": 37.8
+    },
+    {
+     "order": 5,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF1F1A14",
+     "w": 75.6,
+     "h": 60.48,
+     "dx": 0.0,
+     "dy_down": -1.08,
+     "y_up": 1.08
+    },
+    {
+     "order": 6,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFFE4CBE9",
+     "w": 77.76,
+     "h": 6.48,
+     "dx": 0.0,
+     "dy_down": -6.48,
+     "y_up": 6.48
+    },
+    {
+     "order": 7,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFFE4CBE9",
+     "w": 77.76,
+     "h": 6.48,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 8,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFFB2DBEB",
+     "w": 8.64,
+     "h": 21.6,
+     "dx": -28.08,
+     "dy_down": -21.6,
+     "y_up": 21.6
+    },
+    {
+     "order": 9,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF9CCFE6",
+     "w": 8.64,
+     "h": 16.2,
+     "dx": -17.28,
+     "dy_down": -19.44,
+     "y_up": 19.44
+    },
+    {
+     "order": 10,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFFC7E7F2",
+     "w": 8.64,
+     "h": 19.44,
+     "dx": -6.48,
+     "dy_down": -20.52,
+     "y_up": 20.52
+    },
+    {
+     "order": 11,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFFB2DBEB",
+     "w": 8.64,
+     "h": 15.12,
+     "dx": -23.76,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    },
+    {
+     "order": 12,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0XFF9CCFE6",
+     "w": 8.64,
+     "h": 18.36,
+     "dx": -12.96,
+     "dy_down": 0.0,
+     "y_up": -0.0
+    }
+   ]
+  },
+  "furn.rug": {
+   "kind": "carpet",
+   "variant": "1",
+   "desc": "地毯：3 层（外框/内面/内框线，整块按包围盒拉伸，居中）",
+   "sizePx": [
+    108,
+    108
+   ],
+   "layerCount": 3,
+   "layers": [
+    {
+     "order": 1,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0xFFB89A62",
+     "w": 108.0,
+     "h": 108.0,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": 0.0
+    },
+    {
+     "order": 2,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0xFFDCC684",
+     "w": 82.1,
+     "h": 82.1,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": 0.0
+    },
+    {
+     "order": 3,
+     "imageId": 100001,
+     "shape": "rect",
+     "color": "0xFFC9B072",
+     "w": 64.8,
+     "h": 64.8,
+     "dx": 0.0,
+     "dy_down": 0.0,
+     "y_up": 0.0
+    }
+   ]
+  }
+ }
+}
