@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Miliastra Art Pipeline",
+    "description": "Splits the furniture art pipeline (reference image → primitive spec → preview/validation → .gil template write → script embed → device acceptance) into 8 tools with stable JSON contracts: art_decompose / art_build_spec / art_slice / art_preview / art_validate / art_write_gil / art_embed_script / art_inspect. Contract version 1."
+  }
+}

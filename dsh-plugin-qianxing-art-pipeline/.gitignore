@@ -1,0 +1,18 @@
+# ── 本插件的本地忽略（根 .gitignore 已忽略 *.svg / *.png / *.gil，这里只做必要例外）──
+node_modules/
+_work/
+out/
+*.gil
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.ppm
+
+# 插件图标是我们自己的原创图，必须随仓库分发（推翻根目录 *.svg 规则）
+!icon.svg
+
+# 本地安装/调试残留
+.DS_Store
+Thumbs.db
+*.log

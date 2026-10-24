@@ -1,0 +1,12 @@
+# Bundle patch for dsh-plugin-qianxing-art-pipeline.
+# `dsh plugin --profile <name> add <this dir>` / `plugin_manager install_bundle`
+# adds this bundle layer; the row references the package by its npm name so the
+# host loader resolves the installed module.
+#
+# 配置（可选，写在 profile 的 cordis.patch.yml 里覆盖）：
+#   workspaceRoot: 相对路径的解析根（默认 = 会话当前工作目录）
+#   pythonPath:    预留（当前实现为纯 JS，不调用 Python）
+- insert:
+    - id: qianxing-art-pipeline
+      name: dsh-plugin-qianxing-art-pipeline
+      config: {}

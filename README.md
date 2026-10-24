@@ -257,7 +257,8 @@ specs/                  最小示例规格（emit 的输入样例）
 fixtures/               5 份真实 .gia 的解码结果 + 可译图的 spec + 录好的 emit 产物（**不放 .gi* 二进制**）
 test/run-tests.mjs      离线回归 186 项
 tools/sync-from-master.mjs  从主工作仓库同步 + 施加路径适配（锚点找不到就报错）
-docs/                   读取/翻译算法、spike 摘要、官方样本覆盖度、限制清单、同步与维护、推送说明
+dsh-plugin-qianxing-art-pipeline/  DSH 插件：千星家具美术管线 8 个工具 + 技能（零依赖；见 §12）
+docs/                   读取/翻译算法、spike 摘要、官方样本覆盖度、限制清单、同步与维护、推送说明、DSH 插件说明
 out/                    生成物（gitignore，可删可重建）
 ```
 
@@ -320,3 +321,21 @@ out/                    生成物（gitignore，可删可重建）
 
 边界：`art/` **不写 `.gil`/`.gia`**（写入仍由本仓库 `src/` 与主项目 `.gil` 工具链负责），也不随仓库分发任何官方贴图/存档。
 `*.png` / `*.svg` / `*.gil` 仍在 `.gitignore` 内；预览输出到 `out/`，不入库。
+
+---
+
+## 12. `dsh-plugin-qianxing-art-pipeline/`：DSH 插件（2026-10-24）
+
+把「美术管线-插件化交接」的六个阶段做成 **DeepSeek Harness 插件**：8 个模型可调用工具 +
+1 个运行时技能，阶段间只交换契约 JSON（version 1）。零运行时依赖（`node:` 内建；`.gil` 编解码已 vendor），
+不需要 Python，也不随包分发任何官方素材。
+
+| 部分 | 内容 |
+| --- | --- |
+| 工具 | `art_decompose`（S1 参考图→图元层）/ `art_build_spec`（S2）/ `art_slice` + `art_preview`（S3）/ `art_validate`（共用）/ `art_write_gil`（S4 写 `.gil`，四闸）/ `art_embed_script`（S5 标记链）/ `art_inspect`（S6 结构清单） |
+| 安装 | `dsh plugin --profile <p> add "<本目录>/dsh-plugin-qianxing-art-pipeline"` 或 `plugin_manager install_bundle`；**改源码后需重启 DSH** |
+| 验证 | S4/S5 两份黄金回放与仓库交付档**逐字节一致**；编辑器保存往返层字段 0 差异；真机日志四类判据通过；离线 22 项 + 宿主无损 JSON 8 项 |
+| 限制 | 只替换/维护**已有**模板（不能从 0 建模板或首层，因需编辑器建的模板 + 层原型）；子目录无法用 `dsh plugin add github:…` 一行安装 |
+
+细节（安装/契约/已知坑/目录）：`docs/dsh-plugin-art-pipeline.md` 与
+`dsh-plugin-qianxing-art-pipeline/README.md`、`TEST-FLOW.md`。

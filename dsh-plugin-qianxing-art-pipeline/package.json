@@ -1,0 +1,43 @@
+{
+  "name": "dsh-plugin-qianxing-art-pipeline",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "DeepSeek Harness bundle: 千星沙箱家具美术管线（参考图→图元规格→预览校验→写入 .gil 模板→嵌入脚本→真机验收），六个阶段各自暴露为模型可调用的工具，数据契约版本 1。",
+  "license": "MIT",
+  "author": "fangao1437 <18182991366@163.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fangao1437/qianxing-murdoku-tool.git",
+    "directory": "dsh-plugin-qianxing-art-pipeline"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "miliastra",
+    "qianxing",
+    "art-pipeline",
+    "gil"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "src/**/*.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "skill.md",
+    "README.md",
+    "TEST-FLOW.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

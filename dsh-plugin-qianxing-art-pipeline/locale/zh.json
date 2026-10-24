@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "千星美术管线",
+    "description": "把「参考图 → 图元规格 → 预览校验 → 写入 .gil 模板 → 嵌入脚本 → 真机验收」拆成 8 个有稳定 JSON 契约的工具：art_decompose / art_build_spec / art_slice / art_preview / art_validate / art_write_gil / art_embed_script / art_inspect。数据契约 version 1。"
+  }
+}

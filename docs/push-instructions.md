@@ -45,6 +45,34 @@ git push            # 已设 upstream，不用再带 -u
 凭据：GitHub 用户名 `fangao1437` + **个人访问令牌（PAT）**（GitHub 已不支持账号密码）。
 凭据由 Git Credential Manager 接管；本机已存过，所以上面的 push 是静默成功的。
 
+## 2026-10-24 补充：git 协议被重置时，改用 GitHub API 推送（已实测成功）
+
+本机到 `github.com` 的 **git 协议连接会被重置**（`Recv failure: Connection reset`），
+但 `api.github.com` 正常（curl 200）、`~/.ssh` 无密钥、凭据管理器里已有 PAT。所以这次追加
+DSH 插件时走的是 GitHub REST API 的 Git Data 接口，**不依赖 `git push`**：
+
+```powershell
+# 0) 凭据仍由 Git Credential Manager 提供（不打印、不落盘）
+$t = (("protocol=https`nhost=github.com`n`n" | git credential fill) |
+      Where-Object { $_ -like 'password=*' } | ForEach-Object { $_.Substring(9) })
+$h = @{ Authorization = "Bearer $t"; "User-Agent" = "dsh-push"; Accept = "application/vnd.github+json" }
+
+# 1) 读父提交（远端 main 必须 == 本地 HEAD，先确认没有分叉）
+$ref  = Invoke-RestMethod "https://api.github.com/repos/<owner>/<repo>/git/ref/heads/main" -Headers $h
+$base = $ref.object.sha
+
+# 2) 每个改动文件建 blob（content 用 base64）→ 3) 以 base_tree 建 tree
+#    验证返回的 tree sha == 本地 `git rev-parse HEAD^{tree}`（一致才继续）
+# 4) 建 commit（tree/parents/message/author/committer 与本地提交逐字段一致）
+#    验证返回的 commit sha == 本地 `git rev-parse HEAD`
+# 5) PATCH ref/heads/main 指向新 commit，再 GET 复核
+```
+
+**复核标准仍是同一条**：远端 `refs/heads/main` 的 sha == 本地 `git rev-parse HEAD`。
+这次 API 推送后两者一致，并且没有 force、没有改写历史。
+以后若 `git push` 报 `Connection reset`：先跑一次 `git ls-remote` 确认，再按上面 API 路径走，
+或者换一台能连 github.com 的机器 `git push`。
+
 ## 规矩（别破坏）
 
 - **不要 `--force` / `--mirror` / 改写历史**：这是公开仓库，强推会把别人的 clone 弄坏。
