@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Design to 3D Scene",
+    "description": "Turn a design drawing into a runnable 3D scene: SceneSpec v1 contract, grid floor-plan parsing, top-down preview, automated Blender build (.blend / renders / GLB), and a Miliastra placement plan."
+  }
+}

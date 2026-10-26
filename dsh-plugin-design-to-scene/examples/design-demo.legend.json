@@ -1,0 +1,31 @@
+{
+  "name": "demo-a",
+  "cellPx": 48,
+  "margin": 24,
+  "rows": 6,
+  "cols": 8,
+  "metersPerCell": 0.5,
+  "roomColors": {
+    "#D9CDB4": {
+      "name": "客厅"
+    }
+  },
+  "objectColors": {
+    "#AD9C67": {
+      "kind": "table"
+    },
+    "#D9C08A": {
+      "kind": "chair"
+    },
+    "#79CFA1": {
+      "kind": "plant"
+    },
+    "#B89A62": {
+      "kind": "rug",
+      "sizeCells": 0.9
+    }
+  },
+  "wallColor": "#1F1A14",
+  "doorColor": "#C06A1E",
+  "voidColor": "#FFFFFF"
+}

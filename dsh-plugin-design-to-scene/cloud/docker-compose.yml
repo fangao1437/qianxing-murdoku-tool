@@ -1,0 +1,31 @@
+# 腾讯云 / 任意 Linux 云主机部署：docker compose up 即可用
+#
+#   docker compose -f cloud/docker-compose.yml build
+#   docker compose -f cloud/docker-compose.yml run --rm scene-builder \
+#     node cloud/bin/scene-cli.mjs all \
+#       --design /data/design-demo-b.png --legend /data/design-demo-b.legend.json \
+#       --outDir /data/out
+#
+# 挂载方式（这就是“云端挂载”）：
+#   - ./（插件源码目录）以只读方式挂到容器的 /opt/dsh-plugin-design-to-scene：改代码不用重建镜像
+#   - 宿主机 ./_work/cloud-data 挂到 /data：设计图/输出都走数据卷
+#   - 若把插件挂进已有 DSH 云实例，改成挂到该实例的 profile 插件目录（见 README-腾讯云部署.md §4）
+services:
+  scene-builder:
+    build:
+      context: ..
+      dockerfile: cloud/Dockerfile
+    image: dsh-design-to-scene:1.0.0
+    container_name: dsh-design-to-scene
+    working_dir: /opt/dsh-plugin-design-to-scene
+    environment:
+      - BLENDER_PATH=/opt/blender/blender
+      - DSH_WORKSPACE_ROOT=/data
+    volumes:
+      # 插件源码挂载（只读）：升级只需重启容器
+      - ../:/opt/dsh-plugin-design-to-scene:ro
+      # 数据卷：设计图进、产物出
+      - ../_work/cloud-data:/data
+    entrypoint: ["bash", "-lc"]
+    command: ["node cloud/bin/scene-cli.mjs validate --spec examples/hall-demo.spec.json"]
+    # CPU 不够时可加：shm_size: 1gb

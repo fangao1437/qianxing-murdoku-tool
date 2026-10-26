@@ -1,0 +1,19 @@
+node_modules/
+_work/
+out/
+build/
+*.blend
+*.blend1
+*.glb
+*.gltf
+*.fbx
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.log
+
+# 插件图标是本仓库原创图，必须随包分发
+!icon.svg
+# examples 里的演示设计图由脚本再生成（test/fixtures/make-demo-plan.mjs），但**要随包分发**：
+!examples/*.png

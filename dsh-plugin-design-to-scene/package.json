@@ -1,0 +1,44 @@
+{
+  "name": "dsh-plugin-design-to-scene",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "DeepSeek Harness bundle：设计图 → 完整 3D 场景（SceneSpec v1 → 预览图 → Blender 场景/渲染/GLB → 千星落地清单）+ 官方元件库清单（2721 个 prefab）与云端（Docker/脚本）部署包。零运行时依赖，补充「千星奇域 UGC 工具」（Blender 插件）缺少的自动化建场景能力。",
+  "license": "MIT",
+  "author": "fangao1437 <18182991366@163.com>",
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "miliastra",
+    "qianxing",
+    "3d-scene",
+    "design-to-scene",
+    "blender",
+    "official-prefabs",
+    "cloud"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "src/**/*.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "skill.md",
+    "README.md",
+    "TEST-FLOW.md",
+    "examples/**",
+    "LICENSE",
+    "cloud/**",
+    "catalog/**"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

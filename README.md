@@ -339,3 +339,21 @@ out/                    生成物（gitignore，可删可重建）
 
 细节（安装/契约/已知坑/目录）：`docs/dsh-plugin-art-pipeline.md` 与
 `dsh-plugin-qianxing-art-pipeline/README.md`、`TEST-FLOW.md`。
+
+## 13. `dsh-plugin-design-to-scene/`：设计图 → 3D 场景插件（2026-10-26）
+
+把「设计图 → 完整 3D 场景」做成 DSH 插件：5 个工具 + 1 个技能，零运行时依赖（纯 Node）；
+外部只依赖 Blender（没有 Blender 时退化为只产脚本+清单，不静默跳过）。
+定位是补「千星奇域 UGC 工具」（渊星工具箱的 Blender 插件，手工建场景/配环境/导 GIA）缺失的自动化段。
+
+| 部分 | 内容 |
+| --- | --- |
+| 工具 | `scene_parse_plan`（网格平面图→SceneSpec v1）/ `scene_spec_validate` / `scene_preview`（俯视 PNG）/ `scene_build_blender`（headless Blender → `.blend` + 渲染 + GLB）/ `scene_qx_plan`（千星/渊星落地清单） |
+| 官方元件库 | `catalog/`：**2721 个官方 prefab**（16 分类）、`search.mjs` 检索、`kind-map.json` 把 SceneSpec kind 映射到候选元件 |
+| 云端挂载 | `cloud/`：Dockerfile（Node22 + Blender 4.5 LTS）、compose、`install-on-server.sh`（腾讯云 Ubuntu/Debian 一键）、无 DSH 环境 CLI（`cloud/bin/scene-cli.mjs`）、打包脚本 |
+| 验证 | 集成测试 **8/8**；S1 解析 1130 项 / S2 预览 30 项 / S3 Blender 27 项自检全过；`scene-cli all` 端到端出 `.blend`/GLB/渲染/清单；云端包 MANIFEST SHA256 复核 |
+| 边界 | 3D 场景**坐标离线改写已验证**（改现有元件的变换字段，编辑器导入生效）；新增/复制元件未验证；「千星奇域 UGC 工具」需 Blender 5.2+ 与账号权益（与本插件解耦） |
+
+细节：`dsh-plugin-design-to-scene/README.md`、`TEST-FLOW.md`、
+`docs/design-to-scene-cloud-progress.md`（进度/云端交接）、
+`docs/3D坐标离线改写-验证报告.md`、`docs/渊星工具箱与千星奇域UGC工具-评估.md`。

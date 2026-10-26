@@ -1,0 +1,44 @@
+{
+  "name": "demo-b",
+  "cellPx": 48,
+  "margin": 24,
+  "rows": 12,
+  "cols": 16,
+  "metersPerCell": 0.5,
+  "roomColors": {
+    "#CFE0D2": {
+      "name": "书房"
+    },
+    "#D9CDB4": {
+      "name": "画廊"
+    }
+  },
+  "objectColors": {
+    "#D0B0D9": {
+      "kind": "shelf"
+    },
+    "#AD9C67": {
+      "kind": "desk"
+    },
+    "#D9C08A": {
+      "kind": "chair"
+    },
+    "#EFE9D6": {
+      "kind": "lamp"
+    },
+    "#9AA3B8": {
+      "kind": "statue",
+      "heightM": 1.8
+    },
+    "#8C7F52": {
+      "kind": "crate",
+      "color": "#A08E62"
+    },
+    "#C6CBDD": {
+      "kind": "pillar"
+    }
+  },
+  "wallColor": "#1F1A14",
+  "doorColor": "#C06A1E",
+  "voidColor": "#FFFFFF"
+}

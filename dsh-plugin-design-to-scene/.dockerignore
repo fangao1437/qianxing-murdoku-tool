@@ -1,0 +1,11 @@
+_work/
+_dist/
+node_modules/
+.git/
+.gitignore
+*.zip
+*.blend
+*.blend1
+*.glb
+*.gltf
+*.log

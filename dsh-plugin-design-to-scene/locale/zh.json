@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "设计图转 3D 场景",
+    "description": "把设计图变成可运行的 3D 场景：SceneSpec v1 契约 + 网格平面图解析 + 俯视预览 + Blender 自动搭建（.blend/渲染/GLB）+ 千星落地清单。补充「千星奇域 UGC 工具」缺少的自动化建场景能力。"
+  }
+}
