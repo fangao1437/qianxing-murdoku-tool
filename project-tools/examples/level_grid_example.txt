@@ -1,0 +1,34 @@
+# tools/examples/level_grid_example.txt
+# 关卡图文件示例 —— 内容就是现有的 case_001《夜盗独行》
+#
+# 用法：
+#   lua tools/new_level.lua tools/examples/level_grid_example.txt --thief=D --victim=V --dry
+#
+# 网格：每行一格，空格分隔；字母 = 角色 id；. = 空格
+# （这个文件本身只是示例，不是游戏的关卡数据）
+
+.  .  D  .  .
+.  B  .  .  .
+A  .  .  .  .
+.  .  .  .  V
+.  .  .  C  .
+
+--- walls ---
+# R_A(第1-3行 × 第1-3列) 与 R_B(右侧 L 形) 之间
+v 1 3
+v 2 3
+v 3 3
+# R_A 与 R_C(第4-5行 × 第1-4列) 之间
+h 3 1
+h 3 2
+h 3 3
+# R_B 与 R_C 之间
+h 3 4
+v 4 4
+v 5 4
+
+--- doors ---
+# 三扇门，让 Adj(R_B) = {R_A, R_C}
+v 2 3
+h 3 2
+h 3 4

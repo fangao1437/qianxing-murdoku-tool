@@ -1,0 +1,9 @@
+# Bundle patch for dsh-plugin-qianxing-nodegraph.
+# `dsh plugin --profile <name> add <this package>`
+#
+# 可选配置（写在 profile 的 cordis.patch.yml 里覆盖）：
+#   outdir:  工具产物输出目录（默认 ~/.dsh/qianxing-out）
+- insert:
+    - id: qianxing-nodegraph
+      name: dsh-plugin-qianxing-nodegraph
+      config: {}

@@ -1,0 +1,3 @@
+﻿  elseif key == "baked_level" then
+    self._baked_level = value or false
+    return self:_apply_baked(true)

@@ -1,0 +1,9 @@
+{
+  "canvas": { "width": 512, "height": 512, "background": "#00000000" },
+  "elements": [
+    { "id": "card", "type": "rectangle", "x": 256, "y": 256, "width": 480, "height": 480, "rotation": 0, "color": "#2b2f3a", "opacity": 1, "zIndex": 0 },
+    { "id": "inner", "type": "rectangle", "x": 256, "y": 276, "width": 424, "height": 400, "rotation": 0, "color": "#3a4050", "opacity": 1, "zIndex": 1 },
+    { "id": "strip", "type": "rectangle", "x": 256, "y": 52, "width": 400, "height": 64, "rotation": 0, "color": "#e8dfc8", "opacity": 1, "zIndex": 2 }
+  ],
+  "meta": { "sourceType": "editor", "sourceName": "card-frame", "warnings": [] }
+}

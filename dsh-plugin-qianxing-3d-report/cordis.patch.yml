@@ -1,0 +1,5 @@
+# Bundle patch for dsh-plugin-qianxing-3d-report.
+- insert:
+    - id: qianxing-3d-report
+      name: dsh-plugin-qianxing-3d-report
+      config: {}

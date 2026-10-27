@@ -1,0 +1,278 @@
+image 1604x960
+
+== horizontal dark runs (len>=200) in x 400..1300 ==
+  y=126 run=312 from x=906 to 1217
+  y=127 run=395 from x=905 to 1299
+  y=128 run=396 from x=904 to 1299
+  y=129 run=243 from x=981 to 1223
+  y=130 run=397 from x=903 to 1299
+  y=131 run=398 from x=902 to 1299
+  y=143 run=214 from x=1086 to 1299
+  y=144 run=235 from x=1065 to 1299
+  y=145 run=225 from x=1065 to 1289
+  y=147 run=240 from x=1060 to 1299
+  y=148 run=243 from x=949 to 1191
+  y=149 run=243 from x=950 to 1192
+  y=151 run=367 from x=933 to 1299
+  y=152 run=206 from x=934 to 1139
+  y=153 run=205 from x=935 to 1139
+  y=154 run=227 from x=936 to 1162
+  y=159 run=231 from x=938 to 1168
+  y=170 run=227 from x=955 to 1181
+  y=171 run=342 from x=958 to 1299
+  y=172 run=296 from x=1004 to 1299
+  y=179 run=241 from x=1014 to 1254
+  y=187 run=222 from x=992 to 1213
+  y=193 run=602 from x=607 to 1208
+  y=194 run=602 from x=607 to 1208
+  y=195 run=603 from x=607 to 1209
+  y=196 run=603 from x=607 to 1209
+  y=197 run=693 from x=607 to 1299
+  y=198 run=693 from x=607 to 1299
+  y=199 run=686 from x=607 to 1292
+  y=200 run=693 from x=607 to 1299
+  y=201 run=592 from x=607 to 1198
+  y=202 run=592 from x=607 to 1198
+  y=203 run=619 from x=607 to 1225
+  y=204 run=597 from x=607 to 1203
+  y=205 run=597 from x=607 to 1203
+  y=206 run=603 from x=607 to 1209
+  y=207 run=633 from x=607 to 1239
+  y=208 run=633 from x=607 to 1239
+  y=211 run=592 from x=607 to 1198
+  y=212 run=646 from x=607 to 1252
+  y=213 run=595 from x=607 to 1201
+  y=214 run=693 from x=607 to 1299
+  y=215 run=614 from x=607 to 1220
+  y=216 run=693 from x=607 to 1299
+  y=217 run=693 from x=607 to 1299
+  y=300 run=693 from x=607 to 1299
+  y=301 run=614 from x=607 to 1220
+  y=393 run=598 from x=607 to 1204
+  y=394 run=599 from x=607 to 1205
+  y=395 run=599 from x=607 to 1205
+  y=487 run=604 from x=607 to 1210
+  y=488 run=605 from x=607 to 1211
+  y=491 run=408 from x=682 to 1089
+  y=492 run=408 from x=682 to 1089
+  y=493 run=408 from x=682 to 1089
+  y=494 run=408 from x=682 to 1089
+  y=495 run=408 from x=682 to 1089
+  y=496 run=408 from x=682 to 1089
+  y=497 run=408 from x=682 to 1089
+  y=580 run=693 from x=607 to 1299
+  y=581 run=693 from x=607 to 1299
+  y=588 run=213 from x=1087 to 1299
+  y=589 run=211 from x=1087 to 1297
+  y=673 run=656 from x=541 to 1196
+  y=674 run=658 from x=539 to 1196
+  y=675 run=661 from x=536 to 1196
+  y=759 run=664 from x=544 to 1207
+  y=760 run=660 from x=545 to 1204
+  y=761 run=661 from x=538 to 1198
+  y=762 run=660 from x=538 to 1197
+  y=763 run=688 from x=509 to 1196
+  y=764 run=641 from x=556 to 1196
+  y=765 run=641 from x=556 to 1196
+  y=767 run=718 from x=479 to 1196
+  y=768 run=729 from x=468 to 1196
+  y=769 run=716 from x=481 to 1196
+  y=770 run=656 from x=541 to 1196
+  y=771 run=656 from x=541 to 1196
+  y=772 run=653 from x=544 to 1196
+  y=773 run=668 from x=529 to 1196
+  y=774 run=678 from x=519 to 1196
+  y=775 run=720 from x=477 to 1196
+  y=776 run=720 from x=477 to 1196
+  y=777 run=651 from x=555 to 1205
+  y=778 run=799 from x=400 to 1198
+  y=779 run=691 from x=508 to 1198
+  y=780 run=729 from x=508 to 1236
+  y=781 run=710 from x=511 to 1220
+  y=782 run=620 from x=581 to 1200
+  y=789 run=213 from x=646 to 858
+  y=792 run=210 from x=492 to 701
+  y=793 run=212 from x=500 to 711
+  y=804 run=238 from x=400 to 637
+  y=810 run=218 from x=400 to 617
+  y=812 run=240 from x=598 to 837
+  y=822 run=242 from x=513 to 754
+  y=823 run=243 from x=480 to 722
+  y=824 run=391 from x=400 to 790
+  y=825 run=225 from x=565 to 789
+  y=826 run=218 from x=573 to 790
+  y=829 run=241 from x=576 to 816
+  y=830 run=232 from x=586 to 817
+  y=831 run=368 from x=400 to 767
+  y=832 run=243 from x=525 to 767
+  y=833 run=422 from x=400 to 821
+  y=834 run=242 from x=447 to 688
+  y=835 run=217 from x=448 to 664
+  y=836 run=240 from x=448 to 687
+  y=837 run=238 from x=450 to 687
+  y=838 run=210 from x=561 to 770
+  y=839 run=209 from x=561 to 769
+  y=840 run=219 from x=544 to 762
+  y=842 run=415 from x=400 to 814
+  y=843 run=215 from x=599 to 813
+  y=849 run=209 from x=601 to 809
+  y=850 run=291 from x=519 to 809
+  y=852 run=242 from x=413 to 654
+  y=858 run=214 from x=457 to 670
+  y=859 run=315 from x=400 to 714
+  y=860 run=313 from x=400 to 712
+  y=861 run=310 from x=400 to 709
+  y=868 run=221 from x=463 to 683
+  y=870 run=289 from x=400 to 688
+  y=871 run=288 from x=400 to 687
+  y=872 run=243 from x=422 to 664
+  y=873 run=284 from x=400 to 683
+  y=877 run=278 from x=400 to 677
+  y=883 run=207 from x=400 to 606
+  y=888 run=243 from x=408 to 650
+  y=889 run=260 from x=400 to 659
+  y=891 run=258 from x=400 to 657
+  y=892 run=246 from x=400 to 645
+  y=893 run=255 from x=400 to 654
+  y=894 run=253 from x=400 to 652
+  y=907 run=237 from x=400 to 636
+  y=916 run=229 from x=400 to 628
+  y=917 run=228 from x=400 to 627
+  y=918 run=213 from x=414 to 626
+  y=934 run=214 from x=400 to 613
+  y=935 run=213 from x=400 to 612
+  y=936 run=213 from x=400 to 612
+  y=937 run=212 from x=400 to 611
+  y=938 run=211 from x=400 to 610
+  y=958 run=900 from x=400 to 1299
+  y=959 run=900 from x=400 to 1299
+
+== vertical dark runs (len>=200) in y 150..820 ==
+  x=405 run=496 from y=324 to 819
+  x=406 run=496 from y=324 to 819
+  x=407 run=496 from y=324 to 819
+  x=408 run=496 from y=324 to 819
+  x=409 run=496 from y=324 to 819
+  x=410 run=496 from y=324 to 819
+  x=411 run=496 from y=324 to 819
+  x=607 run=609 from y=193 to 801
+  x=608 run=623 from y=193 to 815
+  x=609 run=627 from y=193 to 819
+  x=610 run=609 from y=193 to 801
+  x=611 run=627 from y=193 to 819
+  x=612 run=627 from y=193 to 819
+  x=613 run=627 from y=193 to 819
+  x=614 run=627 from y=193 to 819
+  x=615 run=627 from y=193 to 819
+  x=616 run=627 from y=193 to 819
+  x=617 run=627 from y=193 to 819
+  x=618 run=616 from y=193 to 808
+  x=619 run=627 from y=193 to 819
+  x=620 run=627 from y=193 to 819
+  x=621 run=627 from y=193 to 819
+  x=622 run=627 from y=193 to 819
+  x=625 run=627 from y=193 to 819
+  x=626 run=627 from y=193 to 819
+  x=627 run=627 from y=193 to 819
+  x=628 run=627 from y=193 to 819
+  x=629 run=627 from y=193 to 819
+  x=630 run=627 from y=193 to 819
+  x=631 run=627 from y=193 to 819
+  x=714 run=627 from y=193 to 819
+  x=715 run=627 from y=193 to 819
+  x=807 run=627 from y=193 to 819
+  x=808 run=627 from y=193 to 819
+  x=809 run=627 from y=193 to 819
+  x=901 run=613 from y=193 to 805
+  x=902 run=620 from y=193 to 812
+  x=994 run=670 from y=150 to 819
+  x=995 run=670 from y=150 to 819
+  x=1087 run=654 from y=150 to 803
+  x=1088 run=654 from y=150 to 803
+  x=1089 run=654 from y=150 to 803
+  x=1173 run=633 from y=150 to 782
+  x=1174 run=633 from y=150 to 782
+  x=1175 run=633 from y=150 to 782
+  x=1176 run=619 from y=164 to 782
+  x=1177 run=615 from y=168 to 782
+  x=1178 run=633 from y=150 to 782
+  x=1179 run=633 from y=150 to 782
+  x=1181 run=597 from y=186 to 782
+  x=1182 run=596 from y=187 to 782
+  x=1183 run=597 from y=186 to 782
+  x=1184 run=633 from y=150 to 782
+  x=1185 run=633 from y=150 to 782
+  x=1186 run=633 from y=150 to 782
+  x=1187 run=646 from y=150 to 795
+  x=1188 run=633 from y=150 to 782
+  x=1189 run=640 from y=150 to 789
+  x=1190 run=640 from y=150 to 789
+  x=1191 run=633 from y=150 to 782
+  x=1192 run=639 from y=150 to 788
+  x=1193 run=602 from y=189 to 790
+  x=1194 run=642 from y=150 to 791
+  x=1195 run=642 from y=150 to 791
+  x=1196 run=647 from y=150 to 796
+  x=1197 run=252 from y=261 to 512
+  x=1198 run=222 from y=260 to 481
+  x=1201 run=212 from y=284 to 495
+  x=1217 run=230 from y=150 to 379
+  x=1218 run=253 from y=382 to 634
+  x=1219 run=254 from y=191 to 444
+  x=1225 run=201 from y=237 to 437
+  x=1226 run=230 from y=228 to 457
+  x=1228 run=236 from y=420 to 655
+  x=1229 run=241 from y=281 to 521
+  x=1230 run=231 from y=269 to 499
+  x=1233 run=254 from y=163 to 416
+  x=1239 run=250 from y=256 to 505
+  x=1248 run=201 from y=433 to 633
+  x=1252 run=232 from y=253 to 484
+  x=1253 run=252 from y=214 to 465
+  x=1255 run=250 from y=183 to 432
+  x=1260 run=240 from y=265 to 504
+  x=1263 run=252 from y=287 to 538
+  x=1264 run=253 from y=338 to 590
+  x=1265 run=251 from y=339 to 589
+  x=1266 run=253 from y=338 to 590
+  x=1272 run=462 from y=150 to 611
+  x=1273 run=461 from y=150 to 610
+  x=1274 run=211 from y=332 to 542
+  x=1275 run=253 from y=252 to 504
+  x=1277 run=253 from y=158 to 410
+  x=1281 run=252 from y=186 to 437
+  x=1283 run=204 from y=227 to 430
+  x=1284 run=209 from y=222 to 430
+  x=1289 run=288 from y=150 to 437
+  x=1294 run=218 from y=353 to 570
+  x=1295 run=215 from y=355 to 569
+  x=1296 run=235 from y=355 to 589
+
+== warm pixels: 49719 ==
+clusters (>=6 px):
+  n=8281 bbox x 903..993 (w=91) y 302..392 (h=91) centre 948.0,347.0
+  n=7462 bbox x 716..806 (w=91) y 218..299 (h=82) centre 761.0,258.5
+  n=7462 bbox x 810..900 (w=91) y 218..299 (h=82) centre 855.0,258.5
+  n=7462 bbox x 716..806 (w=91) y 676..757 (h=82) centre 761.0,716.5
+  n=6806 bbox x 1005..1086 (w=82) y 676..758 (h=83) centre 1045.5,717.0
+  n=6724 bbox x 632..713 (w=82) y 218..299 (h=82) centre 672.5,258.5
+  n=1528 bbox x 560..606 (w=47) y 429..556 (h=128) centre 583.0,492.5
+  n=1514 bbox x 849..910 (w=62) y 150..192 (h=43) centre 879.5,171.0
+  n= 335 bbox x 581..606 (w=26) y 277..306 (h=30) centre 593.5,291.5
+  n= 283 bbox x 918..936 (w=19) y 151..170 (h=20) centre 927.0,160.5
+  n= 208 bbox x 904..911 (w=8) y 522..547 (h=26) centre 907.5,534.5
+  n= 182 bbox x 716..806 (w=91) y 209..210 (h=2) centre 761.0,209.5
+  n= 182 bbox x 810..900 (w=91) y 209..210 (h=2) centre 855.0,209.5
+  n= 182 bbox x 998..1004 (w=7) y 335..360 (h=26) centre 1001.0,347.5
+  n= 182 bbox x 656..681 (w=26) y 491..497 (h=7) centre 668.5,494.0
+  n= 165 bbox x 996..997 (w=2) y 676..758 (h=83) centre 996.5,717.0
+  n= 164 bbox x 632..713 (w=82) y 209..210 (h=2) centre 672.5,209.5
+  n= 164 bbox x 623..624 (w=2) y 218..299 (h=82) centre 623.5,258.5
+  n=  91 bbox x 716..806 (w=91) y 766..766 (h=1) centre 761.0,766.0
+  n=  82 bbox x 1005..1086 (w=82) y 766..766 (h=1) centre 1045.5,766.0
+  n=  68 bbox x 601..606 (w=6) y 368..391 (h=24) centre 603.5,379.5
+  n=  44 bbox x 576..583 (w=8) y 378..385 (h=8) centre 579.5,381.5
+  n=  43 bbox x 590..595 (w=6) y 443..451 (h=9) centre 592.5,447.0
+  n=  42 bbox x 932..938 (w=7) y 176..182 (h=7) centre 935.0,179.0
+  n=  25 bbox x 742..747 (w=6) y 155..161 (h=7) centre 744.5,158.0
+  n=  10 bbox x 662..664 (w=3) y 150..153 (h=4) centre 663.0,151.5

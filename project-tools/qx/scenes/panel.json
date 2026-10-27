@@ -1,0 +1,8 @@
+{
+  "canvas": { "width": 512, "height": 512, "background": "#00000000" },
+  "elements": [
+    { "id": "edge", "type": "rectangle", "x": 256, "y": 256, "width": 508, "height": 508, "rotation": 0, "color": "#1B2030", "opacity": 1, "zIndex": 0 },
+    { "id": "fill", "type": "rectangle", "x": 256, "y": 256, "width": 488, "height": 488, "rotation": 0, "color": "#232838", "opacity": 1, "zIndex": 1 }
+  ],
+  "meta": { "sourceType": "editor", "sourceName": "murdoku-panel", "warnings": [] }
+}

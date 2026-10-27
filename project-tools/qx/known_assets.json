@@ -1,0 +1,168 @@
+{
+  "schema": "qxqy-clue-avatar-asset-ids/v1",
+  "generated": "2026-10-08T05:58:00+08:00",
+  "task": "Identify the official asset-library sprite id shown in each of the 4 small avatars on the left of the clue cards.",
+  "verdict": "CONFIRMED - all four ids matched at 4 independent metrics, in both screenshots, with a large margin over the runner-up.",
+  "sources": {
+    "s1": {
+      "path": "C:\\Users\\18182\\.dsh\\attachments\\v1\\objects\\93\\93f31f24b7ee79798dc7d39efd8d94e6a06046f0ffa7d0733b87fbc69bcd6c98",
+      "size": [1920, 864],
+      "note": "contains all four suspects A,B,C,D; row pitch 123 px; avatar box 108x108 at x=127; rows y=340/463/586/709"
+    },
+    "s2": {
+      "path": "C:\\Users\\18182\\.dsh\\attachments\\v1\\objects\\d9\\d98b4737ebc1cbff5812357be42f89d0f5c7d4ae1ca6278112902ecd2e7e8f68",
+      "size": [1920, 864],
+      "note": "independent re-check of B,C,D at a different scroll offset; avatar box 107x107 at x=133; rows y=314/465/619"
+    }
+  },
+  "results": [
+    {
+      "letter": "A",
+      "id": 112042,
+      "description": "grey-haired judge, red top hat, monocle, red tie, grey coat",
+      "confidence": "high",
+      "screen_block": { "screenshot": "s1", "box": [127, 340, 108, 108] },
+      "evidence": {
+        "fullDiff": 20.49,
+        "insetDiff": 17.27,
+        "maskedDiff": 17.05,
+        "interiorDiff": 16.86,
+        "pctInteriorWithin12": 60.2,
+        "similarity_pct": 91.97,
+        "fittedSpriteBox_px": 94,
+        "offset": [1, -1]
+      },
+      "runner_up": { "id": 107016, "fullDiff": 46.42, "interiorDiff": 52.59, "pctInteriorWithin12": 7.6 },
+      "third": { "id": 107258, "fullDiff": 47.5, "interiorDiff": 54.28, "pctInteriorWithin12": 1.6 },
+      "lookalikes_rejected": {
+        "112040": { "fullDiff": 51.64, "why": "blue top hat, darker skin - not the judge on screen" },
+        "112041": { "fullDiff": 51.99, "why": "purple top hat - not the judge on screen" }
+      },
+      "evidence_image": "tools/qx/out/evidence-A-112042.png",
+      "notes": "Card A is the highlighted/selected card in s1, so its white selection frame intrudes on the left and bottom edge of the avatar box; that inflates fullDiff. Excluding the outer 8 px (insetDiff) the gap to 2nd place widens to 3.0x. The 112xxx block contains three top-hat characters (112040/112041/112042) that look similar at contact-sheet size; only 112042 has the RED top hat and grey hair seen on screen."
+    },
+    {
+      "letter": "B",
+      "id": 105104,
+      "description": "mint/teal slime, ear-like bumps on top, two amber oval eyes, swirl patterns on both cheeks",
+      "confidence": "high",
+      "screen_block": { "screenshot": "s1", "box": [127, 463, 108, 108] },
+      "evidence": {
+        "fullDiff": 16.69,
+        "insetDiff": 21.35,
+        "maskedDiff": 24.56,
+        "interiorDiff": 21.76,
+        "pctInteriorWithin12": 52.4,
+        "similarity_pct": 93.45,
+        "fittedSpriteBox_px": 94,
+        "offset": [1, 2]
+      },
+      "runner_up": { "id": 105105, "fullDiff": 25.61, "interiorDiff": 38.31, "pctInteriorWithin12": 8.3 },
+      "third": { "id": 112005, "fullDiff": 27.36, "interiorDiff": 33.98, "pctInteriorWithin12": 37.6 },
+      "cross_check_s2": { "box": [133, 314, 107, 107], "fullDiff": 16.97, "runner_up_id": 105105, "runner_up_fullDiff": 25.96 },
+      "evidence_image": "tools/qx/out/evidence-B-105104.png",
+      "notes": "Tightest of the four: the runner-up 105105 is also a slime, so silhouettes are similar. Decisive differences are the two amber eyes, the top ear-bumps and the cheek swirls, which only 105104 has. 112005/112006 are slime BODY CLOSE-UPS, not the full slime shown on screen."
+    },
+    {
+      "letter": "C",
+      "id": 112031,
+      "description": "character with blue headband/scarf and olive face mask, dark vest with cross lacing and grey straps",
+      "confidence": "high",
+      "screen_block": { "screenshot": "s1", "box": [127, 586, 108, 108] },
+      "evidence": {
+        "fullDiff": 10.01,
+        "insetDiff": 11.9,
+        "maskedDiff": 15.34,
+        "interiorDiff": 14.9,
+        "pctInteriorWithin12": 69.1,
+        "similarity_pct": 96.07,
+        "fittedSpriteBox_px": 94,
+        "offset": [1, -2]
+      },
+      "runner_up": { "id": 107356, "fullDiff": 30.74, "interiorDiff": 67.23, "pctInteriorWithin12": 3.6 },
+      "third": { "id": 111025, "fullDiff": 31.56, "interiorDiff": 66.56, "pctInteriorWithin12": 1.0 },
+      "fourth": { "id": 112030, "fullDiff": 32.3, "interiorDiff": 67.34, "pctInteriorWithin12": 24.2 },
+      "cross_check_s2": { "box": [133, 465, 107, 107], "fullDiff": 7.87, "runner_up_id": 107356, "runner_up_fullDiff": 31.4 },
+      "evidence_image": "tools/qx/out/evidence-C-112031.png",
+      "notes": "112030 is the same character WITHOUT the blue headband; only 112031 has the headband."
+    },
+    {
+      "letter": "D",
+      "id": 105105,
+      "description": "cyan slime with a draped light-blue pattern and a frowning face at the bottom",
+      "confidence": "high",
+      "screen_block": { "screenshot": "s1", "box": [127, 709, 108, 108] },
+      "evidence": {
+        "fullDiff": 7.56,
+        "insetDiff": 7.63,
+        "maskedDiff": 7.52,
+        "interiorDiff": 6.6,
+        "pctInteriorWithin12": 88.0,
+        "similarity_pct": 97.03,
+        "fittedSpriteBox_px": 96,
+        "offset": [1, 2]
+      },
+      "runner_up": { "id": 105104, "fullDiff": 25.96, "interiorDiff": 37.87, "pctInteriorWithin12": 9.5 },
+      "third": { "id": 111137, "fullDiff": 26.77, "interiorDiff": 37.03, "pctInteriorWithin12": 11.4 },
+      "cross_check_s2": { "box": [133, 619, 107, 107], "fullDiff": 12.33, "runner_up_id": 105104, "runner_up_fullDiff": 26.21 },
+      "evidence_image": "tools/qx/out/evidence-D-105105.png",
+      "notes": "Best match of the four: 88% of the sprite's interior pixels are within 12/255 of the screen. Screen D is a single sprite, NOT a composite of two images."
+    }
+  ],
+  "not_direct_copies": {
+    "answer": false,
+    "detail": "All four avatars ARE direct copies of the sprite: the sprite is drawn with 'contain' fit into a ~94 px box, centred, over a flat dark backdrop (~#272528), then the whole screen was JPEG-compressed and downscaled. Evidence: the difference heatmaps in the evidence images are black everywhere except along the sprite's outlines and internal line art - exactly the signature of resampling. A different image would show large bright blobs inside flat colour regions; a tinted or masked variant would light up in patches."
+  },
+  "screen_model": {
+    "avatar_box": "108x108 at x=127 (s1) / 107x107 at x=133 (s2)",
+    "box_backdrop": "#272528-ish flat (NOT the card background #2C251D)",
+    "sprite_rendering": "contain fit into a ~94 px box, aspect preserved, centred, then sub-pixel aligned",
+    "scale_examples": { "112042": "256->94 = 0.367", "105104": "247->94 = 0.381", "105105": "255->96 = 0.376" }
+  },
+  "superseded_guess": {
+    "old_mapping": { "A": 105104, "B": 112031, "C": 105105 },
+    "why_wrong": "The three ids were right but assigned to the wrong letters, and A was missing. 105104/105105 are slimes, not portraits; 112031 is the masked character.",
+    "corrected_mapping": { "A": 112042, "B": 105104, "V": 112031, "D": 105105 },
+    "naming_note": "2026-10-09: the third key was written as C here, but the current archive names that control portrait.V (112031 is the masked character). The three other ids were already correct. Ids are unchanged; only the label was wrong, and it was this note that made docs/assets取不到-追查.md report a contradiction with lua/ui_controller.lua:4491, which reads A=112042 B=105104 V=112031 D=105105. Both sides agree and always did."
+  },
+  "side_findings": {
+    "identical_files": [
+      [112005, 112006]
+    ],
+    "identical_files_note": "112005 and 112006 are byte-identical (MD5 7389CA07A5F09E1216BB9121634DDB41). 8 such duplicate groups exist in the 1408-sprite library. Both are slime BODY CLOSE-UPS, not the avatars on screen.",
+    "block_map": {
+      "105xxx": "mixed block (315 files): icons/badges/starlight AND creature art. 105104 and 105105 are CREATURE (slime) art, so the block-level label 'decorative patterns' in docs/美术素材从哪来-实地调查.md does not hold for them.",
+      "112xxx": "42 files, creature/character art: 112001-112028 slimes/fungi/ghosts/beast masks, 112029-112042 human busts. A (112042) and C (112031) live here.",
+      "110xxx": "53 files, teal UI play/button icons",
+      "107xxx": "382 files, largest block: scenery/FX/plants/beasts",
+      "109xxx": "73 files, roman numerals and fancy letters"
+    }
+  },
+  "reproduce": {
+    "cwd": "D:\\新建文件夹\\miHoYo Launcher\\qianxing-murdoku",
+    "commands": [
+      "powershell -ExecutionPolicy Bypass -File tools\\qx\\identify_avatars.ps1",
+      "powershell -ExecutionPolicy Bypass -File tools\\qx\\verify_final.ps1",
+      "powershell -ExecutionPolicy Bypass -File tools\\qx\\build_evidence.ps1 -Slot B -Ids 105104,105105,112005"
+    ],
+    "outputs": [
+      "tools/qx/out/avatar_match_report.json",
+      "tools/qx/out/avatar_match_console.txt",
+      "tools/qx/out/verify_final.json",
+      "tools/qx/out/verify_final_console.txt",
+      "tools/qx/out/evidence-A-112042.png",
+      "tools/qx/out/evidence-B-105104.png",
+      "tools/qx/out/evidence-C-112031.png",
+      "tools/qx/out/evidence-D-105105.png"
+    ]
+  },
+  "method_summary": "For every one of the 1408 library sprites, rebuild the avatar box: fill a flat backdrop sampled from the box border, draw the sprite with contain-fit into a box size that is searched from 84 to 104 px, centred, with sub-pixel offsets searched from -4 to +4. Score = mean absolute RGB difference (0..255) against the real screen pixels. Stage 1 scans all sprites at 32x32 with three box sizes; stage 2 refines the top 30 at 54x54 over box size and offset; stage 3 re-scores the top 8 at native 108x108 and adds alpha-masked statistics; stage 4 repeats the whole thing for B/C/D against the second screenshot. verify_final.ps1 then re-fits from scratch and reports four independent residuals per candidate, including an interior-only residual restricted to pixels whose full 3x3 sprite-mask neighbourhood is opaque, which no resampling artefact can influence.",
+  "pitfalls_hit": [
+    "This machine's 'powershell' is Windows PowerShell 5.1, which decodes a BOM-less .ps1 as GBK; a script containing a Chinese path literal created a mojibake directory D:\\<garbage>\\miHoYo Launcher. All final scripts are ASCII-only and derive the repo root from $PSScriptRoot.",
+    "In PowerShell the comma binds tighter than '-', so @($a-1,$b-1) parses as $a - (1, $b-1) and throws 'op_Subtraction' on System.Object[]. Always parenthesise.",
+    "PowerShell variable names are case-insensitive: $W and $w are the same variable. This silently produced a 94x94 evidence canvas.",
+    "[System.Drawing.Drawing2D.PixelOffsetMode]::High does not exist on .NET Framework 4.8; use HighQuality.",
+    "'Diff' is a built-in alias for Compare-Object, so custom comparison functions must not be named Diff.",
+    "Sprites are transparent PNGs. Drawing one onto a fresh Bitmap leaves transparent pixels black, which differs from the on-screen backdrop by 40+; that is exactly why the earlier match_avatar2.ps1 reported meaningless 37-49 differences and never hit any known id. You must fill the backdrop (or compare only opaque pixels)."
+  ]
+}

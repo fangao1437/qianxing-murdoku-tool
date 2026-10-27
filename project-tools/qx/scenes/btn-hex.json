@@ -1,0 +1,9 @@
+{
+  "canvas": { "width": 256, "height": 256, "background": "#00000000" },
+  "elements": [
+    { "id": "hex1", "type": "triangle", "x": 128, "y": 96,  "width": 200, "height": 116, "rotation": 0,   "color": "#232838", "opacity": 1, "zIndex": 0 },
+    { "id": "hex2", "type": "triangle", "x": 128, "y": 160, "width": 200, "height": 116, "rotation": 180, "color": "#232838", "opacity": 1, "zIndex": 1 },
+    { "id": "mid",  "type": "rectangle","x": 128, "y": 128, "width": 200, "height": 116, "rotation": 0,   "color": "#232838", "opacity": 1, "zIndex": 2 }
+  ],
+  "meta": { "sourceType": "editor", "sourceName": "murdoku-hex-btn", "warnings": [] }
+}

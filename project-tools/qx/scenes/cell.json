@@ -1,0 +1,9 @@
+{
+  "canvas": { "width": 128, "height": 128, "background": "#00000000" },
+  "elements": [
+    { "id": "edge", "type": "rectangle", "x": 64, "y": 64, "width": 126, "height": 126, "rotation": 0, "color": "#1B2030", "opacity": 1, "zIndex": 0 },
+    { "id": "fill", "type": "rectangle", "x": 64, "y": 64, "width": 116, "height": 116, "rotation": 0, "color": "#2B3348", "opacity": 1, "zIndex": 1 },
+    { "id": "dot",  "type": "ellipse",   "x": 64, "y": 64, "width": 6,   "height": 6,   "rotation": 0, "color": "#3A4155", "opacity": 1, "zIndex": 2 }
+  ],
+  "meta": { "sourceType": "editor", "sourceName": "murdoku-cell", "warnings": [] }
+}

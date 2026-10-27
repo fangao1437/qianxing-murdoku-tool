@@ -1,0 +1,56 @@
+{
+  "name": "dsh-plugin-beyond-simulator",
+  "version": "2.0.8",
+  "description": "千星奇域客户端 UI 编辑与试玩模拟器 for DeepSeek Harness",
+  "type": "module",
+  "packageManager": "pnpm@10.15.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "dsh-plugin/dist/index.js",
+  "exports": {
+    ".": "./dsh-plugin/dist/index.js",
+    "./skill": "./dsh-plugin/dist/skill.js",
+    "./preset": "./dsh-plugin/dist/preset.js",
+    "./client": "./dsh-plugin/dist/client.js",
+    "./cordis.patch.yml": "./dsh-plugin/cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dsh-plugin/dist",
+    "dsh-plugin/lib/play.html",
+    "dsh-plugin/skill.md",
+    "dsh-plugin/presets",
+    "dsh-plugin/cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1475505/miliastra-beyond-simulator.git"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./dsh-plugin/cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ],
+      "platform": "web"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@napi-rs/canvas": "0.1.100",
+    "fengari": "0.1.5",
+    "protobufjs": "8.7.2"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-tools": "^0.1.0-rc.6 || ^0.2.0-rc.1"
+  },
+  "license": "GPL-3.0-only"
+}

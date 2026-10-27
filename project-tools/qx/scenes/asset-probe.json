@@ -1,0 +1,8 @@
+{
+  "canvas": { "width": 256, "height": 256, "background": "#00000000" },
+  "elements": [
+    { "id": "s1", "type": "image", "x": 128, "y": 128, "width": 200, "height": 200, "rotation": 0, "color": "#ffffff", "opacity": 1, "zIndex": 0, "imageAssetId": 105001, "imageTint": false }
+  ],
+  "meta": { "sourceType": "editor", "sourceName": "murdoku-hex", "warnings": [] },
+  "library": { "activeCategory": "basic-shape", "categories": [], "baseShapePresets": [], "savedItems": [] }
+}

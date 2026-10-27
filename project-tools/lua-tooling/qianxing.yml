@@ -1,0 +1,30 @@
+# tools/lua-tooling/qianxing.yml —— selene 的「千星客户端脚本」标准库
+#
+# 为什么需要：lua/**.lua 跑在千星奇域的客户端脚本环境里，game / script /
+# Enum / Color / printerr 都是**引擎注入的全局**，不在任何 Lua 官方标准库里。
+# 不声明它们，selene 会把每一次使用都报成 undefined_variable（实测 100 条），
+# 真正的信号会被淹掉。
+#
+# 声明方式用 any: true —— 不去猜引擎 API 的签名（猜错了会把对的代码报错），
+# 只回答「这个名字是存在的」。引擎 API 的**真实签名**以官方文档为准：
+#   · docs/7.1-脚本API速查.md
+#   · docs/API-四方对照.md
+#   · dsh-plugin-miliastra-toolbox 的 get_client_document / list_client_documents
+#
+# ⚠️ 这份表是**外部事实的镜像**，不是我们的设计。引擎加了新全局就往下加一行。
+---
+base: lua53
+
+globals:
+  # ── 引擎全局 ──────────────────────────────────────────────────────────────
+  game:
+    any: true
+  script:
+    any: true
+  Enum:
+    any: true
+  Color:
+    any: true
+  # 客户端脚本没有 os / io，日志只有 print / printerr 两个出口
+  printerr:
+    any: true

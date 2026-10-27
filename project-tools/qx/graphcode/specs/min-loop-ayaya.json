@@ -1,0 +1,30 @@
+{
+  "_comment": "ayaya target 的历史 fixture（GPL 分支，deprecated）。故意保留字符串 graph_id + 对象形式 args，用来证明 --target=ayaya 没被改坏。",
+  "graph_id": "server_qx_min_loop_01",
+  "graph_name": "模板_qx最小闭环_ayaya",
+  "graph_type": "server",
+  "description": "ayaya target 回归用：实体创建时 → 打印字符串 → 设置自定义变量",
+  "handlers": [
+    {
+      "event": "实体创建时",
+      "params": ["事件源实体", "事件源GUID"],
+      "body": [
+        {
+          "node": "打印字符串",
+          "args": {
+            "字符串": "qx-min-loop: entity created"
+          }
+        },
+        {
+          "node": "设置自定义变量",
+          "args": {
+            "目标实体": { "$ref": "事件源实体" },
+            "变量名": "qx_min_loop_flag",
+            "变量值": 1,
+            "是否触发事件": true
+          }
+        }
+      ]
+    }
+  ]
+}

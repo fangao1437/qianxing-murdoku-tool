@@ -1,0 +1,42 @@
+{
+ "_kind": "qx.graphcode.fixtures-index",
+ "samples": [
+  {
+   "slug": "fall-protect",
+   "file": "保护玩家防止坠崖掉落自动传送.gia",
+   "digest": "fall-protect.digest.json",
+   "graphs": 1,
+   "nodes": 7,
+   "decode": "fall-protect.decode.json"
+  },
+  {
+   "slug": "composite-atlas",
+   "file": "常用复合节点大全v1.7(补充包同步更新中).gia",
+   "digest": "composite-atlas.digest.json",
+   "graphs": 87,
+   "nodes": 473
+  },
+  {
+   "slug": "projectile-coords",
+   "file": "实时获取投射物坐标（最快每0.06s获取一次）.gia",
+   "digest": "projectile-coords.digest.json",
+   "graphs": 4,
+   "nodes": 34,
+   "decode": "projectile-coords.decode.json"
+  },
+  {
+   "slug": "disconnect-detect",
+   "file": "玩家掉线检测、重连检测、断网检测.gia",
+   "digest": "disconnect-detect.digest.json",
+   "graphs": 2,
+   "nodes": 33
+  },
+  {
+   "slug": "double-jump",
+   "file": "只按空格实现二段跳.gia",
+   "digest": "double-jump.digest.json",
+   "graphs": 1,
+   "nodes": 40
+  }
+ ]
+}

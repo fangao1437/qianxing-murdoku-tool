@@ -1,0 +1,4 @@
+[
+  {"cmd":"patch","op":{"op":"newAsset","assetType":"client-control-template"}},
+  {"cmd":"dump","out":"tools/sim/out/project-client.json"}
+]

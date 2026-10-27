@@ -1,0 +1,212 @@
+[
+ {
+  "name": "坠崖保护",
+  "graphId": 1073741845,
+  "nodes": [
+   {
+    "index": 1,
+    "typeId": 288,
+    "scope": 22000,
+    "source": "catalog",
+    "name": "Teleport Player (Beyond Mode)",
+    "dsl": null,
+    "method": null,
+    "pos": {
+     "x": 501.6000061035156,
+     "y": -13.266666412353516
+    },
+    "comment": null
+   },
+   {
+    "index": 2,
+    "typeId": 946,
+    "scope": 22000,
+    "source": "catalog",
+    "name": "When Character Movement SPD Meets Condition",
+    "dsl": "角色移动速度达到条件时",
+    "method": "whenCharacterMovementSpdMeetsCondition",
+    "pos": {
+     "x": -885.066650390625,
+     "y": -85.26667022705078
+    },
+    "comment": null
+   },
+   {
+    "index": 3,
+    "typeId": 2,
+    "scope": 22000,
+    "source": "catalog",
+    "name": "Double Branch",
+    "dsl": "双分支",
+    "method": "doubleBranch",
+    "pos": {
+     "x": 55.733333587646484,
+     "y": -90.5999984741211
+    },
+    "comment": null
+   },
+   {
+    "index": 4,
+    "typeId": 99,
+    "scope": 22000,
+    "source": "catalog",
+    "name": "Get Entity Location and Rotation",
+    "dsl": "获取实体位置与旋转",
+    "method": "getEntityLocationAndRotation",
+    "pos": {
+     "x": -681.8666381835938,
+     "y": 535
+    },
+    "comment": null
+   },
+   {
+    "index": 5,
+    "typeId": 9,
+    "scope": 22000,
+    "source": "catalog",
+    "name": "Split 3D Vector",
+    "dsl": null,
+    "method": null,
+    "pos": {
+     "x": -274.9333190917969,
+     "y": 528.3333129882812
+    },
+    "comment": null
+   },
+   {
+    "index": 6,
+    "typeId": 231,
+    "scope": 22000,
+    "source": "catalog",
+    "name": "Less Than or Equal To",
+    "dsl": "数值小于等于",
+    "method": "lessThanOrEqualTo",
+    "pos": {
+     "x": 145.86666870117188,
+     "y": 528.3333129882812
+    },
+    "comment": null
+   },
+   {
+    "index": 7,
+    "typeId": 259,
+    "scope": 22000,
+    "source": "catalog",
+    "name": "Get Player Entity to Which the Character Belongs",
+    "dsl": "获取角色归属的玩家实体",
+    "method": "getPlayerEntityToWhichTheCharacterBelongs",
+    "pos": {
+     "x": -488.79998779296875,
+     "y": 141.53334045410156
+    },
+    "comment": null
+   }
+  ],
+  "edges": [
+   {
+    "from": {
+     "node": 7,
+     "pin": "data_out",
+     "index": 0
+    },
+    "to": {
+     "node": 1,
+     "pin": "data_in",
+     "index": 0
+    },
+    "category": "data"
+   },
+   {
+    "from": {
+     "node": 2,
+     "pin": "exec_out",
+     "index": 0
+    },
+    "to": {
+     "node": 3,
+     "pin": "exec_in",
+     "index": 0
+    },
+    "category": "flow"
+   },
+   {
+    "from": {
+     "node": 3,
+     "pin": "exec_out",
+     "index": 0
+    },
+    "to": {
+     "node": 1,
+     "pin": "exec_in",
+     "index": 0
+    },
+    "category": "flow"
+   },
+   {
+    "from": {
+     "node": 6,
+     "pin": "data_out",
+     "index": 0
+    },
+    "to": {
+     "node": 3,
+     "pin": "data_in",
+     "index": 0
+    },
+    "category": "data"
+   },
+   {
+    "from": {
+     "node": 2,
+     "pin": "data_out",
+     "index": 0
+    },
+    "to": {
+     "node": 4,
+     "pin": "data_in",
+     "index": 0
+    },
+    "category": "data"
+   },
+   {
+    "from": {
+     "node": 4,
+     "pin": "data_out",
+     "index": 0
+    },
+    "to": {
+     "node": 5,
+     "pin": "data_in",
+     "index": 0
+    },
+    "category": "data"
+   },
+   {
+    "from": {
+     "node": 5,
+     "pin": "data_out",
+     "index": 1
+    },
+    "to": {
+     "node": 6,
+     "pin": "data_in",
+     "index": 0
+    },
+    "category": "data"
+   },
+   {
+    "from": {
+     "node": 2,
+     "pin": "data_out",
+     "index": 0
+    },
+    "to": {
+     "node": 7,
+     "pin": "data_in",
+     "index": 0
+    },
+    "category": "data"
+   }
+  ]
+ }
+]

@@ -1,0 +1,13 @@
+{
+  "name": "dsh-plugin-qianxing-prefab-render",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "DeepSeek Harness bundle：千星 3D 场景「官方素材渲染」——用渊星官方 prefab 几何库 + 贴图（本地/云端副本）把 SceneSpec 自动搭成官方素材场景并渲染（.blend + PNG）。只能渲染/预览，云端不能导出 GIA（需要 Windows host bridge + 渊星权益）。",
+  "license": "MIT",
+  "author": "fangao1437 <18182991366@163.com>",
+  "keywords": ["deepseek-harness", "dsh-plugin", "miliastra", "qianxing", "3d", "yuanxing", "prefab", "render"],
+  "exports": { ".": "./index.js" },
+  "files": ["index.js", "src/**/*.js", "lib/*.py", "cordis.patch.yml", "skill.md", "LICENSE"],
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
+}

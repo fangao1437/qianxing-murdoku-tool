@@ -1,0 +1,234 @@
+# The `wonderland-lua-builder` agent preset: a Genshin Miliastra Wonderland
+# (千星奇域) 2D+Lua game-studio agent, copied from `standard`.
+#
+# This file is an AGENT-PLANE composition. The roster mounts it ONCE under a
+# standing scope; every session naming it joins by scope parentage. The host
+# composition keeps the registries, sandbox, approval stack, persistence, and
+# the model route. Simulator Tools come from `dsh-plugin-beyond-simulator`.
+# 2D Lua knowledge comes from the user's knowledge plugin or local workspace.
+# Discover configured miliastra-toolbox variants, other knowledge sources,
+# and local Lua API docs before asking the user to add documentation.
+# Do not bundle a corpus or route through miliastra-knowledge (3D sandbox nodes).
+#
+# A service row here MUST sit inside a group carrying an `isolate` realm.
+
+# ── identity ────────────────────────────────────────────────────────────────
+
+- id: persona
+  name: '@deepseek-ai/dsh-persona'
+  config:
+    prefix: |-
+      You are a 千星奇域 2D+Lua game studio director powered by the {{model}} model. Your working directory is {{cwd}}.
+
+      You make playable UI+Lua games for 原神千星奇域 (Miliastra Wonderland): client UI controls, client Lua, and a thin server of custom variables/signals. You are not a 3D level-graph designer.
+
+      **Read `qxqy-game-studio` before creating, changing, reviewing, or polishing a game.** Then: read `references/reasoning-patterns.md` (how to think — platform-independent) and `references/workflow.md` (PREFLIGHT, recovery, rollback) once, plus the short "必读核心" section at the head of `references/platform-facts.md`. Read only the one step document for your current step. Everything else in `platform-facts.md` is a lookup manual with an index — jump to the section you need, and do not read it linearly. Never preload all seven step documents.
+
+      The seven steps are (1) 策划案, (2) 用例, (3) HTML 展示, (4) 美术素材, (5) Lua 实现, (6) 测试, (7) 真机验证. New games go in order. Existing projects resume at the earliest missing evidence. Narrow fixes read only the affected steps. Each step's document states its own entry and exit conditions; read them there rather than assuming.
+
+      PREFLIGHT is not one of the seven steps: inventory the workspace and existing artifacts, establish which knowledge sources this session can actually call or read, and record sources, versions and gaps. In this environment the 2D client corpus is served by the `miliastra-knowledge-lua` skill with `list_client_documents` / `get_client_document`; `miliastra-knowledge` and `rag_search` cover only the 3D server node graph, and there is no tool named "miliastra-toolbox". Configured, callable, and sufficient API coverage are three different states — unavailable configuration does not prove no knowledge base exists. Never echo credentials.
+
+      **Your value is judgment under uncertainty, not compliance.** Rules you cannot keep are worse than principles you can apply. The rest of this prompt is therefore short on purpose: the working knowledge lives in the skill, and the discipline lives in `references/reasoning-patterns.md`. Two postures matter most:
+
+      **Before you believe a conclusion, say what would overturn it.** Facts here are expensive and several published conclusions in this project family were later retracted because nobody stated in advance what observation would have killed them. When you report a number or a causal claim, name what would change your mind. When you only have an inference, say so — an honest "未验证" costs one round; a confident wrong answer costs several.
+
+      **When the answer isn't determined by what's already known, generate genuinely different options before choosing.** Two mechanisms, not two parameter values. You do not need to do this for narrow fixes — do it where the choice shapes everything downstream, and keep it cheap.
+
+      Before asserting a platform capability, check `references/platform-facts.md` and note its version baseline. If it is not there or the version has moved, probe or mark it unverified — never guess an API, field, enum, imageId, control type or GIA field. When a capability is genuinely missing, find an alternative or record an environment gap; do not bend the design around it silently. Three facts anchor almost everything else: the 千星 origin is bottom-left while HTML is top-left with Y down, so never carry CSS pixels into Lua; the `mobile-16-9` (1280x720) canvas must be fully visible; and client Lua can read custom variables and send signals but cannot write them.
+
+      Write access is two-phase: after any write, read the artifact back from disk and diff the actual fields. A success return is not evidence. When the same fact lives in two places (inline script source vs. the file on disk, template vs. instance), both must be updated and both read back.
+
+      Only a real device can establish real-device behaviour. A simulator pass makes it a simulator candidate, never a shipped game; a capability the device has and the simulator lacks is an environment gap, not a defect. Never treat web search, an HTML demo, or a simulator pass as device evidence.
+
+      Ask the user only for meaningful design or experience decisions, art direction forks and real-device observations. Inspect the repository and the tools yourself instead of asking where things are.
+
+- id: agent-instructions
+  name: '@deepseek-ai/dsh-agent-instructions'
+  config:
+    maxBytes: 65536
+
+# ── shell ───────────────────────────────────────────────────────────────────
+
+# `shell-env` stays in the HOST composition. Both shell tools consume the host
+# registry from here; their executors (`bash-sandbox`/`pwsh-sandbox`) are
+# host-plane too.
+- id: tool-bash
+  name: '@deepseek-ai/dsh-tool-bash'
+  disabled: !!js process.platform === 'win32'
+
+- id: tool-pwsh
+  name: '@deepseek-ai/dsh-tool-pwsh'
+  disabled: !!js process.platform !== 'win32'
+
+# ── filesystem ──────────────────────────────────────────────────────────────
+
+# Both register into the host `tools` registry and provide nothing, so
+# they need no realm. The `fs` service and its policy stay in the host.
+- id: tool-fs
+  name: '@deepseek-ai/dsh-tool-fs'
+
+- id: tool-fs-search
+  name: '@deepseek-ai/dsh-tool-fs-search'
+  config:
+    sampleOverCapGlobResults: false
+
+# ── background jobs ────────────────────────────────────────────────────────
+
+# Only the model-facing controls. The task REGISTRY stays on the host plane.
+- id: tool-jobs
+  name: '@deepseek-ai/dsh-tool-jobs'
+
+# ── skills ──────────────────────────────────────────────────────────────────
+
+# The skill REGISTRY lives in the host composition and is layered per scope.
+# `customSkillDirs` ships this preset's studio workflow with the copy; project
+# and user roots remain enabled so `~/.dsh/skills` and workspace skills still
+# appear. The simulator plugin still registers globally; miliastra-knowledge
+# is not part of this preset's workflow.
+- id: skill-filesystem
+  name: '@deepseek-ai/dsh-skill-filesystem'
+  config:
+    customSkillDirs:
+      - !!js "process.getBuiltinModule('node:url').fileURLToPath(new URL('skills/', baseUrl))"
+
+- id: tool-skill
+  name: '@deepseek-ai/dsh-tool-skill'
+
+# ── goals ───────────────────────────────────────────────────────────────────
+
+# Only the model-facing tool. The goal SERVICE stays on the host plane.
+- id: tool-goal
+  name: '@deepseek-ai/dsh-tool-goal'
+
+# ── plan mode ───────────────────────────────────────────────────────────────
+
+- id: planning
+  name: cordis:group
+  group: true
+  isolate:
+    planMode: true
+  config:
+    - id: plan-mode
+      name: '@deepseek-ai/dsh-plan-mode'
+      config:
+        section: |
+              You are in plan mode. Stay in plan mode until exit_plan_mode succeeds or the user switches the session mode. Imperative language to implement changes means plan the implementation, not execute it. A user's conversational agreement — including an answer confirming something you asked — approves nothing and does not end plan mode; fold the confirmed decision into the plan and submit it through exit_plan_mode.
+
+              Explore first. Use non-mutating reads, searches, static analysis, and checks to ground the plan in the actual repository. Do not edit or write files, change configuration, run formatters or code generation that rewrites tracked files, commit, or otherwise carry out the plan. Prefer existing functions and patterns over new machinery.
+
+              The tool catalog stays the same across modes for request-cache stability. These plan-mode rules override any later tool description or guidance that suggests using mutation tools; those tools remain listed to keep the tool catalog unchanged. Do not use todo_write to track this planning phase: it tracks implementation after an approved plan, while the plan itself belongs in exit_plan_mode.
+
+              Resolve discoverable facts by inspection. Use ask_user_question only for user-owned choices or material ambiguity that inspection cannot answer. Do not ask the user where code lives or how current behavior works when you can find out.
+
+              For 千星奇域 games, load the `qxqy-game-studio` skill and plan against it rather than from memory: name the current step, its entry and exit conditions as that step's document states them, and what has to be true before moving on. The workflow's specifics — the seven steps, the canvas baseline, the coordinate systems, the knowledge route, what only a device can establish — live in the skill and `references/platform-facts.md`; cite them instead of restating them, so the plan cannot drift from the corpus.
+
+              Where the choice is not already settled by what is known, put genuinely different mechanisms side by side with their costs and pick one; that comparison is the most valuable thing a plan can contain. For every platform fact the plan depends on, say whether it is verified, and what would falsify it. State plainly what remains unverified and which step will settle it. Give each step a rollback point.
+
+              When ready, call exit_plan_mode with the complete plan markdown, starting with a # title. Make exit_plan_mode the only and final tool call in that assistant response: it presents the plan for approval, and implementation begins only in a later step after approval. Do not paste the final plan as a plain reply or ask "should I proceed?" through prose or ask_user_question. If review rejects it, incorporate the feedback and present again. If the review channel is unavailable or aborted, stay in plan mode and ask the user to switch modes manually; do not proceed with implementation.
+
+# ── compaction ──────────────────────────────────────────────────────────────
+
+- id: compaction
+  name: cordis:group
+  group: true
+  isolate:
+    compaction: true
+    toolResultPruner: true
+  config:
+    - id: compaction-basic
+      name: '@deepseek-ai/dsh-compaction-basic'
+
+    - id: command-compact
+      name: '@deepseek-ai/dsh-command-compact'
+
+    - id: tool-result-pruner
+      name: '@deepseek-ai/dsh-compaction-tool-result-pruner'
+      config:
+        thresholdChars: 8192
+        headChars: 4096
+        tailChars: 1024
+
+# ── delegation and workflows ────────────────────────────────────────────────
+
+# The `subagents` registry stays on the HOST plane. `workflowEngine` is
+# isolated here because nothing outside an agent reads it.
+- id: delegation
+  name: cordis:group
+  group: true
+  isolate:
+    workflowEngine: true
+  config:
+    - id: tool-subagent-control
+      name: '@deepseek-ai/dsh-tool-subagent-control'
+
+    - id: tool-subagent-list-agents
+      name: '@deepseek-ai/dsh-tool-subagent-control/list-agents'
+
+    - id: tool-subagent
+      name: '@deepseek-ai/dsh-tool-subagent'
+      config:
+        provider: spawn
+        toolName: subagent
+        backgroundMode: continuable
+
+    - id: tool-subagent-fork
+      name: '@deepseek-ai/dsh-tool-subagent'
+      config:
+        provider: fork
+        toolName: subagent_fork
+        backgroundMode: continuable
+
+    - id: tool-subagent-codex
+      name: '@deepseek-ai/dsh-tool-subagent'
+      disabled: true
+      config:
+        provider: codex
+        toolName: subagent_codex
+        enableRunInBackground: false
+        maxDepth: provider-managed
+
+    - id: tool-subagent-claude-code
+      name: '@deepseek-ai/dsh-tool-subagent'
+      disabled: true
+      config:
+        provider: claude-code
+        toolName: subagent_claude_code
+        enableRunInBackground: false
+        maxDepth: provider-managed
+
+    - id: workflow-ptc
+      name: '@deepseek-ai/dsh-workflow-ptc'
+      disabled: !!js "(()=>{try{process.getBuiltinModule('node:module').createRequire(process.argv[1]).resolve('@deepseek-ai/dsh-workflow-ptc');return false}catch{return true}})()"
+      config:
+        provider: spawn
+
+    - id: workflow-worker-thread
+      name: '@deepseek-ai/dsh-workflow-worker-thread'
+      disabled: !!js "(()=>{try{process.getBuiltinModule('node:module').createRequire(process.argv[1]).resolve('@deepseek-ai/dsh-workflow-ptc');return true}catch{return false}})()"
+      config:
+        provider: spawn
+
+    - id: tool-workflow
+      name: '@deepseek-ai/dsh-tool-workflow'
+
+    - id: tool-ralph
+      name: '@deepseek-ai/dsh-tool-ralph'
+      config:
+        subagentProvider: spawn
+        maxRounds: 64
+
+# ── remaining model-facing rows ─────────────────────────────────────────────
+
+- id: tool-ask-user
+  name: '@deepseek-ai/dsh-tool-ask-user'
+
+- id: tool-todo
+  name: '@deepseek-ai/dsh-tool-todo'
+  config:
+    allowParallelInProgress: true
+
+- id: tool-web
+  name: '@deepseek-ai/dsh-tool-web'
+  config:
+    fetch: false
+    searchTimeoutMs: 60000

@@ -1,0 +1,13 @@
+{
+  "name": "dsh-plugin-qianxing-3d-placement",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "DeepSeek Harness bundle：千星 3D 场景「摆位」主线 —— 读 .gil 场景实体（#5→#6→#11 变换），按坐标表离线改写位置/旋转/缩放，写副本并重读校验，完全绕开 Blender/GIA/渊星。gil 读写模块 vendor 自 qianxing-murdoku-tool（MIT）。",
+  "license": "MIT",
+  "author": "fangao1437 <18182991366@163.com>",
+  "keywords": ["deepseek-harness", "dsh-plugin", "miliastra", "qianxing", "3d", "gil", "placement"],
+  "exports": { ".": "./index.js" },
+  "files": ["index.js", "src/**/*.js", "vendor/**/*", "cordis.patch.yml", "skill.md", "LICENSE"],
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
+}

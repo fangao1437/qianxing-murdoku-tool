@@ -1,0 +1,7 @@
+# Bundle patch for dsh-plugin-qianxing-prefab-render.
+- insert:
+    - id: qianxing-prefab-render
+      name: dsh-plugin-qianxing-prefab-render
+      config:
+        assetsDir: /root/yx-assets
+        blenderPath: /opt/blender52/blender-5.2.3-linux-x64/blender

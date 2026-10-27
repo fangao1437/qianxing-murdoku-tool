@@ -1,6 +1,13 @@
 # qianxing-murdoku-tool
 
-千星奇域（原神 UGC，官方名「千星沙箱」）的**节点图双向工具链**，独立仓库版。
+千星奇域（原神 UGC，官方名「千星沙箱」）的**工具与插件集合仓**。
+
+> ★ **全仓导航** → [`TOOLS-INDEX.md`](TOOLS-INDEX.md) ✓
+> - **8 个可安装插件**（顶层 `dsh-plugin-*`）：模拟器 / 家具美术管线 / 节点图双向 / 3D 摆位 / 3D 报告 / 设计图→场景 / 官方素材渲染 / 知识库查询
+> - **主项目工具 526 个文件**（`project-tools/`）：`.gil` 读写体检、代码审计、模拟器试玩、关卡校验、截图分析
+> - 逐条清单：`project-tools/docs/工具目录.md`（63KB）
+
+本 README 主要讲**节点图双向工具链**（本仓的核心实现，`src/` + `dsh-plugin-qianxing-nodegraph/`）。
 
 ```
              读（read）                                         写（emit → build → inject）

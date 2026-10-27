@@ -1,0 +1,6 @@
+# Bundle patch for dsh-plugin-qianxing-3d-placement.
+# `dsh plugin --profile <name> add <this package>`
+- insert:
+    - id: qianxing-3d-placement
+      name: dsh-plugin-qianxing-3d-placement
+      config: {}

@@ -1,0 +1,8 @@
+{
+  "canvas": { "width": 512, "height": 96, "background": "#00000000" },
+  "elements": [
+    { "id": "paper", "type": "rectangle", "x": 256, "y": 48, "width": 500, "height": 84, "rotation": 0, "color": "#E8DFC8", "opacity": 1, "zIndex": 0 },
+    { "id": "shade", "type": "rectangle", "x": 256, "y": 14, "width": 500, "height": 20, "rotation": 0, "color": "#CFC5AC", "opacity": 1, "zIndex": 1 }
+  ],
+  "meta": { "sourceType": "editor", "sourceName": "murdoku-tape", "warnings": [] }
+}

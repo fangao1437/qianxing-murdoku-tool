@@ -1,0 +1,13 @@
+{
+  "name": "dsh-plugin-qianxing-3d-report",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "DeepSeek Harness bundle：3D 场景确认报告 —— 依据设计图/SceneSpec + Blender 渲染结果，生成含渲染图与元件坐标表的 PDF，供用户确认与调整（不是内部参考）。",
+  "license": "MIT",
+  "author": "fangao1437 <18182991366@163.com>",
+  "keywords": ["deepseek-harness", "dsh-plugin", "miliastra", "qianxing", "3d", "blender", "report", "pdf"],
+  "exports": { ".": "./index.js" },
+  "files": ["index.js", "src/**/*.js", "cordis.patch.yml", "skill.md", "LICENSE"],
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
+}

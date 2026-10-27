@@ -1,0 +1,9 @@
+{
+  "canvas": { "width": 360, "height": 64, "background": "#00000000" },
+  "elements": [
+    { "id": "edge",  "type": "rectangle", "x": 180, "y": 32, "width": 356, "height": 60, "rotation": 0, "color": "#1B2030", "opacity": 1, "zIndex": 0 },
+    { "id": "face",  "type": "rectangle", "x": 180, "y": 32, "width": 346, "height": 50, "rotation": 0, "color": "#2B3348", "opacity": 1, "zIndex": 1 },
+    { "id": "head",  "type": "rectangle", "x": 40,  "y": 32, "width": 44,  "height": 44, "rotation": 0, "color": "#3A4155", "opacity": 1, "zIndex": 2 }
+  ],
+  "meta": { "sourceType": "editor", "sourceName": "murdoku-clue-row", "warnings": [] }
+}

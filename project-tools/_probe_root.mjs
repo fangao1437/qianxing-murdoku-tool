@@ -1,0 +1,10 @@
+﻿import { readGil } from './gil/gilread.mjs';
+const g = readGil('512-一二关美术-v308.gil');
+const r = g.recs.find(x=>x.id===1073741846);
+console.log('1073741846 name=', r && r.name, 'parent=', r && r.parentId);
+console.log('records named root:', g.recs.filter(x=>x.name==='root').map(x=>x.id).join(','));
+console.log('top(no parent):', g.recs.filter(x=>!x.parentId).map(x=>x.id+':'+x.name).slice(0,10).join(', '));
+const lab = g.recs.find(x=>x.name==='labels');
+console.log('labels id', lab.id, 'parent', lab.parentId);
+const l1 = g.recs.find(x=>x.name==='label.1');
+console.log('label.1 id', l1.id, 'parent', l1.parentId, 'states', l1.states.length, 'kind?', typeof l1.name);

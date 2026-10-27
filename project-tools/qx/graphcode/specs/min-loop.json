@@ -1,0 +1,30 @@
+{
+  "_comment": "qx 最小闭环：1 个触发器 + 2 个执行节点。默认 target=gts（MIT）→ genshin-ts 的 TS 源码 → gsts compile → inject；--target=ayaya 仍可出旧的 Graph Code。",
+  "_why_this_shape": "『实体创建时』是 server 侧 Trigger（nodes.json events[].zh），出参『事件源实体/事件源GUID』由 events-payload 映射到 evt.eventSourceEntity / evt.eventSourceGuid；『设置自定义变量』是 Function，method=setCustomVariable。",
+  "_args_note": "args 用**数组 = 端口位置参数**（gts 的调用约定）。{\"$ref\":\"名\"} 是连线，{\"$int\":1} 是整数（gts 里 int=bigint）。",
+  "graph_id": 1073741825,
+  "graph_name": "模板_qx最小闭环_实体创建时写变量",
+  "graph_type": "server",
+  "description": "qx 最小闭环：实体创建时 → 打印字符串 → 设置自定义变量（emit.mjs --target=gts 生成）",
+  "handlers": [
+    {
+      "event": "实体创建时",
+      "params": ["事件源实体", "事件源GUID"],
+      "body": [
+        {
+          "node": "打印字符串",
+          "args": ["qx-min-loop: entity created"]
+        },
+        {
+          "node": "设置自定义变量",
+          "args": [
+            { "$ref": "事件源实体" },
+            "qx_min_loop_flag",
+            { "$int": 1 },
+            true
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "_kind": "qx.graphcode.node-aliases",
+  "_provenance": {
+    "note": "nodes.json 里 109 个服务端节点只有英文显示名、没有中文 DSL 名、也没有 gts 方法名（上游 MIT 数据包里这批名字与 TS 方法名的措辞对不上）。本表只收录**人工核对过签名**的映射，用来让「读回来的图」能再次翻译成 gts 源码。",
+    "policy": "宁可少收，不许猜。每条必须写 evidence（签名/端口怎么对上的）和 confidence。confidence 只允许 '[实测]' 或 '[推断]'；写 '[推断]' 的，翻译产物必须能过 compile 才算钉住。",
+    "how_to_add": "① 打开 nodes.json 找该 id 的 inputs_types / outputs_types；② 在 genshin-ts 的 dist/src/definitions/nodes.d.ts 里找候选方法；③ 端口个数 + 类型序列 + 返回值个数**三项全同**且候选**唯一**才可收；④ 写 evidence。",
+    "verified_against": "genshin-ts@0.2.3 dist/src/definitions/nodes.d.ts + zh_aliases.d.ts"
+  },
+  "aliases": [
+    {
+      "type_id": 9,
+      "name_en": "Split 3D Vector",
+      "gts_method": "split3dVector",
+      "zh": "拆分三维向量",
+      "evidence": "nodes.json: in=[Vec] out=[Flt,Flt,Flt]；gts nodes.d.ts `split3dVector(_3dVector: Vec3Value): {x,y,z}` = 1 入 3 出；zh_aliases 里 split3dVector ↔ 拆分三维向量。三项全同且无第二候选。",
+      "confidence": "[推断]",
+      "proven_by": "tools/qx/graphcode/fixtures/fall-protect.emit-spec.json（compile 通过）"
+    },
+    {
+      "type_id": 225,
+      "name_en": "Create 3D Vector",
+      "gts_method": "create3dVector",
+      "zh": "创建三维向量",
+      "evidence": "nodes.json: in=[Flt,Flt,Flt] out=[Vec]；gts nodes.d.ts `create3dVector(x,y,z: FloatValue): vec3` = 3 入 1 出。三项全同。",
+      "confidence": "[推断]",
+      "proven_by": "(未进本轮 compile 用例；端口签名一致)"
+    },
+    {
+      "type_id": 288,
+      "name_en": "Teleport Player (Beyond Mode)",
+      "gts_method": "teleportPlayer",
+      "zh": "传送玩家",
+      "evidence": "nodes.json: in=[Ety,Vec,Vec] out=[]；gts nodes.d.ts `teleportPlayer(playerEntity: PlayerEntity, targetLocation: Vec3Value, targetRotation: Vec3Value): void` = 3 入 0 出。gts 全库里 teleport* 只有这一个方法（另一个是事件 whenPlayerTeleportCompletes）。⚠️ 上游显示名带 `(Beyond Mode)` 后缀，是否与 teleportPlayer 完全同源**没有真机验证**。",
+      "confidence": "[推断]",
+      "risk": "'(Beyond Mode)' 后缀可能对应另一个变体节点；本轮只证明它**能编译**，不能证明它**语义等价**。",
+      "proven_by": "tools/qx/graphcode/fixtures/fall-protect.emit-spec.json（compile 通过）"
+    }
+  ],
+  "out_fields": {
+    "_note": "多出参节点：`const v = f.xxx()` 拿到的是整个返回值，取第几个分量要靠**属性名**。属性名不在 nodes.json 里（端口名常为 null）⇒ 必须查本表；表里没有就报 MULTI_OUT_PIN 拒绝生成。",
+    "_scope": "本表**只覆盖 5 份官方样本里实际被消费过的多出参节点**（见 docs/official-gia-coverage.md §3）。不是全量，也不会假装是全量。",
+    "9": {
+      "name_en": "Split 3D Vector",
+      "fields": ["xComponent", "yComponent", "zComponent"],
+      "evidence": "genshin-ts nodes.d.ts: `split3dVector(_3dVector: Vec3Value): { xComponent: number; yComponent: number; zComponent: number }`；JSDoc 原文「Outputs the x, y, and z components …」，顺序与 nodes.json 的 out=[Flt,Flt,Flt] 一致。",
+      "confidence": "[推断]"
+    },
+    "99": {
+      "name_en": "Get Entity Location and Rotation",
+      "fields": ["location", "rotate"],
+      "evidence": "genshin-ts nodes.d.ts: `getEntityLocationAndRotation(targetEntity): { location: vec3; rotate: vec3 }`；nodes.json 的 out=[Vec,Vec]（端口名都是 null，顺序与返回对象字段顺序一致）。",
+      "confidence": "[推断]"
+    }
+  }
+}

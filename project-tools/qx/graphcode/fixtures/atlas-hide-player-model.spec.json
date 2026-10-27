@@ -1,0 +1,25 @@
+{
+ "graph_id": 1073741827,
+ "graph_name": "_执行_隐藏玩家模型",
+ "graph_type": "server",
+ "handlers": [
+  {
+   "event": "实体创建时",
+   "params": [
+    "事件源实体",
+    "事件源GUID"
+   ],
+   "body": [
+    {
+     "node": "激活关闭模型显示",
+     "args": [
+      {
+       "$ref": "事件源实体"
+      },
+      false
+     ]
+    }
+   ]
+  }
+ ]
+}

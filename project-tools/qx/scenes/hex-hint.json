@@ -1,0 +1,86 @@
+{
+  "canvas": {
+    "width": 70,
+    "height": 70,
+    "background": "#00000000"
+  },
+  "elements": [
+    {
+      "id": "edgeA",
+      "type": "rectangle",
+      "x": 35,
+      "y": 35,
+      "width": 56,
+      "height": 73,
+      "rotation": 0,
+      "color": "#8C867A",
+      "opacity": 1,
+      "zIndex": 0
+    },
+    {
+      "id": "edgeB",
+      "type": "rectangle",
+      "x": 35,
+      "y": 35,
+      "width": 73,
+      "height": 56,
+      "rotation": 0,
+      "color": "#8C867A",
+      "opacity": 1,
+      "zIndex": 0
+    },
+    {
+      "id": "baseA",
+      "type": "rectangle",
+      "x": 35,
+      "y": 35,
+      "width": 56,
+      "height": 70,
+      "rotation": 0,
+      "color": "#1F1D1A",
+      "opacity": 1,
+      "zIndex": 1
+    },
+    {
+      "id": "baseB",
+      "type": "rectangle",
+      "x": 35,
+      "y": 35,
+      "width": 70,
+      "height": 56,
+      "rotation": 0,
+      "color": "#1F1D1A",
+      "opacity": 1,
+      "zIndex": 1
+    },
+    {
+      "id": "lens",
+      "type": "ring",
+      "x": 31,
+      "y": 32,
+      "width": 36,
+      "height": 36,
+      "rotation": 0,
+      "color": "#FFFFFF",
+      "opacity": 1,
+      "zIndex": 3
+    },
+    {
+      "id": "grip",
+      "type": "ellipse",
+      "x": 51,
+      "y": 52,
+      "width": 13,
+      "height": 27,
+      "rotation": 45,
+      "color": "#FFFFFF",
+      "opacity": 1,
+      "zIndex": 4
+    }
+  ],
+  "meta": {
+    "sourceType": "editor",
+    "sourceName": "murdoku-hex-hint",
+    "warnings": []
+  }
+}

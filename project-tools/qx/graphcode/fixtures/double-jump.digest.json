@@ -1,0 +1,144 @@
+{
+ "_kind": "qx.graphcode.gia-digest",
+ "sample": {
+  "slug": "double-jump",
+  "file": "只按空格实现二段跳.gia",
+  "bytes": 21607,
+  "sha256": "4df379d32e14df5dae3bbe7b4ddaf5e96f9074ffb58fea8e1674c7227d650b49"
+ },
+ "note": "40 节点大图 + 节点图变量 + 枚举常量",
+ "envelope": {
+  "headerU32": [
+   21603,
+   1,
+   806,
+   3,
+   21583
+  ],
+  "bodyLen": 21583,
+  "trailerLen": 4
+ },
+ "rootFields": {
+  "1": 3,
+  "2": 1,
+  "3": 1,
+  "5": 1
+ },
+ "units": {
+  "total": 4,
+  "whichCounts": {
+   "1": 1,
+   "9": 1,
+   "18": 1,
+   "19": 1
+  },
+  "list": [
+   {
+    "bucket": "graph",
+    "index": 0,
+    "guid": 1077936129,
+    "which": 1,
+    "kind": "模型",
+    "name": "空模型",
+    "relatedIds": []
+   },
+   {
+    "bucket": "graph",
+    "index": 1,
+    "guid": 1073741825,
+    "which": 9,
+    "kind": "节点图",
+    "name": "跟随",
+    "relatedIds": []
+   },
+   {
+    "bucket": "graph",
+    "index": 2,
+    "guid": 1086324737,
+    "which": 18,
+    "kind": "模版",
+    "name": "默认模版",
+    "relatedIds": [
+     1090519041
+    ]
+   },
+   {
+    "bucket": "acc",
+    "index": 0,
+    "guid": 1090519041,
+    "which": 19,
+    "kind": "模版",
+    "name": "默认模版(角色编辑)",
+    "relatedIds": [
+     1086324737,
+     1073741825
+    ]
+   }
+  ]
+ },
+ "nodeDefs": [],
+ "graphs": [
+  {
+   "bucket": "graph",
+   "unitIndex": 1,
+   "name": "跟随",
+   "graphId": 1073741825,
+   "header": {
+    "tag1": 10000,
+    "tag2": 20000,
+    "tag3": 21001,
+    "graphId": 1073741825
+   },
+   "nodes": 40,
+   "edges": 60,
+   "flowEdges": 20,
+   "dataEdges": 40,
+   "comments": 1,
+   "typeHistogram": {
+    "2": 4,
+    "3": 1,
+    "9": 2,
+    "11": 1,
+    "14": 3,
+    "22": 4,
+    "36": 1,
+    "71": 1,
+    "79": 3,
+    "82": 1,
+    "83": 2,
+    "99": 2,
+    "169": 3,
+    "202": 1,
+    "232": 1,
+    "240": 2,
+    "252": 1,
+    "323": 1,
+    "337": 3,
+    "668": 3
+   },
+   "compositeRefs": 0,
+   "unknownRefs": 0
+  }
+ ],
+ "resources": {
+  "variables": [
+   {
+    "name": "平台",
+    "uses": [
+     "跟随",
+     "跟随",
+     "跟随",
+     "跟随"
+    ]
+   }
+  ],
+  "signals": [],
+  "composites": []
+ },
+ "totals": {
+  "nodes": 40,
+  "edges": 60,
+  "compositeRefs": 0,
+  "unknownNodes": 0
+ }
+}
