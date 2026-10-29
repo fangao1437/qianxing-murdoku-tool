@@ -26,6 +26,10 @@
 
 ## 一 ★★★ 插件（8 个 · DeepSeek Harness 可安装）
 
+> ★★★ **本机安装清单（★ 2026-10-30 实测 ✓）** → **`docs/插件安装清单.md`** ✓
+> ★★ 含：**已装版本 vs 仓内版本核对**（★ 8 个全一致 ✓ 唯一漂移 = web profile 的模拟器 v2.0.2 ⚠️）✓
+> ★ 机器可读：`docs/plugins-manifest.json` ✓　★ 重扫脚本：`node tools/scan-installed-plugins.mjs --write` ✓
+
 ★ **装法** ✓：★ 把整个 `dsh-plugin-*` 目录放进
 `%USERPROFILE%\.dsh\profiles\<profile>\node_modules\` ✓（★ 或在桌面端插件页安装）✓
 ★ **发布形态** ✓：★ 已提交 `package.json` ＋ `dsh-plugin.json`（★ 若存在 ✓）＋ `README.md` ✓
