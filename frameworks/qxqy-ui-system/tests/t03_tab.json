@@ -1,0 +1,20 @@
+{
+  "format": "qxqy-autotest",
+  "version": 1,
+  "name": "t03_tab",
+  "dt": 0.0333333333,
+  "playerCount": 1,
+  "canvasId": "mobile-16-9",
+  "note": "页签跳页：tab.p3 直接跳到 p3；跳过 p2 不产生中间态",
+  "events": [
+    { "kind": "click", "name": "tab.p3" }
+  ],
+  "asserts": [
+    { "kind": "log", "contains": "ACT p3<- tab.p3 page=p3" },
+    { "kind": "log", "contains": "PAGE demo/p3 idx=3" },
+    { "kind": "control", "name": "hud.pager", "field": "text", "equals": "3 / 3" },
+    { "kind": "control", "name": "page.p1", "field": "visible", "equals": false },
+    { "kind": "control", "name": "page.p2", "field": "visible", "equals": false },
+    { "kind": "control", "name": "page.p3", "field": "visible", "equals": true }
+  ]
+}

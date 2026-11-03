@@ -1,0 +1,18 @@
+{
+  "format": "qxqy-autotest",
+  "version": 1,
+  "name": "t08_server_sync",
+  "dt": 0.0333333333,
+  "playerCount": 1,
+  "canvasId": "mobile-16-9",
+  "note": "下行校正：服务端发 ui/sync(p3) → 客户端以服务端为准跳到 p3（幂等、不回调上行）",
+  "events": [
+    { "kind": "serverSend", "target": "PlayerSelf", "name": "ui/sync", "params": ["p3"] }
+  ],
+  "asserts": [
+    { "kind": "log", "contains": "APP_SYNC page=p3" },
+    { "kind": "log", "contains": "APP_SYNC_APPLIED page=p3" },
+    { "kind": "control", "name": "hud.pager", "field": "text", "equals": "3 / 3" },
+    { "kind": "control", "name": "page.p3", "field": "visible", "equals": true }
+  ]
+}

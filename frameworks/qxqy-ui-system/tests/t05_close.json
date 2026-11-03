@@ -1,0 +1,17 @@
+{
+  "format": "qxqy-autotest",
+  "version": 1,
+  "name": "t05_close",
+  "dt": 0.0333333333,
+  "playerCount": 1,
+  "canvasId": "mobile-16-9",
+  "note": "关闭界面：屏根 SetVisible(false)，但**保持 active**（容器不销毁、脚本继续活）；页内按钮仍在树上",
+  "events": [
+    { "kind": "click", "name": "btn.close" }
+  ],
+  "asserts": [
+    { "kind": "log", "contains": "ACT close<- btn.close" },
+    { "kind": "control", "name": "screen.demo", "field": "visible", "equals": false },
+    { "kind": "tree", "name": "page.p1", "exists": true }
+  ]
+}

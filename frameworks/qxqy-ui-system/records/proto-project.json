@@ -1,0 +1,2976 @@
+{
+  "layoutSchemaVersion": 2,
+  "version": 1,
+  "meta": {
+    "name": "未命名界面",
+    "assetType": "server-control-template",
+    "sourceFormat": "authoring",
+    "sourceFile": ""
+  },
+  "canvasId": "pc-16-9",
+  "canvas": {
+    "id": "pc-16-9",
+    "width": 1600,
+    "height": 900,
+    "platform": "KEYBOARD",
+    "label": "PC 1600×900",
+    "presets": [
+      {
+        "id": "pc-16-9",
+        "label": "PC 1600×900",
+        "width": 1600,
+        "height": 900,
+        "platform": "KEYBOARD"
+      },
+      {
+        "id": "pc-21-9",
+        "label": "PC 2100×900",
+        "width": 2100,
+        "height": 900,
+        "platform": "KEYBOARD"
+      },
+      {
+        "id": "mobile-16-9",
+        "label": "手机 1280×720",
+        "width": 1280,
+        "height": 720,
+        "platform": "TOUCHSCREEN"
+      },
+      {
+        "id": "mobile-19.5-9",
+        "label": "手机 1560×720",
+        "width": 1560,
+        "height": 720,
+        "platform": "TOUCHSCREEN"
+      },
+      {
+        "id": "mobile-4-3",
+        "label": "手机 1280×960",
+        "width": 1280,
+        "height": 960,
+        "platform": "TOUCHSCREEN"
+      }
+    ]
+  },
+  "selectedId": "n2",
+  "asset": {
+    "type": "server-control-template",
+    "label": "服务端控件模板",
+    "templateCount": 1,
+    "currentTemplateId": ""
+  },
+  "tree": [
+    {
+      "id": "sc1",
+      "guid": 1073741850,
+      "kind": "server-container",
+      "name": "客户端控件容器",
+      "label": "客户端控件容器",
+      "depth": 0,
+      "parentId": null,
+      "ancestorIds": [],
+      "siblingIndex": 0,
+      "siblingCount": 1,
+      "templateId": "sc1",
+      "childCount": 1,
+      "incomplete": false
+    },
+    {
+      "id": "n1",
+      "guid": 1073741851,
+      "kind": "container",
+      "name": "容器节点",
+      "label": "容器节点",
+      "depth": 1,
+      "parentId": "sc1",
+      "ancestorIds": [
+        "sc1"
+      ],
+      "siblingIndex": 0,
+      "siblingCount": 1,
+      "templateId": "sc1",
+      "childCount": 10,
+      "incomplete": false
+    },
+    {
+      "id": "n2",
+      "guid": 1073741852,
+      "kind": "textbox",
+      "name": "文本框",
+      "label": "文本框",
+      "depth": 2,
+      "parentId": "n1",
+      "ancestorIds": [
+        "sc1",
+        "n1"
+      ],
+      "siblingIndex": 0,
+      "siblingCount": 10,
+      "templateId": "sc1",
+      "childCount": 0,
+      "incomplete": false
+    },
+    {
+      "id": "n3",
+      "guid": 1073741853,
+      "kind": "cursor",
+      "name": "光标检测区域",
+      "label": "光标检测区域",
+      "depth": 2,
+      "parentId": "n1",
+      "ancestorIds": [
+        "sc1",
+        "n1"
+      ],
+      "siblingIndex": 1,
+      "siblingCount": 10,
+      "templateId": "sc1",
+      "childCount": 0,
+      "incomplete": false
+    },
+    {
+      "id": "n4",
+      "guid": 1073741854,
+      "kind": "reference",
+      "name": "模板引用控件",
+      "label": "模板引用控件",
+      "depth": 2,
+      "parentId": "n1",
+      "ancestorIds": [
+        "sc1",
+        "n1"
+      ],
+      "siblingIndex": 2,
+      "siblingCount": 10,
+      "templateId": "sc1",
+      "childCount": 0,
+      "incomplete": false
+    },
+    {
+      "id": "n5",
+      "guid": 1073741855,
+      "kind": "grid",
+      "name": "网格视窗",
+      "label": "网格视窗",
+      "depth": 2,
+      "parentId": "n1",
+      "ancestorIds": [
+        "sc1",
+        "n1"
+      ],
+      "siblingIndex": 3,
+      "siblingCount": 10,
+      "templateId": "sc1",
+      "childCount": 0,
+      "incomplete": false
+    },
+    {
+      "id": "n6",
+      "guid": 1073741856,
+      "kind": "button",
+      "name": "预设按钮",
+      "label": "预设按钮",
+      "depth": 2,
+      "parentId": "n1",
+      "ancestorIds": [
+        "sc1",
+        "n1"
+      ],
+      "siblingIndex": 4,
+      "siblingCount": 10,
+      "templateId": "sc1",
+      "childCount": 0,
+      "incomplete": false
+    },
+    {
+      "id": "n7",
+      "guid": 1073741857,
+      "kind": "textwindow",
+      "name": "文本视窗",
+      "label": "文本视窗",
+      "depth": 2,
+      "parentId": "n1",
+      "ancestorIds": [
+        "sc1",
+        "n1"
+      ],
+      "siblingIndex": 5,
+      "siblingCount": 10,
+      "templateId": "sc1",
+      "childCount": 0,
+      "incomplete": false
+    },
+    {
+      "id": "n8",
+      "guid": 1073741858,
+      "kind": "keyhint",
+      "name": "按键提示",
+      "label": "按键提示",
+      "depth": 2,
+      "parentId": "n1",
+      "ancestorIds": [
+        "sc1",
+        "n1"
+      ],
+      "siblingIndex": 6,
+      "siblingCount": 10,
+      "templateId": "sc1",
+      "childCount": 0,
+      "incomplete": false
+    },
+    {
+      "id": "n9",
+      "guid": 1073741859,
+      "kind": "image",
+      "name": "图片",
+      "label": "图片",
+      "depth": 2,
+      "parentId": "n1",
+      "ancestorIds": [
+        "sc1",
+        "n1"
+      ],
+      "siblingIndex": 7,
+      "siblingCount": 10,
+      "templateId": "sc1",
+      "childCount": 0,
+      "incomplete": false
+    },
+    {
+      "id": "n10",
+      "guid": 1073741860,
+      "kind": "animation",
+      "name": "界面动效",
+      "label": "界面动效",
+      "depth": 2,
+      "parentId": "n1",
+      "ancestorIds": [
+        "sc1",
+        "n1"
+      ],
+      "siblingIndex": 8,
+      "siblingCount": 10,
+      "templateId": "sc1",
+      "childCount": 0,
+      "incomplete": false
+    },
+    {
+      "id": "n11",
+      "guid": 1073741861,
+      "kind": "fullscreen",
+      "name": "全屏动效",
+      "label": "全屏动效",
+      "depth": 2,
+      "parentId": "n1",
+      "ancestorIds": [
+        "sc1",
+        "n1"
+      ],
+      "siblingIndex": 9,
+      "siblingCount": 10,
+      "templateId": "sc1",
+      "childCount": 0,
+      "incomplete": false
+    }
+  ],
+  "boxes": [
+    {
+      "left": 0,
+      "bottom": 0,
+      "width": 1600,
+      "height": 900,
+      "right": 1600,
+      "top": 900,
+      "centerX": 800,
+      "centerY": 450,
+      "posX": 800,
+      "posY": 450,
+      "id": "sc1",
+      "kind": "server-container",
+      "name": "客户端控件容器",
+      "visible": true,
+      "active": true,
+      "rotationZ": 0,
+      "renderLeft": 0,
+      "renderBottom": 0,
+      "renderWidth": 1600,
+      "renderHeight": 900,
+      "renderRotationZ": 0,
+      "renderMatrix": {
+        "a": 1,
+        "b": 0,
+        "c": 0,
+        "d": 1,
+        "tx": 0,
+        "ty": 0
+      },
+      "primitive": null
+    },
+    {
+      "left": 0,
+      "bottom": 0,
+      "width": 1600,
+      "height": 900,
+      "right": 1600,
+      "top": 900,
+      "centerX": 800,
+      "centerY": 450,
+      "posX": 800,
+      "posY": 450,
+      "id": "n1",
+      "kind": "container",
+      "name": "容器节点",
+      "visible": true,
+      "active": true,
+      "rotationZ": 0,
+      "renderLeft": 0,
+      "renderBottom": 0,
+      "renderWidth": 1600,
+      "renderHeight": 900,
+      "renderRotationZ": 0,
+      "renderMatrix": {
+        "a": 1,
+        "b": 0,
+        "c": 0,
+        "d": 1,
+        "tx": 0,
+        "ty": 0
+      },
+      "primitive": null
+    },
+    {
+      "left": 0,
+      "bottom": 0,
+      "width": 1600,
+      "height": 900,
+      "right": 1600,
+      "top": 900,
+      "centerX": 800,
+      "centerY": 450,
+      "posX": 800,
+      "posY": 450,
+      "id": "n11",
+      "kind": "fullscreen",
+      "name": "全屏动效",
+      "visible": true,
+      "active": true,
+      "rotationZ": 0,
+      "renderLeft": 0,
+      "renderBottom": 0,
+      "renderWidth": 1600,
+      "renderHeight": 900,
+      "renderRotationZ": 0,
+      "renderMatrix": {
+        "a": 1,
+        "b": 0,
+        "c": 0,
+        "d": 1,
+        "tx": 0,
+        "ty": 0
+      },
+      "primitive": null
+    },
+    {
+      "left": 1050,
+      "bottom": 300,
+      "width": 100,
+      "height": 100,
+      "right": 1150,
+      "top": 400,
+      "centerX": 1100,
+      "centerY": 350,
+      "posX": 1100,
+      "posY": 350,
+      "id": "n10",
+      "kind": "animation",
+      "name": "界面动效",
+      "visible": true,
+      "active": true,
+      "rotationZ": 0,
+      "renderLeft": 1050,
+      "renderBottom": 300,
+      "renderWidth": 100,
+      "renderHeight": 100,
+      "renderRotationZ": 0,
+      "renderMatrix": {
+        "a": 1,
+        "b": 0,
+        "c": 0,
+        "d": 1,
+        "tx": 0,
+        "ty": 0
+      },
+      "primitive": null
+    },
+    {
+      "left": 1060,
+      "bottom": 440,
+      "width": 80,
+      "height": 80,
+      "right": 1140,
+      "top": 520,
+      "centerX": 1100,
+      "centerY": 480,
+      "posX": 1100,
+      "posY": 480,
+      "id": "n9",
+      "kind": "image",
+      "name": "图片",
+      "visible": true,
+      "active": true,
+      "rotationZ": 0,
+      "renderLeft": 1060,
+      "renderBottom": 440,
+      "renderWidth": 80,
+      "renderHeight": 80,
+      "renderRotationZ": 0,
+      "renderMatrix": {
+        "a": 1,
+        "b": 0,
+        "c": 0,
+        "d": 1,
+        "tx": 0,
+        "ty": 0
+      },
+      "primitive": "fivestar",
+      "imageSource": "StaticReference",
+      "imageId": 100005,
+      "imageColor": 4294967295,
+      "enableMask": false,
+      "enableSoftEdge": false,
+      "softEdgeMode": "Percentage",
+      "softEdgeWidthX": 8,
+      "softEdgeWidthY": 8,
+      "horizontalSoftRange": 85,
+      "verticalSoftRange": 85,
+      "enableFill": false,
+      "fillType": "Horizontal",
+      "fillHorizontalType": "Left",
+      "fillVerticalType": "Bottom",
+      "fillRadial90Type": "BottomLeft",
+      "fillRadialType": "Bottom",
+      "fillAmount": 1,
+      "reverseMaskArea": false
+    },
+    {
+      "left": 1080,
+      "bottom": 570,
+      "width": 40,
+      "height": 40,
+      "right": 1120,
+      "top": 610,
+      "centerX": 1100,
+      "centerY": 590,
+      "posX": 1100,
+      "posY": 590,
+      "id": "n8",
+      "kind": "keyhint",
+      "name": "按键提示",
+      "visible": true,
+      "active": true,
+      "rotationZ": 0,
+      "renderLeft": 1080,
+      "renderBottom": 570,
+      "renderWidth": 40,
+      "renderHeight": 40,
+      "renderRotationZ": 0,
+      "renderMatrix": {
+        "a": 1,
+        "b": 0,
+        "c": 0,
+        "d": 1,
+        "tx": 0,
+        "ty": 0
+      },
+      "primitive": null
+    },
+    {
+      "left": 1050,
+      "bottom": 680,
+      "width": 100,
+      "height": 40,
+      "right": 1150,
+      "top": 720,
+      "centerX": 1100,
+      "centerY": 700,
+      "posX": 1100,
+      "posY": 700,
+      "id": "n7",
+      "kind": "textwindow",
+      "name": "文本视窗",
+      "visible": true,
+      "active": true,
+      "rotationZ": 0,
+      "renderLeft": 1050,
+      "renderBottom": 680,
+      "renderWidth": 100,
+      "renderHeight": 40,
+      "renderRotationZ": 0,
+      "renderMatrix": {
+        "a": 1,
+        "b": 0,
+        "c": 0,
+        "d": 1,
+        "tx": 0,
+        "ty": 0
+      },
+      "primitive": null,
+      "text": "",
+      "fontSize": 20,
+      "fontColor": 4294967295,
+      "bgColor": 16777215,
+      "enableOutline": true,
+      "outlineColor": 858993459,
+      "horizontalAlignment": "Left",
+      "verticalAlignment": "Top"
+    },
+    {
+      "left": 725,
+      "bottom": 425,
+      "width": 150,
+      "height": 50,
+      "right": 875,
+      "top": 475,
+      "centerX": 800,
+      "centerY": 450,
+      "posX": 800,
+      "posY": 450,
+      "id": "n6",
+      "kind": "button",
+      "name": "预设按钮",
+      "visible": true,
+      "active": true,
+      "rotationZ": 0,
+      "renderLeft": 725,
+      "renderBottom": 425,
+      "renderWidth": 150,
+      "renderHeight": 50,
+      "renderRotationZ": 0,
+      "renderMatrix": {
+        "a": 1,
+        "b": 0,
+        "c": 0,
+        "d": 1,
+        "tx": 0,
+        "ty": 0
+      },
+      "primitive": null,
+      "raycastTarget": true,
+      "interactable": true,
+      "clickAudioId": 50888,
+      "unavailableChildId": null,
+      "hoverChildId": null,
+      "pressedChildId": null,
+      "selectedChildId": null
+    },
+    {
+      "left": 460,
+      "bottom": 310,
+      "width": 80,
+      "height": 80,
+      "right": 540,
+      "top": 390,
+      "centerX": 500,
+      "centerY": 350,
+      "posX": 500,
+      "posY": 350,
+      "id": "n5",
+      "kind": "grid",
+      "name": "网格视窗",
+      "visible": true,
+      "active": true,
+      "rotationZ": 0,
+      "renderLeft": 460,
+      "renderBottom": 310,
+      "renderWidth": 80,
+      "renderHeight": 80,
+      "renderRotationZ": 0,
+      "renderMatrix": {
+        "a": 1,
+        "b": 0,
+        "c": 0,
+        "d": 1,
+        "tx": 0,
+        "ty": 0
+      },
+      "primitive": null
+    },
+    {
+      "left": 460,
+      "bottom": 440,
+      "width": 80,
+      "height": 80,
+      "right": 540,
+      "top": 520,
+      "centerX": 500,
+      "centerY": 480,
+      "posX": 500,
+      "posY": 480,
+      "id": "n4",
+      "kind": "reference",
+      "name": "模板引用控件",
+      "visible": true,
+      "active": true,
+      "rotationZ": 0,
+      "renderLeft": 460,
+      "renderBottom": 440,
+      "renderWidth": 80,
+      "renderHeight": 80,
+      "renderRotationZ": 0,
+      "renderMatrix": {
+        "a": 1,
+        "b": 0,
+        "c": 0,
+        "d": 1,
+        "tx": 0,
+        "ty": 0
+      },
+      "primitive": null
+    },
+    {
+      "left": 425,
+      "bottom": 565,
+      "width": 150,
+      "height": 50,
+      "right": 575,
+      "top": 615,
+      "centerX": 500,
+      "centerY": 590,
+      "posX": 500,
+      "posY": 590,
+      "id": "n3",
+      "kind": "cursor",
+      "name": "光标检测区域",
+      "visible": true,
+      "active": true,
+      "rotationZ": 0,
+      "renderLeft": 425,
+      "renderBottom": 565,
+      "renderWidth": 150,
+      "renderHeight": 50,
+      "renderRotationZ": 0,
+      "renderMatrix": {
+        "a": 1,
+        "b": 0,
+        "c": 0,
+        "d": 1,
+        "tx": 0,
+        "ty": 0
+      },
+      "primitive": null
+    },
+    {
+      "left": 450,
+      "bottom": 680,
+      "width": 100,
+      "height": 40,
+      "right": 550,
+      "top": 720,
+      "centerX": 500,
+      "centerY": 700,
+      "posX": 500,
+      "posY": 700,
+      "id": "n2",
+      "kind": "textbox",
+      "name": "文本框",
+      "visible": true,
+      "active": true,
+      "rotationZ": 0,
+      "renderLeft": 450,
+      "renderBottom": 680,
+      "renderWidth": 100,
+      "renderHeight": 40,
+      "renderRotationZ": 0,
+      "renderMatrix": {
+        "a": 1,
+        "b": 0,
+        "c": 0,
+        "d": 1,
+        "tx": 0,
+        "ty": 0
+      },
+      "primitive": null,
+      "text": "文本",
+      "fontSize": 20,
+      "fontColor": 4294967295,
+      "bgColor": 16777215,
+      "enableOutline": true,
+      "outlineColor": 858993459,
+      "horizontalAlignment": "Left",
+      "verticalAlignment": "Top"
+    }
+  ],
+  "inspector": {
+    "id": "n2",
+    "guid": 1073741852,
+    "kind": "textbox",
+    "label": "文本框",
+    "incomplete": false,
+    "fields": [
+      {
+        "key": "name",
+        "label": "名称",
+        "type": "string",
+        "value": "文本框"
+      },
+      {
+        "key": "active",
+        "label": "初始激活",
+        "type": "bool",
+        "value": true
+      },
+      {
+        "key": "visible",
+        "label": "初始可见性",
+        "type": "bool",
+        "value": true
+      },
+      {
+        "key": "canControllerFocus",
+        "label": "可被手柄摇杆导航选中",
+        "type": "bool",
+        "value": false
+      },
+      {
+        "key": "posX",
+        "label": "位置 X",
+        "type": "number",
+        "value": 500,
+        "computed": true
+      },
+      {
+        "key": "posY",
+        "label": "位置 Y",
+        "type": "number",
+        "value": 700,
+        "computed": true
+      },
+      {
+        "key": "width",
+        "label": "大小 W",
+        "type": "number",
+        "value": 100,
+        "computed": true
+      },
+      {
+        "key": "height",
+        "label": "大小 H",
+        "type": "number",
+        "value": 40,
+        "computed": true
+      },
+      {
+        "key": "rotationZ",
+        "label": "旋转 Z",
+        "type": "number",
+        "value": 0
+      },
+      {
+        "key": "syncAllDevices",
+        "label": "同步信息至所有设备",
+        "type": "bool",
+        "value": true
+      },
+      {
+        "key": "anchorType",
+        "label": "锚点类型",
+        "type": "enum",
+        "value": "center",
+        "options": [
+          {
+            "value": "center",
+            "label": "居中"
+          },
+          {
+            "value": "top-left",
+            "label": "左上"
+          },
+          {
+            "value": "top",
+            "label": "上方"
+          },
+          {
+            "value": "top-right",
+            "label": "右上"
+          },
+          {
+            "value": "left",
+            "label": "左侧"
+          },
+          {
+            "value": "right",
+            "label": "右侧"
+          },
+          {
+            "value": "bottom-left",
+            "label": "左下"
+          },
+          {
+            "value": "bottom",
+            "label": "下方"
+          },
+          {
+            "value": "bottom-right",
+            "label": "右下"
+          },
+          {
+            "value": "stretch",
+            "label": "双向拉伸"
+          },
+          {
+            "value": "stretch-horizontal",
+            "label": "水平拉伸"
+          },
+          {
+            "value": "stretch-vertical",
+            "label": "垂直拉伸"
+          },
+          {
+            "value": "custom",
+            "label": "自定义"
+          }
+        ]
+      },
+      {
+        "key": "anchorMinX",
+        "label": "锚点 Min X",
+        "type": "number",
+        "value": 0.5
+      },
+      {
+        "key": "anchorMinY",
+        "label": "锚点 Min Y",
+        "type": "number",
+        "value": 0.5
+      },
+      {
+        "key": "anchorMaxX",
+        "label": "锚点 Max X",
+        "type": "number",
+        "value": 0.5
+      },
+      {
+        "key": "anchorMaxY",
+        "label": "锚点 Max Y",
+        "type": "number",
+        "value": 0.5
+      },
+      {
+        "key": "pivotX",
+        "label": "中心 X",
+        "type": "number",
+        "value": 0.5
+      },
+      {
+        "key": "pivotY",
+        "label": "中心 Y",
+        "type": "number",
+        "value": 0.5
+      },
+      {
+        "key": "fontSize",
+        "label": "字号",
+        "type": "number",
+        "value": 20
+      },
+      {
+        "key": "adaptiveFontSize",
+        "label": "字号自适应",
+        "type": "bool",
+        "value": false
+      },
+      {
+        "key": "minimumFontSize",
+        "label": "最小字号",
+        "type": "number",
+        "value": 20
+      },
+      {
+        "key": "fontColor",
+        "label": "文本色",
+        "type": "color",
+        "value": 4294967295
+      },
+      {
+        "key": "bgColor",
+        "label": "背景色",
+        "type": "color",
+        "value": 16777215
+      },
+      {
+        "key": "enableOutline",
+        "label": "启用描边",
+        "type": "bool",
+        "value": true
+      },
+      {
+        "key": "outlineColor",
+        "label": "描边色",
+        "type": "color",
+        "value": 858993459
+      },
+      {
+        "key": "horizontalAlignment",
+        "label": "水平对齐",
+        "type": "enum",
+        "value": "Left",
+        "options": [
+          {
+            "value": "Left",
+            "label": "左对齐"
+          },
+          {
+            "value": "Middle",
+            "label": "居中"
+          },
+          {
+            "value": "Right",
+            "label": "右对齐"
+          }
+        ]
+      },
+      {
+        "key": "verticalAlignment",
+        "label": "垂直对齐",
+        "type": "enum",
+        "value": "Top",
+        "options": [
+          {
+            "value": "Top",
+            "label": "顶部"
+          },
+          {
+            "value": "Middle",
+            "label": "居中"
+          },
+          {
+            "value": "Bottom",
+            "label": "底部"
+          }
+        ]
+      },
+      {
+        "key": "text",
+        "label": "文本",
+        "type": "text",
+        "value": "文本"
+      }
+    ]
+  },
+  "root": {
+    "id": "sc1",
+    "kind": "server-container",
+    "name": "客户端控件容器",
+    "guid": 1073741850,
+    "giaRelatedGuids": [],
+    "active": true,
+    "visible": true,
+    "canControllerFocus": false,
+    "syncAllDevices": true,
+    "giaRaw": {
+      "genericField501": 0,
+      "footerField505": 0
+    },
+    "transformByPlatform": {
+      "KEYBOARD": {
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "anchorMin": {
+          "x": 0,
+          "y": 0
+        },
+        "anchorMax": {
+          "x": 1,
+          "y": 1
+        },
+        "offset": {
+          "x": 0,
+          "y": 0
+        },
+        "size": {
+          "x": 0,
+          "y": 0
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "TOUCHSCREEN": {
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "anchorMin": {
+          "x": 0,
+          "y": 0
+        },
+        "anchorMax": {
+          "x": 1,
+          "y": 1
+        },
+        "offset": {
+          "x": 0,
+          "y": 0
+        },
+        "size": {
+          "x": 0,
+          "y": 0
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "CONTROLLER_CONSOLE": {
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "anchorMin": {
+          "x": 0,
+          "y": 0
+        },
+        "anchorMax": {
+          "x": 1,
+          "y": 1
+        },
+        "offset": {
+          "x": 0,
+          "y": 0
+        },
+        "size": {
+          "x": 0,
+          "y": 0
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "CONTROLLER_MOBILE": {
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "anchorMin": {
+          "x": 0,
+          "y": 0
+        },
+        "anchorMax": {
+          "x": 1,
+          "y": 1
+        },
+        "offset": {
+          "x": 0,
+          "y": 0
+        },
+        "size": {
+          "x": 0,
+          "y": 0
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      }
+    },
+    "children": [
+      {
+        "id": "n1",
+        "kind": "container",
+        "name": "容器节点",
+        "guid": 1073741851,
+        "giaRelatedGuids": [],
+        "active": true,
+        "visible": true,
+        "canControllerFocus": false,
+        "syncAllDevices": true,
+        "giaRaw": {
+          "genericField501": 0,
+          "footerField505": 0
+        },
+        "transformByPlatform": {
+          "KEYBOARD": {
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "anchorMin": {
+              "x": 0,
+              "y": 0
+            },
+            "anchorMax": {
+              "x": 1,
+              "y": 1
+            },
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "size": {
+              "x": 0,
+              "y": 0
+            },
+            "pivot": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          },
+          "TOUCHSCREEN": {
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "anchorMin": {
+              "x": 0,
+              "y": 0
+            },
+            "anchorMax": {
+              "x": 1,
+              "y": 1
+            },
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "size": {
+              "x": 0,
+              "y": 0
+            },
+            "pivot": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          },
+          "CONTROLLER_CONSOLE": {
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "anchorMin": {
+              "x": 0,
+              "y": 0
+            },
+            "anchorMax": {
+              "x": 1,
+              "y": 1
+            },
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "size": {
+              "x": 0,
+              "y": 0
+            },
+            "pivot": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          },
+          "CONTROLLER_MOBILE": {
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "anchorMin": {
+              "x": 0,
+              "y": 0
+            },
+            "anchorMax": {
+              "x": 1,
+              "y": 1
+            },
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "size": {
+              "x": 0,
+              "y": 0
+            },
+            "pivot": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          }
+        },
+        "children": [
+          {
+            "id": "n2",
+            "kind": "textbox",
+            "name": "文本框",
+            "guid": 1073741852,
+            "giaRelatedGuids": [],
+            "active": true,
+            "visible": true,
+            "canControllerFocus": false,
+            "syncAllDevices": true,
+            "giaRaw": {
+              "genericField501": 0,
+              "footerField505": 0,
+              "textField501": 20,
+              "textField503": 12,
+              "textAlign": 0
+            },
+            "transformByPlatform": {
+              "KEYBOARD": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": -300,
+                  "y": 250
+                },
+                "size": {
+                  "x": 100,
+                  "y": 40
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "TOUCHSCREEN": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": -300,
+                  "y": 250
+                },
+                "size": {
+                  "x": 100,
+                  "y": 40
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "CONTROLLER_CONSOLE": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": -300,
+                  "y": 250
+                },
+                "size": {
+                  "x": 100,
+                  "y": 40
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "CONTROLLER_MOBILE": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": -300,
+                  "y": 250
+                },
+                "size": {
+                  "x": 100,
+                  "y": 40
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              }
+            },
+            "children": [],
+            "scriptMappingIds": [],
+            "fontSize": 20,
+            "adaptiveFontSize": false,
+            "minimumFontSize": 20,
+            "fontColor": 4294967295,
+            "bgColor": 16777215,
+            "enableOutline": true,
+            "outlineColor": 858993459,
+            "horizontalAlignment": "Left",
+            "verticalAlignment": "Top",
+            "text": "文本"
+          },
+          {
+            "id": "n3",
+            "kind": "cursor",
+            "name": "光标检测区域",
+            "guid": 1073741853,
+            "giaRelatedGuids": [],
+            "active": true,
+            "visible": true,
+            "canControllerFocus": false,
+            "syncAllDevices": true,
+            "giaRaw": {
+              "genericField501": 0,
+              "footerField505": 0,
+              "cursorField501": 1
+            },
+            "transformByPlatform": {
+              "KEYBOARD": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": -300,
+                  "y": 140
+                },
+                "size": {
+                  "x": 150,
+                  "y": 50
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "TOUCHSCREEN": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": -300,
+                  "y": 140
+                },
+                "size": {
+                  "x": 150,
+                  "y": 50
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "CONTROLLER_CONSOLE": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": -300,
+                  "y": 140
+                },
+                "size": {
+                  "x": 150,
+                  "y": 50
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "CONTROLLER_MOBILE": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": -300,
+                  "y": 140
+                },
+                "size": {
+                  "x": 150,
+                  "y": 50
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              }
+            },
+            "children": [],
+            "scriptMappingIds": [],
+            "raycastTarget": true
+          },
+          {
+            "id": "n4",
+            "kind": "reference",
+            "name": "模板引用控件",
+            "guid": 1073741854,
+            "giaRelatedGuids": [],
+            "active": true,
+            "visible": true,
+            "canControllerFocus": false,
+            "syncAllDevices": true,
+            "giaRaw": {
+              "genericField501": 0,
+              "footerField505": 0,
+              "templateRefSlot": ""
+            },
+            "transformByPlatform": {
+              "KEYBOARD": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": -300,
+                  "y": 30
+                },
+                "size": {
+                  "x": 80,
+                  "y": 80
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "TOUCHSCREEN": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": -300,
+                  "y": 30
+                },
+                "size": {
+                  "x": 80,
+                  "y": 80
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "CONTROLLER_CONSOLE": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": -300,
+                  "y": 30
+                },
+                "size": {
+                  "x": 80,
+                  "y": 80
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "CONTROLLER_MOBILE": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": -300,
+                  "y": 30
+                },
+                "size": {
+                  "x": 80,
+                  "y": 80
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              }
+            },
+            "children": [],
+            "scriptMappingIds": [],
+            "referencedPrefabId": null
+          },
+          {
+            "id": "n5",
+            "kind": "grid",
+            "name": "网格视窗",
+            "guid": 1073741855,
+            "giaRelatedGuids": [],
+            "active": true,
+            "visible": true,
+            "canControllerFocus": false,
+            "syncAllDevices": true,
+            "giaRaw": {
+              "genericField501": 0,
+              "footerField505": 0,
+              "gridField501": 1,
+              "gridField507": 1,
+              "gridField508": 1,
+              "gridField509": 1,
+              "gridField511": 5,
+              "gridField512": 1
+            },
+            "transformByPlatform": {
+              "KEYBOARD": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": -300,
+                  "y": -100
+                },
+                "size": {
+                  "x": 80,
+                  "y": 80
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "TOUCHSCREEN": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": -300,
+                  "y": -100
+                },
+                "size": {
+                  "x": 80,
+                  "y": 80
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "CONTROLLER_CONSOLE": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": -300,
+                  "y": -100
+                },
+                "size": {
+                  "x": 80,
+                  "y": 80
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "CONTROLLER_MOBILE": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": -300,
+                  "y": -100
+                },
+                "size": {
+                  "x": 80,
+                  "y": 80
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              }
+            },
+            "children": [],
+            "scriptMappingIds": [],
+            "itemPrefabId": null,
+            "raycastTarget": true,
+            "interactable": true,
+            "showScrollBar": true,
+            "scrollDirection": "Vertical",
+            "layoutConstraint": "AutoWrap",
+            "layoutConstraintFixedCount": null,
+            "cellSizeX": 50,
+            "cellSizeY": 50,
+            "spacingX": 8,
+            "spacingY": 8,
+            "padding1X": 20,
+            "padding1Y": 20,
+            "padding2X": 20,
+            "padding2Y": 20,
+            "previewCount": 5
+          },
+          {
+            "id": "n6",
+            "kind": "button",
+            "name": "预设按钮",
+            "guid": 1073741856,
+            "giaRelatedGuids": [],
+            "active": true,
+            "visible": true,
+            "canControllerFocus": false,
+            "syncAllDevices": true,
+            "giaRaw": {
+              "genericField501": 0,
+              "footerField505": 0
+            },
+            "transformByPlatform": {
+              "KEYBOARD": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "x": 150,
+                  "y": 50
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "TOUCHSCREEN": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "x": 150,
+                  "y": 50
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "CONTROLLER_CONSOLE": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "x": 150,
+                  "y": 50
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "CONTROLLER_MOBILE": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "x": 150,
+                  "y": 50
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              }
+            },
+            "children": [],
+            "scriptMappingIds": [],
+            "raycastTarget": true,
+            "interactable": true,
+            "clickAudioId": 50888,
+            "unavailableChildId": null,
+            "hoverChildId": null,
+            "pressedChildId": null,
+            "selectedChildId": null
+          },
+          {
+            "id": "n7",
+            "kind": "textwindow",
+            "name": "文本视窗",
+            "guid": 1073741857,
+            "giaRelatedGuids": [],
+            "active": true,
+            "visible": true,
+            "canControllerFocus": false,
+            "syncAllDevices": true,
+            "giaRaw": {
+              "genericField501": 0,
+              "footerField505": 0,
+              "textField501": 20,
+              "textField503": 12,
+              "textAlign": 0,
+              "textField511": 1,
+              "textViewField502": 1,
+              "textViewField503": 1
+            },
+            "transformByPlatform": {
+              "KEYBOARD": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": 300,
+                  "y": 250
+                },
+                "size": {
+                  "x": 100,
+                  "y": 40
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "TOUCHSCREEN": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": 300,
+                  "y": 250
+                },
+                "size": {
+                  "x": 100,
+                  "y": 40
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "CONTROLLER_CONSOLE": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": 300,
+                  "y": 250
+                },
+                "size": {
+                  "x": 100,
+                  "y": 40
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "CONTROLLER_MOBILE": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": 300,
+                  "y": 250
+                },
+                "size": {
+                  "x": 100,
+                  "y": 40
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              }
+            },
+            "children": [],
+            "scriptMappingIds": [],
+            "fontSize": 20,
+            "adaptiveFontSize": false,
+            "minimumFontSize": 20,
+            "fontColor": 4294967295,
+            "bgColor": 16777215,
+            "enableOutline": true,
+            "outlineColor": 858993459,
+            "horizontalAlignment": "Left",
+            "verticalAlignment": "Top",
+            "text": "",
+            "interactable": true,
+            "showScrollBar": true
+          },
+          {
+            "id": "n8",
+            "kind": "keyhint",
+            "name": "按键提示",
+            "guid": 1073741858,
+            "giaRelatedGuids": [],
+            "active": true,
+            "visible": true,
+            "canControllerFocus": false,
+            "syncAllDevices": true,
+            "giaRaw": {
+              "genericField501": 0,
+              "footerField505": 0,
+              "keyHintField501": 1,
+              "keyHintField502": 1
+            },
+            "transformByPlatform": {
+              "KEYBOARD": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": 300,
+                  "y": 140
+                },
+                "size": {
+                  "x": 40,
+                  "y": 40
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "TOUCHSCREEN": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": 300,
+                  "y": 140
+                },
+                "size": {
+                  "x": 40,
+                  "y": 40
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "CONTROLLER_CONSOLE": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": 300,
+                  "y": 140
+                },
+                "size": {
+                  "x": 40,
+                  "y": 40
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "CONTROLLER_MOBILE": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": 300,
+                  "y": 140
+                },
+                "size": {
+                  "x": 40,
+                  "y": 40
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              }
+            },
+            "children": [],
+            "scriptMappingIds": [],
+            "keyboardKeyCode": null,
+            "controllerKeyCode": null
+          },
+          {
+            "id": "n9",
+            "kind": "image",
+            "name": "图片",
+            "guid": 1073741859,
+            "giaRelatedGuids": [],
+            "active": true,
+            "visible": true,
+            "canControllerFocus": false,
+            "syncAllDevices": true,
+            "giaRaw": {
+              "genericField501": 0,
+              "footerField505": 0,
+              "imageField502": 1,
+              "imageField504": 1,
+              "imageField505": 1,
+              "imageField507": 2,
+              "imageFillType": 1
+            },
+            "transformByPlatform": {
+              "KEYBOARD": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": 300,
+                  "y": 30
+                },
+                "size": {
+                  "x": 80,
+                  "y": 80
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "TOUCHSCREEN": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": 300,
+                  "y": 30
+                },
+                "size": {
+                  "x": 80,
+                  "y": 80
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "CONTROLLER_CONSOLE": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": 300,
+                  "y": 30
+                },
+                "size": {
+                  "x": 80,
+                  "y": 80
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "CONTROLLER_MOBILE": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": 300,
+                  "y": 30
+                },
+                "size": {
+                  "x": 80,
+                  "y": 80
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              }
+            },
+            "children": [],
+            "scriptMappingIds": [],
+            "imageSource": "StaticReference",
+            "imageId": 100005,
+            "imageColor": 4294967295,
+            "enableMask": false,
+            "enableSoftEdge": false,
+            "softEdgeMode": "Percentage",
+            "softEdgeWidthX": 8,
+            "softEdgeWidthY": 8,
+            "horizontalSoftRange": 85,
+            "verticalSoftRange": 85,
+            "enableFill": false,
+            "fillType": "Horizontal",
+            "fillHorizontalType": "Left",
+            "fillVerticalType": "Bottom",
+            "fillRadial90Type": "BottomLeft",
+            "fillRadialType": "Bottom",
+            "fillAmount": 1,
+            "reverseMaskArea": false
+          },
+          {
+            "id": "n10",
+            "kind": "animation",
+            "name": "界面动效",
+            "guid": 1073741860,
+            "giaRelatedGuids": [],
+            "active": true,
+            "visible": true,
+            "canControllerFocus": false,
+            "syncAllDevices": true,
+            "giaRaw": {
+              "genericField501": 0,
+              "footerField505": 0,
+              "effectSlot": ""
+            },
+            "transformByPlatform": {
+              "KEYBOARD": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": 300,
+                  "y": -100
+                },
+                "size": {
+                  "x": 100,
+                  "y": 100
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "TOUCHSCREEN": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": 300,
+                  "y": -100
+                },
+                "size": {
+                  "x": 100,
+                  "y": 100
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "CONTROLLER_CONSOLE": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": 300,
+                  "y": -100
+                },
+                "size": {
+                  "x": 100,
+                  "y": 100
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "CONTROLLER_MOBILE": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "anchorMax": {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                "offset": {
+                  "x": 300,
+                  "y": -100
+                },
+                "size": {
+                  "x": 100,
+                  "y": 100
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              }
+            },
+            "children": [],
+            "scriptMappingIds": [],
+            "animationId": null,
+            "playSoundEffect": null,
+            "layer": null
+          },
+          {
+            "id": "n11",
+            "kind": "fullscreen",
+            "name": "全屏动效",
+            "guid": 1073741861,
+            "giaRelatedGuids": [],
+            "active": true,
+            "visible": true,
+            "canControllerFocus": false,
+            "syncAllDevices": true,
+            "giaRaw": {
+              "genericField501": 0,
+              "footerField505": 0,
+              "fullscreenEffectSlot": ""
+            },
+            "transformByPlatform": {
+              "KEYBOARD": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "anchorMax": {
+                  "x": 1,
+                  "y": 1
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "x": 0,
+                  "y": 0
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "TOUCHSCREEN": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "anchorMax": {
+                  "x": 1,
+                  "y": 1
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "x": 0,
+                  "y": 0
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "CONTROLLER_CONSOLE": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "anchorMax": {
+                  "x": 1,
+                  "y": 1
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "x": 0,
+                  "y": 0
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              },
+              "CONTROLLER_MOBILE": {
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "anchorMin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "anchorMax": {
+                  "x": 1,
+                  "y": 1
+                },
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "x": 0,
+                  "y": 0
+                },
+                "pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              }
+            },
+            "children": [],
+            "scriptMappingIds": [],
+            "animationId": null,
+            "playSoundEffect": null
+          }
+        ],
+        "scriptMappingIds": [],
+        "isolateNavigation": false,
+        "disableKeyEventPassthrough": false,
+        "disableCursorEventPassthrough": false,
+        "showCursor": false
+      }
+    ],
+    "scriptMappingIds": []
+  },
+  "workspace": {
+    "name": "miHoYo Launcher",
+    "path": "D:\\新建文件夹\\miHoYo Launcher",
+    "bound": true
+  },
+  "save": {
+    "format": "qxqy-simulator-save",
+    "name": "未命名存档",
+    "activeAssetType": "server-control-template",
+    "assets": {
+      "server": {
+        "type": "server-control-template",
+        "name": "未命名界面",
+        "sourceFile": ""
+      },
+      "client": {
+        "type": "client-control-template",
+        "name": "Lua实例化面板",
+        "sourceFile": ""
+      },
+      "scripts": []
+    }
+  },
+  "scripts": [],
+  "mountTargets": [
+    {
+      "id": "n1",
+      "name": "容器节点",
+      "kind": "container",
+      "assetType": "server-control-template",
+      "assetLabel": "服务器控件模板"
+    },
+    {
+      "id": "n2",
+      "name": "文本框",
+      "kind": "textbox",
+      "assetType": "server-control-template",
+      "assetLabel": "服务器控件模板"
+    },
+    {
+      "id": "n3",
+      "name": "光标检测区域",
+      "kind": "cursor",
+      "assetType": "server-control-template",
+      "assetLabel": "服务器控件模板"
+    },
+    {
+      "id": "n4",
+      "name": "模板引用控件",
+      "kind": "reference",
+      "assetType": "server-control-template",
+      "assetLabel": "服务器控件模板"
+    },
+    {
+      "id": "n5",
+      "name": "网格视窗",
+      "kind": "grid",
+      "assetType": "server-control-template",
+      "assetLabel": "服务器控件模板"
+    },
+    {
+      "id": "n6",
+      "name": "预设按钮",
+      "kind": "button",
+      "assetType": "server-control-template",
+      "assetLabel": "服务器控件模板"
+    },
+    {
+      "id": "n7",
+      "name": "文本视窗",
+      "kind": "textwindow",
+      "assetType": "server-control-template",
+      "assetLabel": "服务器控件模板"
+    },
+    {
+      "id": "n8",
+      "name": "按键提示",
+      "kind": "keyhint",
+      "assetType": "server-control-template",
+      "assetLabel": "服务器控件模板"
+    },
+    {
+      "id": "n9",
+      "name": "图片",
+      "kind": "image",
+      "assetType": "server-control-template",
+      "assetLabel": "服务器控件模板"
+    },
+    {
+      "id": "n10",
+      "name": "界面动效",
+      "kind": "animation",
+      "assetType": "server-control-template",
+      "assetLabel": "服务器控件模板"
+    },
+    {
+      "id": "n11",
+      "name": "全屏动效",
+      "kind": "fullscreen",
+      "assetType": "server-control-template",
+      "assetLabel": "服务器控件模板"
+    },
+    {
+      "id": "n1",
+      "name": "Lua实例化面板",
+      "kind": "container",
+      "assetType": "client-control-template",
+      "assetLabel": "客户端控件模板"
+    },
+    {
+      "id": "n2",
+      "name": "模板标题",
+      "kind": "textbox",
+      "assetType": "client-control-template",
+      "assetLabel": "客户端控件模板"
+    },
+    {
+      "id": "n3",
+      "name": "模板图标",
+      "kind": "image",
+      "assetType": "client-control-template",
+      "assetLabel": "客户端控件模板"
+    },
+    {
+      "id": "n4",
+      "name": "确认按钮",
+      "kind": "button",
+      "assetType": "client-control-template",
+      "assetLabel": "客户端控件模板"
+    },
+    {
+      "id": "n5",
+      "name": "按钮文字",
+      "kind": "textbox",
+      "assetType": "client-control-template",
+      "assetLabel": "客户端控件模板"
+    }
+  ],
+  "serverLogic": {
+    "version": 1,
+    "rules": []
+  },
+  "migrationWarnings": [],
+  "controlGuidChanges": [],
+  "scriptSync": null,
+  "storage": {
+    "path": ""
+  }
+}

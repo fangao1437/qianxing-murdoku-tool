@@ -1,0 +1,17 @@
+{
+  "format": "qxqy-autotest",
+  "version": 1,
+  "name": "t07_pc",
+  "dt": 0.0333333333,
+  "playerCount": 1,
+  "canvasId": "pc-16-9",
+  "note": "多画布回归：同一套锚点在 PC 1600×900 上同样正确（布局不含绝对像素假设）",
+  "events": [
+    { "kind": "click", "name": "btn.next" }
+  ],
+  "asserts": [
+    { "kind": "log", "contains": "DISCOVER screens=1 pages=3 tabs=3" },
+    { "kind": "control", "name": "hud.pager", "field": "text", "equals": "2 / 3" },
+    { "kind": "control", "name": "page.p2", "field": "visible", "equals": true }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "format": "qxqy-autotest",
+  "version": 1,
+  "name": "t06_key",
+  "dt": 0.0333333333,
+  "playerCount": 1,
+  "canvasId": "pc-16-9",
+  "note": "键盘：右键翻到 p2、左键回 p1、Esc 关闭。键名在 PC 画布才可能生效（触屏画布无键盘）",
+  "events": [
+    { "kind": "key", "key": "Right" },
+    { "kind": "key", "key": "Left" },
+    { "kind": "key", "key": "Escape" }
+  ],
+  "asserts": [
+    { "kind": "log", "contains": "KEY_BIND" },
+    { "kind": "log", "contains": "ACT next<- key" },
+    { "kind": "log", "contains": "ACT prev<- key" },
+    { "kind": "log", "contains": "ACT close<- key" },
+    { "kind": "control", "name": "screen.demo", "field": "visible", "equals": false }
+  ]
+}

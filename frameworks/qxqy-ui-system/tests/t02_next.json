@@ -1,0 +1,21 @@
+{
+  "format": "qxqy-autotest",
+  "version": 1,
+  "name": "t02_next",
+  "dt": 0.0333333333,
+  "playerCount": 1,
+  "canvasId": "mobile-16-9",
+  "note": "翻页：点 btn.next 从 p1 → p2；页码、页显隐、服务端收到 ui/nav 三向断言",
+  "events": [
+    { "kind": "click", "name": "btn.next" }
+  ],
+  "asserts": [
+    { "kind": "log", "contains": "PAGE demo/p2 idx=2" },
+    { "kind": "log", "contains": "ACT next<- btn.next page=p2" },
+    { "kind": "control", "name": "hud.pager", "field": "text", "equals": "2 / 3" },
+    { "kind": "control", "name": "page.p1", "field": "visible", "equals": false },
+    { "kind": "control", "name": "page.p2", "field": "visible", "equals": true },
+    { "kind": "control", "name": "page.p3", "field": "visible", "equals": false },
+    { "kind": "signal", "name": "ui/nav", "direction": "in" }
+  ]
+}

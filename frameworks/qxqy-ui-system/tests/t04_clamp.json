@@ -1,0 +1,19 @@
+{
+  "format": "qxqy-autotest",
+  "version": 1,
+  "name": "t04_clamp",
+  "dt": 0.0333333333,
+  "playerCount": 1,
+  "canvasId": "mobile-16-9",
+  "note": "边界钳制（默认 wrap=false）：首页点 prev 不动、不产生 ACT 日志；末页点 next 同理",
+  "events": [
+    { "kind": "click", "name": "btn.prev" },
+    { "kind": "click", "name": "tab.p3" },
+    { "kind": "click", "name": "btn.next" }
+  ],
+  "asserts": [
+    { "kind": "control", "name": "hud.pager", "field": "text", "equals": "3 / 3" },
+    { "kind": "control", "name": "page.p3", "field": "visible", "equals": true },
+    { "kind": "log", "contains": "PAGE demo/p3 idx=3" }
+  ]
+}

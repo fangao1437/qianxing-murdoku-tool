@@ -1,0 +1,3 @@
+id,name,prefab,instance_count,note
+elem-1,示例-桌子,prefabs/table_a,1,示例行（请替换成你的元件）
+elem-2,示例-椅子,prefabs/chair_a,4,四把同款椅子

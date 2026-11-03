@@ -1,0 +1,1154 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-10-20T18:44:12.933Z",
+  "out": "qianxing-murdoku/存档/474-教程UI系统骨架-v2.gil",
+  "bytes": 187323,
+  "base": {
+    "file": "qianxing-murdoku/assets/纯2D游戏模板(客户端脚本版).gil",
+    "records": 24,
+    "maxId": 1073742039
+  },
+  "donor": {
+    "file": "qianxing-murdoku/存档/470-遗留清理-v282.gil",
+    "recordId": 1073741889,
+    "name": "face",
+    "assetIdField": "#505(73,96)/#503/#84/#503",
+    "assetId": 100001,
+    "colorField": "#505(73,96)/#503/#84/#502"
+  },
+  "prototypes": {
+    "container": {
+      "id": 1073742022,
+      "kind": "容器节点"
+    },
+    "textbox": {
+      "id": 1073742023,
+      "kind": "文本框"
+    },
+    "button": {
+      "id": 1073742036,
+      "kind": "预设按钮"
+    }
+  },
+  "counts": {
+    "newRecords": 39,
+    "reusedRecords": 1,
+    "namedControls": 40,
+    "totalRecords": 63,
+    "baseRecords": 24
+  },
+  "idRange": [
+    1073743800,
+    1073743838
+  ],
+  "appRoot": {
+    "reusedId": 1073742017,
+    "name": "app.root",
+    "note": "复用基线画布默认容器节点 1073742017：改名 app.root + 从容器原型克隆 transform 槽(1,12) + 4 平台双向拉伸 + 显式零几何 + 建子列表",
+    "clientControlContainer": {
+      "id": 1073742016,
+      "childListKept": 0
+    }
+  },
+  "childListOrder": "engine",
+  "decisions": {
+    "rootReuse": "app.root **复用** 1073742017（不再新建顶层容器）；客户端控件容器 1073742016 的子列表保持 0。真机参照 470-遗留清理-v282.gil：客户端控件容器(子=0) + root(父=null, 子=74, 状态=4)",
+    "rootIsParentless": "app.root 无 #504：官方 game.GetClientUIRoots() = 「画布中的默认容器节点」，FindClientUIRoot 只查根层",
+    "rootListRegistered": "/#9/#501 根表**不追加**（1073742017 本来就在里面）",
+    "rootExplicitZero": "复用根的 offset/size 写成显式浮点 0（值仍是拉满父级）：gilread.stateBlocks() 要求尺寸对里有 2 个浮点才认状态块 ⇒ 才读得出 状态=4",
+    "childListOrder": "子列表**越靠后显示越靠上**（官方 SetSiblingIndex「数值越大…显示越靠上」+ murdoku 真机「Instantiate 追加到末尾=最上」） ⇒ 为了\"先列出者在最上层\"，写出的是列出顺序的**反向**；page.* 例外（框架按同级顺序取页序，故保持 p1,p2,p3 且整体压底）",
+    "colorField": "图片槽 (73,96) details 的 #84： #502 = imageColor(ARGB)，#503 = assetId",
+    "imageAsset": "assetId=100001（白色正四边形白模），全部图片控件都用它 + 各自的 ARGB 染色",
+    "geometries": "四平台（KEYBOARD/TOUCHSCREEN/CONTROLLER_CONSOLE/CONTROLLER_MOBILE）各一套状态几何；零分量按引擎稀疏编码省略"
+  },
+  "colors": {
+    "plate": {
+      "dec": 3711256158,
+      "hex": "0xDD35465E"
+    },
+    "bg1": {
+      "dec": 2350787130,
+      "hex": "0x8C1E2A3A"
+    },
+    "bg2": {
+      "dec": 2351570474,
+      "hex": "0x8C2A1E2A"
+    },
+    "bg3": {
+      "dec": 2350787102,
+      "hex": "0x8C1E2A1E"
+    },
+    "sel": {
+      "dec": 4294955088,
+      "hex": "0xFFFFD050"
+    },
+    "off": {
+      "dec": 2862262463,
+      "hex": "0xAA9AA8BF"
+    }
+  },
+  "controls": [
+    {
+      "id": 1073742017,
+      "name": "app.root",
+      "parent": null,
+      "proto": "container",
+      "reused": true,
+      "aMin": [
+        0,
+        0
+      ],
+      "aMax": [
+        1,
+        1
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "children": [
+        "screen.demo"
+      ]
+    },
+    {
+      "id": 1073743800,
+      "name": "screen.demo",
+      "parent": "app.root",
+      "proto": "container",
+      "reused": false,
+      "aMin": [
+        0,
+        0
+      ],
+      "aMax": [
+        1,
+        1
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "children": [
+        "page.p1",
+        "page.p2",
+        "page.p3",
+        "btn.reset",
+        "btn.next",
+        "btn.prev",
+        "tab.p3",
+        "tab.p2",
+        "tab.p1",
+        "hud.pager",
+        "hud.title",
+        "btn.close"
+      ]
+    },
+    {
+      "id": 1073743801,
+      "name": "btn.close",
+      "parent": "screen.demo",
+      "proto": "button",
+      "reused": false,
+      "aMin": [
+        0.5,
+        0.5
+      ],
+      "aMax": [
+        0.5,
+        0.5
+      ],
+      "off": [
+        560,
+        300
+      ],
+      "size": [
+        80,
+        56
+      ],
+      "children": [
+        "plate",
+        "text"
+      ]
+    },
+    {
+      "id": 1073743802,
+      "name": "text",
+      "parent": "btn.close",
+      "proto": "textbox",
+      "reused": false,
+      "aMin": [
+        0,
+        0
+      ],
+      "aMax": [
+        1,
+        1
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "text": "×",
+      "fontSize": 26,
+      "children": []
+    },
+    {
+      "id": 1073743803,
+      "name": "plate",
+      "parent": "btn.close",
+      "proto": "image",
+      "reused": false,
+      "aMin": [
+        0,
+        0
+      ],
+      "aMax": [
+        1,
+        1
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "color": 3711256158,
+      "children": []
+    },
+    {
+      "id": 1073743804,
+      "name": "hud.title",
+      "parent": "screen.demo",
+      "proto": "textbox",
+      "reused": false,
+      "aMin": [
+        0.5,
+        0.5
+      ],
+      "aMax": [
+        0.5,
+        0.5
+      ],
+      "off": [
+        0,
+        310
+      ],
+      "size": [
+        820,
+        56
+      ],
+      "text": "教程 UI 系统 · 翻页单击活动（架构骨架）",
+      "fontSize": 28,
+      "children": []
+    },
+    {
+      "id": 1073743805,
+      "name": "hud.pager",
+      "parent": "screen.demo",
+      "proto": "textbox",
+      "reused": false,
+      "aMin": [
+        0.5,
+        0.5
+      ],
+      "aMax": [
+        0.5,
+        0.5
+      ],
+      "off": [
+        0,
+        -300
+      ],
+      "size": [
+        220,
+        44
+      ],
+      "text": "1 / 3",
+      "fontSize": 22,
+      "children": []
+    },
+    {
+      "id": 1073743806,
+      "name": "tab.p1",
+      "parent": "screen.demo",
+      "proto": "button",
+      "reused": false,
+      "aMin": [
+        0.5,
+        0.5
+      ],
+      "aMax": [
+        0.5,
+        0.5
+      ],
+      "off": [
+        -170,
+        250
+      ],
+      "size": [
+        120,
+        56
+      ],
+      "children": [
+        "plate",
+        "state.off",
+        "state.sel",
+        "text"
+      ]
+    },
+    {
+      "id": 1073743807,
+      "name": "text",
+      "parent": "tab.p1",
+      "proto": "textbox",
+      "reused": false,
+      "aMin": [
+        0,
+        0
+      ],
+      "aMax": [
+        1,
+        1
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "text": "1",
+      "fontSize": 26,
+      "children": []
+    },
+    {
+      "id": 1073743808,
+      "name": "state.sel",
+      "parent": "tab.p1",
+      "proto": "image",
+      "reused": false,
+      "aMin": [
+        0.5,
+        0.5
+      ],
+      "aMax": [
+        0.5,
+        0.5
+      ],
+      "off": [
+        0,
+        -48
+      ],
+      "size": [
+        22,
+        22
+      ],
+      "color": 4294955088,
+      "children": []
+    },
+    {
+      "id": 1073743809,
+      "name": "state.off",
+      "parent": "tab.p1",
+      "proto": "image",
+      "reused": false,
+      "aMin": [
+        0.5,
+        0.5
+      ],
+      "aMax": [
+        0.5,
+        0.5
+      ],
+      "off": [
+        0,
+        -48
+      ],
+      "size": [
+        22,
+        22
+      ],
+      "color": 2862262463,
+      "children": []
+    },
+    {
+      "id": 1073743810,
+      "name": "plate",
+      "parent": "tab.p1",
+      "proto": "image",
+      "reused": false,
+      "aMin": [
+        0,
+        0
+      ],
+      "aMax": [
+        1,
+        1
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "color": 3711256158,
+      "children": []
+    },
+    {
+      "id": 1073743811,
+      "name": "tab.p2",
+      "parent": "screen.demo",
+      "proto": "button",
+      "reused": false,
+      "aMin": [
+        0.5,
+        0.5
+      ],
+      "aMax": [
+        0.5,
+        0.5
+      ],
+      "off": [
+        0,
+        250
+      ],
+      "size": [
+        120,
+        56
+      ],
+      "children": [
+        "plate",
+        "state.off",
+        "state.sel",
+        "text"
+      ]
+    },
+    {
+      "id": 1073743812,
+      "name": "text",
+      "parent": "tab.p2",
+      "proto": "textbox",
+      "reused": false,
+      "aMin": [
+        0,
+        0
+      ],
+      "aMax": [
+        1,
+        1
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "text": "2",
+      "fontSize": 26,
+      "children": []
+    },
+    {
+      "id": 1073743813,
+      "name": "state.sel",
+      "parent": "tab.p2",
+      "proto": "image",
+      "reused": false,
+      "aMin": [
+        0.5,
+        0.5
+      ],
+      "aMax": [
+        0.5,
+        0.5
+      ],
+      "off": [
+        0,
+        -48
+      ],
+      "size": [
+        22,
+        22
+      ],
+      "color": 4294955088,
+      "children": []
+    },
+    {
+      "id": 1073743814,
+      "name": "state.off",
+      "parent": "tab.p2",
+      "proto": "image",
+      "reused": false,
+      "aMin": [
+        0.5,
+        0.5
+      ],
+      "aMax": [
+        0.5,
+        0.5
+      ],
+      "off": [
+        0,
+        -48
+      ],
+      "size": [
+        22,
+        22
+      ],
+      "color": 2862262463,
+      "children": []
+    },
+    {
+      "id": 1073743815,
+      "name": "plate",
+      "parent": "tab.p2",
+      "proto": "image",
+      "reused": false,
+      "aMin": [
+        0,
+        0
+      ],
+      "aMax": [
+        1,
+        1
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "color": 3711256158,
+      "children": []
+    },
+    {
+      "id": 1073743816,
+      "name": "tab.p3",
+      "parent": "screen.demo",
+      "proto": "button",
+      "reused": false,
+      "aMin": [
+        0.5,
+        0.5
+      ],
+      "aMax": [
+        0.5,
+        0.5
+      ],
+      "off": [
+        170,
+        250
+      ],
+      "size": [
+        120,
+        56
+      ],
+      "children": [
+        "plate",
+        "state.off",
+        "state.sel",
+        "text"
+      ]
+    },
+    {
+      "id": 1073743817,
+      "name": "text",
+      "parent": "tab.p3",
+      "proto": "textbox",
+      "reused": false,
+      "aMin": [
+        0,
+        0
+      ],
+      "aMax": [
+        1,
+        1
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "text": "3",
+      "fontSize": 26,
+      "children": []
+    },
+    {
+      "id": 1073743818,
+      "name": "state.sel",
+      "parent": "tab.p3",
+      "proto": "image",
+      "reused": false,
+      "aMin": [
+        0.5,
+        0.5
+      ],
+      "aMax": [
+        0.5,
+        0.5
+      ],
+      "off": [
+        0,
+        -48
+      ],
+      "size": [
+        22,
+        22
+      ],
+      "color": 4294955088,
+      "children": []
+    },
+    {
+      "id": 1073743819,
+      "name": "state.off",
+      "parent": "tab.p3",
+      "proto": "image",
+      "reused": false,
+      "aMin": [
+        0.5,
+        0.5
+      ],
+      "aMax": [
+        0.5,
+        0.5
+      ],
+      "off": [
+        0,
+        -48
+      ],
+      "size": [
+        22,
+        22
+      ],
+      "color": 2862262463,
+      "children": []
+    },
+    {
+      "id": 1073743820,
+      "name": "plate",
+      "parent": "tab.p3",
+      "proto": "image",
+      "reused": false,
+      "aMin": [
+        0,
+        0
+      ],
+      "aMax": [
+        1,
+        1
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "color": 3711256158,
+      "children": []
+    },
+    {
+      "id": 1073743821,
+      "name": "btn.prev",
+      "parent": "screen.demo",
+      "proto": "button",
+      "reused": false,
+      "aMin": [
+        0.5,
+        0.5
+      ],
+      "aMax": [
+        0.5,
+        0.5
+      ],
+      "off": [
+        -470,
+        -250
+      ],
+      "size": [
+        110,
+        64
+      ],
+      "children": [
+        "plate",
+        "text"
+      ]
+    },
+    {
+      "id": 1073743822,
+      "name": "text",
+      "parent": "btn.prev",
+      "proto": "textbox",
+      "reused": false,
+      "aMin": [
+        0,
+        0
+      ],
+      "aMax": [
+        1,
+        1
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "text": "‹",
+      "fontSize": 26,
+      "children": []
+    },
+    {
+      "id": 1073743823,
+      "name": "plate",
+      "parent": "btn.prev",
+      "proto": "image",
+      "reused": false,
+      "aMin": [
+        0,
+        0
+      ],
+      "aMax": [
+        1,
+        1
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "color": 3711256158,
+      "children": []
+    },
+    {
+      "id": 1073743824,
+      "name": "btn.next",
+      "parent": "screen.demo",
+      "proto": "button",
+      "reused": false,
+      "aMin": [
+        0.5,
+        0.5
+      ],
+      "aMax": [
+        0.5,
+        0.5
+      ],
+      "off": [
+        470,
+        -250
+      ],
+      "size": [
+        110,
+        64
+      ],
+      "children": [
+        "plate",
+        "text"
+      ]
+    },
+    {
+      "id": 1073743825,
+      "name": "text",
+      "parent": "btn.next",
+      "proto": "textbox",
+      "reused": false,
+      "aMin": [
+        0,
+        0
+      ],
+      "aMax": [
+        1,
+        1
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "text": "›",
+      "fontSize": 26,
+      "children": []
+    },
+    {
+      "id": 1073743826,
+      "name": "plate",
+      "parent": "btn.next",
+      "proto": "image",
+      "reused": false,
+      "aMin": [
+        0,
+        0
+      ],
+      "aMax": [
+        1,
+        1
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "color": 3711256158,
+      "children": []
+    },
+    {
+      "id": 1073743827,
+      "name": "btn.reset",
+      "parent": "screen.demo",
+      "proto": "button",
+      "reused": false,
+      "aMin": [
+        0.5,
+        0.5
+      ],
+      "aMax": [
+        0.5,
+        0.5
+      ],
+      "off": [
+        0,
+        -250
+      ],
+      "size": [
+        150,
+        60
+      ],
+      "children": [
+        "plate",
+        "text"
+      ]
+    },
+    {
+      "id": 1073743828,
+      "name": "text",
+      "parent": "btn.reset",
+      "proto": "textbox",
+      "reused": false,
+      "aMin": [
+        0,
+        0
+      ],
+      "aMax": [
+        1,
+        1
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "text": "重置",
+      "fontSize": 26,
+      "children": []
+    },
+    {
+      "id": 1073743829,
+      "name": "plate",
+      "parent": "btn.reset",
+      "proto": "image",
+      "reused": false,
+      "aMin": [
+        0,
+        0
+      ],
+      "aMax": [
+        1,
+        1
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "color": 3711256158,
+      "children": []
+    },
+    {
+      "id": 1073743830,
+      "name": "page.p1",
+      "parent": "screen.demo",
+      "proto": "container",
+      "reused": false,
+      "aMin": [
+        0.08,
+        0.14
+      ],
+      "aMax": [
+        0.92,
+        0.84
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "children": [
+        "bg",
+        "label"
+      ]
+    },
+    {
+      "id": 1073743831,
+      "name": "label",
+      "parent": "page.p1",
+      "proto": "textbox",
+      "reused": false,
+      "aMin": [
+        0.5,
+        0.5
+      ],
+      "aMax": [
+        0.5,
+        0.5
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        620,
+        80
+      ],
+      "text": "第 1 页 · 内容留白",
+      "fontSize": 30,
+      "children": []
+    },
+    {
+      "id": 1073743832,
+      "name": "bg",
+      "parent": "page.p1",
+      "proto": "image",
+      "reused": false,
+      "aMin": [
+        0,
+        0
+      ],
+      "aMax": [
+        1,
+        1
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "color": 2350787130,
+      "children": []
+    },
+    {
+      "id": 1073743833,
+      "name": "page.p2",
+      "parent": "screen.demo",
+      "proto": "container",
+      "reused": false,
+      "aMin": [
+        0.08,
+        0.14
+      ],
+      "aMax": [
+        0.92,
+        0.84
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "children": [
+        "bg",
+        "label"
+      ]
+    },
+    {
+      "id": 1073743834,
+      "name": "label",
+      "parent": "page.p2",
+      "proto": "textbox",
+      "reused": false,
+      "aMin": [
+        0.5,
+        0.5
+      ],
+      "aMax": [
+        0.5,
+        0.5
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        620,
+        80
+      ],
+      "text": "第 2 页 · 内容留白",
+      "fontSize": 30,
+      "children": []
+    },
+    {
+      "id": 1073743835,
+      "name": "bg",
+      "parent": "page.p2",
+      "proto": "image",
+      "reused": false,
+      "aMin": [
+        0,
+        0
+      ],
+      "aMax": [
+        1,
+        1
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "color": 2351570474,
+      "children": []
+    },
+    {
+      "id": 1073743836,
+      "name": "page.p3",
+      "parent": "screen.demo",
+      "proto": "container",
+      "reused": false,
+      "aMin": [
+        0.08,
+        0.14
+      ],
+      "aMax": [
+        0.92,
+        0.84
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "children": [
+        "bg",
+        "label"
+      ]
+    },
+    {
+      "id": 1073743837,
+      "name": "label",
+      "parent": "page.p3",
+      "proto": "textbox",
+      "reused": false,
+      "aMin": [
+        0.5,
+        0.5
+      ],
+      "aMax": [
+        0.5,
+        0.5
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        620,
+        80
+      ],
+      "text": "第 3 页 · 内容留白",
+      "fontSize": 30,
+      "children": []
+    },
+    {
+      "id": 1073743838,
+      "name": "bg",
+      "parent": "page.p3",
+      "proto": "image",
+      "reused": false,
+      "aMin": [
+        0,
+        0
+      ],
+      "aMax": [
+        1,
+        1
+      ],
+      "off": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ],
+      "color": 2350787102,
+      "children": []
+    }
+  ],
+  "writeGil": {
+    "diffs": 31,
+    "compared": 16029,
+    "expectRecs": 63
+  },
+  "rootList": {
+    "field": "/#9/#501",
+    "count": 18,
+    "changed": false,
+    "appRootId": 1073742017
+  }
+}

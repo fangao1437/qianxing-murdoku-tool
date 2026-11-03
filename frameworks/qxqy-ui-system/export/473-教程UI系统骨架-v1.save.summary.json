@@ -1,0 +1,33 @@
+{
+ "summary": {
+  "in": "D:/新建文件夹/miHoYo Launcher/qianxing-murdoku/存档/473-教程UI系统骨架-v1.gil",
+  "out": "D:/新建文件夹/miHoYo Launcher/workspace/qxqy-ui-system/export/473-教程UI系统骨架-v1.save.json",
+  "geom": "auto",
+  "records": 63,
+  "controlsInOutput": 63,
+  "scaffoldDropped": 20,
+  "kinds": {
+   "container": 8,
+   "textbox": 14,
+   "image": 18,
+   "cursor": 2,
+   "textwindow": 2,
+   "animation": 2,
+   "fullscreen": 2,
+   "button": 9,
+   "keyhint": 2,
+   "grid": 2,
+   "reference": 2
+  },
+  "designNodes": 0,
+  "canvasAbsoluteNodes": 0,
+  "nanPairsTreatedAsMissing": 0,
+  "anchorFallbacks": 84,
+  "warnings": 11,
+  "sha256": "31CABB3A34152A4C76481F1E1152D31F72281059D7A0D2F012E60B42000B8069",
+  "outBytes": 182253,
+  "outSha256": "365FECC255766A143F8208C71B8B2FDE221088154A1FC6ECB1F7BB050C4994D9"
+ },
+ "check": null,
+ "geomNotes": []
+}
