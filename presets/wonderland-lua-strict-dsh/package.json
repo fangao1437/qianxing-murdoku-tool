@@ -1,0 +1,12 @@
+{
+  "name": "dsh-preset-wonderland-lua-strict",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "千星 2D+Lua 游戏制作 — 严格版 Agent 预设 bundle",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
