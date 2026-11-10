@@ -209,7 +209,8 @@ function coverageOf(poly, els, step = 2) {
 // 逐档加大 C 的尺度（仍是「顶点贴多边形顶点」的零溢出图元），直到覆盖率达标。
 function fillAdaptive(poly, color, opts = {}) {
   const target = opts.target ?? 0.9995;
-  const scaleSets = opts.scaleSets ?? [[0.62], [0.4, 0.8], [0.3, 0.55, 0.8, 1.0]];
+  const scaleSets = opts.scaleSets ?? [[0.62], [0.4, 0.8], [0.3, 0.55, 0.8, 1.0],
+    [0.2, 0.35, 0.5, 0.62, 0.75, 0.88, 1.0]];
   let best = null;
   for (const scales of scaleSets) {
     const els = fillConvex(poly, color, scales);
@@ -329,7 +330,8 @@ function selfTest() {
   }
   if (!isConvex(poly)) throw new Error('拟合出的多边形不是凸多边形：' + JSON.stringify(poly));
   const color = argOf('color', '#C85D11');
-  const { els, stats } = fillAdaptive(poly, color, { maxDepth: Number(argOf('max-depth', '7')) });
+  const { els, stats } = fillAdaptive(poly, color, {
+    maxDepth: Number(argOf('max-depth', '7')), target: Number(argOf('target', '0.9995')) });
   const v = verify(poly, els, color, Number(argOf('grid', '1')));
   const result = {
     tool: 'fit-primitive-shape', version: 1,
@@ -343,5 +345,6 @@ function selfTest() {
   if (out) { fs.mkdirSync(path.dirname(path.resolve(out)), { recursive: true }); fs.writeFileSync(out, JSON.stringify(result, null, 2)); }
   console.log(JSON.stringify({ polygon: result.polygon, residual: overall, verification: v, out: out || '(stdout)' }, null, 2));
   if (!out) console.log(JSON.stringify(result.elements, null, 2));
-  if (v.overflowVertices !== 0 || v.coverage < 99.9) { console.error('VERIFY FAILED'); process.exit(1); }
+  const minCov = Number(argOf('min-coverage', '99.9'));
+  if (v.overflowVertices !== 0 || v.coverage < minCov) { console.error('VERIFY FAILED'); process.exit(1); }
 })().catch(e => { console.error('ERROR:', e.message); process.exit(1); });
