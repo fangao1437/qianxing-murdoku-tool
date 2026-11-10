@@ -11,7 +11,8 @@
 
 **是**
 - 一份**可校验、可复现**的家具美术数据：`specs/furniture_templates.json`（8 个模板：椅/植物/雕像/方桌/横桌/竖桌/书架/地毯，共 71+3 层）；
-- 四个零依赖 Node 工具：**生成规格**、**切件**、**离线预览（SVG）**、**规格自检**；
+- 五个零依赖 Node 工具：**生成规格**、**切件**、**离线预览（SVG）**、**规格自检**、
+  **原生基本图形拟合**（`tools/fit-primitive-shape.mjs`，见 `docs/原生图形拟合工具.md`）；
 - 一份把"踩过的坑"写进去的**完整流程文档**（`docs/美术制作流程.md`）。
 
 **不是**
@@ -40,6 +41,9 @@ node art/tools/gen-layers.mjs --furn-art=../qianxing-murdoku/lua/furn_art.lua --
 
 # ⑤ 一条命令跑全部自检
 node art/test/run.mjs --furn-art=../qianxing-murdoku/lua/furn_art.lua
+
+# ⑥ 原生基本图形拟合自检（零依赖，不读任何文件）
+node art/tools/fit-primitive-shape.mjs --self-test
 ```
 
 > 上面的相对路径假设 `art/` 与本工具的兄弟目录里放着主项目 `qianxing-murdoku/`；
@@ -58,6 +62,8 @@ node art/test/run.mjs --furn-art=../qianxing-murdoku/lua/furn_art.lua
 | `tools/slice-layout.mjs` | 布局 JSON → 每件家具 `{templateKey, anchor, span, offsetCells}`（= 运行时脚本下发的东西） |
 | `tools/render-preview.mjs` | 规格 + 布局 → 1600×900 SVG 观感基准（房间底色 → 逐层矩形/椭圆/圆角板） |
 | `tools/check-spec.mjs` | 规格自检（模板集合/层数/画布/颜色格式/尺寸范围/层序/地毯三层规则/手搭层上限 12） |
+| `tools/fit-primitive-shape.mjs` | **原生基本图形拟合**：设计图斜边区域 → 分段直线拟合 → `100003` 等腰三角铺满（A 整幅每边 + B 扇形补角 + C 顶角三角），带零溢出与 100% 覆盖自检；说明见 `docs/原生图形拟合工具.md` |
+| `docs/原生图形拟合工具.md` | 拟合工具的算法、100003 几何模型、参数、自检闸门与「警局场景 v17 楔形」实战数据 |
 | `test/run.mjs` | 一键自检 20 条（含切件断言、SVG 断言、可选的主项目生成一致性） |
 
 ---

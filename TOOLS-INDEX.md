@@ -13,6 +13,7 @@
 | ★ **在编辑器里编辑 UI / 试玩** | ★ `dsh-plugin-beyond-simulator/`（★ `qxqy_studio_*`）|
 | ★★ **读 `.gil` 存档、体检、改控件** | ★ `project-tools/gil/`（★ `inspect_gil.mjs` 先看）|
 | ★ **给家具做美术（参考图→图元→写档）** | ★ `dsh-plugin-qianxing-art-pipeline/`（★ `art_*`）|
+| ★ **设计图斜边/楔形 → 原生 100003 三角（零溢出拟合）** | ★ `art/tools/fit-primitive-shape.mjs` ＋ `art/docs/原生图形拟合工具.md`（★ `--self-test`）|
 | ★★ **改 3D 场景摆位** | ★ `dsh-plugin-qianxing-3d-placement/`（★ `scene3d_*`）|
 | ★ **设计图 → 3D 场景** | ★ `dsh-plugin-design-to-scene/`（★ `scene_*`）|
 | ★★ **查千星节点/文档/排障** | ★ `dsh-plugin-miliastra-toolbox/` |
