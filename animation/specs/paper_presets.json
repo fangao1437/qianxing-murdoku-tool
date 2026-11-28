@@ -1,0 +1,117 @@
+{
+  "schema": "qx-kirchhoff-paper-presets/v1",
+  "source": "qianxing-murdoku 749_v8（真机实测通过）",
+  "model": {
+    "equation": "D * d^4w/ds^4 + rho*h * d^2w/dt^2 + c * dw/dt = q(s, t)",
+    "modes": {
+      "cantilever_free": {
+        "boundary": "w(0)=0, w'(0)=0, M(1)=-Dw''(1)=0, V(1)=-Dw'''(1)=0",
+        "shape": "(6*xi^2 - 4*xi^3 + xi^4) / 3",
+        "slope": "(4/3) * (3*xi - 3*xi^2 + xi^3)"
+      },
+      "simply_supported_air_cushion": {
+        "boundary": "w(0)=0, w(1)=0, M(0)=0, M(1)=0",
+        "shape": "(16/5) * (xi - 2*xi^3 + xi^4)",
+        "slope": "(16/5) * (1 - 6*xi^2 + 4*xi^3)"
+      }
+    }
+  },
+  "presets": {
+    "shop_card": {
+      "name": "调查商城右侧独立档案纸卡",
+      "prefix": "econ.shop736.",
+      "duration": 0.36,
+      "strips": 16,
+      "base": { "cx": 444.0, "cy": -19.0, "w": 468.0, "h": 530.0 },
+      "anchors": {
+        "vPTop": 0.418491,
+        "vPBot": 0.945283,
+        "vTop": 0.183019,
+        "vBot": 0.681132
+      },
+      "colors": {
+        "outerBoard": "#ECE2CC",
+        "border": "#FFB89872",
+        "face": "#FFF7F0DF",
+        "innerBox": "#FFE7D0B2"
+      },
+      "innerBoxes": [
+        { "id": "desc_box", "dx": 0, "cy": -115.0, "w": 412.0, "h": 286.0, "segs": 10, "color": "#FFE7D0B2" }
+      ],
+      "params": {
+        "headDxA": 20,
+        "headDxB": 22,
+        "headDy": 4,
+        "arcLiftY": 3.5,
+        "thetaHeadA": 1.15,
+        "thetaHeadB": 1.25,
+        "ampKl": 0.25,
+        "ampAir": 0.055,
+        "obliqueDeg": 5.6,
+        "airTwistDeg": 0.35,
+        "perspF": 4200,
+        "globalWidthTilt": 0.010,
+        "underEndScale": 0.994,
+        "underEndRot": -0.15
+      },
+      "gates": {
+        "maxStretchPx": 0.01,
+        "minBottomLeftY": -265.5,
+        "maxTopLeftY": 275.0,
+        "maxTopRightY": 285.0,
+        "maxAdjacentHalfWidthStepPx": 0.6,
+        "minMidTailAngleDeg": 1.5,
+        "maxMidTailAngleDeg": 4.5,
+        "minMidBendDiffDeg": 1.0
+      }
+    },
+    "bag_note": {
+      "name": "调查背包右侧便签纸",
+      "prefix": "econ.bag741.",
+      "duration": 0.36,
+      "strips": 16,
+      "base": { "cx": 395.6666564941406, "cy": -44.0, "w": 408.5, "h": 616.3333129882812 },
+      "anchors": {
+        "vPTop": 0.390806,
+        "vPBot": 0.927529,
+        "vTop": 0.188480,
+        "vBot": 0.659816
+      },
+      "colors": {
+        "border": "#FFA58868",
+        "face": "#FFF6E7D2",
+        "innerBox": "#FFE8D7BF"
+      },
+      "innerBoxes": [
+        { "id": "label_box", "dx": 0, "cy": 148.0, "w": 360.0, "h": 92.0, "segs": 3, "color": "#FFE8D7BF" },
+        { "id": "body_box", "dx": 0, "cy": -142.5, "w": 360.0, "h": 324.0, "segs": 11, "color": "#FFE8D7BF" }
+      ],
+      "params": {
+        "headDxA": 19,
+        "headDxB": 21,
+        "headDy": 5,
+        "arcLiftY": 4.0,
+        "thetaHeadA": 1.10,
+        "thetaHeadB": 1.20,
+        "ampKl": 0.26,
+        "ampAir": 0.055,
+        "obliqueDeg": 5.6,
+        "airTwistDeg": 0.35,
+        "perspF": 4200,
+        "globalWidthTilt": 0.010,
+        "underEndScale": 0.994,
+        "underEndRot": 0.15
+      },
+      "gates": {
+        "maxStretchPx": 0.01,
+        "minBottomLeftY": -308.8,
+        "maxTopLeftY": 320.0,
+        "maxTopRightY": 330.0,
+        "maxAdjacentHalfWidthStepPx": 0.6,
+        "minMidTailAngleDeg": 1.5,
+        "maxMidTailAngleDeg": 4.5,
+        "minMidBendDiffDeg": 1.0
+      }
+    }
+  }
+}

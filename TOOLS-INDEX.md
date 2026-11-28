@@ -14,6 +14,7 @@
 | ★★ **读 `.gil` 存档、体检、改控件** | ★ `project-tools/gil/`（★ `inspect_gil.mjs` 先看）|
 | ★ **给家具做美术（参考图→图元→写档）** | ★ `dsh-plugin-qianxing-art-pipeline/`（★ `art_*`）|
 | ★ **设计图斜边/楔形 → 原生 100003 三角（零溢出拟合）** | ★ `art/tools/fit-primitive-shape.mjs` ＋ `art/docs/原生图形拟合工具.md`（★ `--self-test`）|
+| ★★ **2D UI 物理柔性纸张动画（基尔霍夫薄板方程 + 零半透明）** | ★ `animation/README.md` ＋ `animation/docs/UI动画制作流程.md` ＋ `animation/tools/kirchhoff-paper-sim.mjs` ＋ `animation/tools/audit-gil-anim.mjs`（★ `node animation/test/run.mjs`）|
 | ★★ **改 3D 场景摆位** | ★ `dsh-plugin-qianxing-3d-placement/`（★ `scene3d_*`）|
 | ★ **设计图 → 3D 场景** | ★ `dsh-plugin-design-to-scene/`（★ `scene_*`）|
 | ★★ **查千星节点/文档/排障** | ★ `dsh-plugin-miliastra-toolbox/` |
@@ -176,6 +177,8 @@ node project-tools/gil/embed_script.mjs --in="存档/452-门定位常走路径.g
 | ★ **`verify_longpress.mjs`** | ★ 长按门槛 |
 | ★ **`verify_gray_unplace.mjs`** | ★ 灰白层与「拿起」 |
 | ★ **`verify_row_overwrite_sentinel.mjs`** | ★ 单射覆盖哨兵（★ 谁最后写 ✓）|
+| ★★ **`build_749.mjs`** | ★ 749_v8 商店/背包基尔霍夫薄板柔性纸张动画 `.gil` 构建与 Lua 注入脚本 ✓ |
+| ★★ **`verify_749_paper_anim.lua`** | ★ 749_v8 高仿真沙箱回归（冷启动逐叶子关灯、不可伸长物理门禁、购买静默、稳态 0 开销）✓ |
 
 ### 2.8 ★★ 根目录 —— 截图分析（Python）
 
@@ -260,6 +263,7 @@ node project-tools/draw_layout_v2.mjs        # ★ 出布局图
 | ★ **`docs/dsh-plugin-art-pipeline.md`** | ★ 美术管线插件说明 |
 | ★ **`docs/3D坐标离线改写-验证报告.md`** | ★ 摆位可行性报告 |
 | ★ **`docs/渊星工具箱与千星奇域UGC工具-评估.md`** | ★ 工具选型评估 |
+| ★★ **`animation/docs/UI动画制作流程.md`** | ★ 2D UI 物理柔性纸张动画完整制作流程（基尔霍夫薄板方程、逐叶子闭环、v1→v8 踩坑实录与四道门禁 ✓）|
 
 ### 5.2 主项目随附（`project-tools/docs/`）
 | 文档 | 内容 |
